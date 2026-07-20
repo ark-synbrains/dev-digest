@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="/dev/digest — an AI-generated changelog of the latest models, algorithms, and product releases for hands-on technical readers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%233F6B4A'/%3E%3Ctext x='12' y='17' font-size='14' text-anchor='middle' fill='%23FBF6EC' font-family='monospace'%3E/%3C/text%3E%3C/svg%3E">
+<title>/dev/digest — technical newsletter agent</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,72,400;0,72,600;1,72,500&family=Inter:wght@400;500&display=swap');
+
+  :root{
+    --bg: #0F1516;
+    --bg-raised: #16201F;
+    --card: #1A2423;
+    --hairline: #2B3836;
+    --ink: #E6E8E1;
+    --ink-dim: #8CA39A;
+    --amber: #5FBE87;
+    --amber-dim: #2F4A3B;
+    --amber-dim-text: #6E8478;
+    --amber-text: #0B1210;
+    --add: #7FD9A0;
+    --del: #D97A63;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 24px) 100px;
+  }
+
+  /* ---- Masthead ---- */
+  .masthead{
+    padding: 48px 0 22px;
+    border-bottom: 1px solid var(--hairline);
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  .masthead-title{
+    font-family: 'Newsreader', serif;
+    font-size: clamp(26px, 6vw, 40px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .masthead-title .slash{ color: var(--amber); font-weight:400; }
+  .cursor{
+    display:inline-block; width:10px; height:26px; background:var(--amber);
+    animation: blink 1.1s steps(1) infinite; vertical-align: -4px;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+  .meta-line{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-dim);
+    text-align: right;
+    line-height: 1.6;
+  }
+  .meta-line .issue{ color: var(--amber); }
+
+  .masthead-right{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+  }
+
+  .tagline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    padding: 14px 0 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- Controls ---- */
+  .controls{
+    margin-top: 26px;
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items:center;
+  }
+  select, button{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    background: var(--bg-raised);
+    color: var(--ink);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 9px 12px;
+  }
+  select{cursor:pointer;}
+  #genBtn{
+    background: var(--amber);
+    color: var(--amber-text);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: filter 0.15s ease;
+  }
+  #genBtn:hover{ filter: brightness(1.08); }
+  #genBtn:disabled{ background: var(--amber-dim); color: var(--amber-dim-text); cursor: progress; }
+  #genBtn:focus-visible, select:focus-visible{
+    outline: 2px solid var(--amber); outline-offset: 2px;
+  }
+  .format-wrap{
+    display: inline-flex;
+    align-items: center;
+  }
+  .format-wrap[hidden]{ display: none; }
+
+  #downloadBtn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  }
+  #downloadBtn svg{ width:16px; height:16px; }
+  #downloadBtn:hover:not(:disabled){
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+  #downloadBtn:disabled{
+    color: var(--ink-dim);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  #downloadBtn:focus-visible{
+    outline: 2px solid var(--amber); outline-offset: 2px;
+  }
+
+  /* ---- Status ---- */
+  .status{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-top: 14px;
+    min-height: 18px;
+  }
+  .status .ok{ color: var(--add); }
+  .status .err{ color: var(--del); }
+
+  /* ---- Sections ---- */
+  .section{ margin-top: 40px; }
+  .section-head{
+    display:flex; align-items:baseline; gap:10px;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+  .section-head .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--amber);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .section-head .count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+
+  /* ---- Entry (diff/commit style) ---- */
+  .entry{
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(33,28,21,0.05), 0 1px 0 rgba(33,28,21,0.03);
+  }
+  .entry-top{
+    display:flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    margin-bottom: 6px;
+  }
+  .entry-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--add);
+  }
+  .entry-tag::before{ content: "+ "; }
+  .entry-hash{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    flex-shrink:0;
+  }
+  .entry-title{
+    font-family: 'Newsreader', serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 4px 0 6px;
+    line-height: 1.3;
+  }
+  .entry-body{
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .entry-body .del{ color: var(--del); }
+  .entry-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+  }
+  .entry-source a{ color: var(--ink-dim); text-decoration: none; border-bottom: 1px dotted var(--hairline); }
+  .entry-source a:hover{ color: var(--amber); border-color: var(--amber); }
+
+  /* ---- Empty state ---- */
+  .empty{
+    margin-top: 60px;
+    padding: 40px 0;
+    text-align:center;
+    color: var(--ink-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 13px;
+    border: 1px dashed var(--hairline);
+    border-radius: 6px;
+  }
+  .empty .arrow{ color: var(--amber); }
+
+  .footer-note{
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px){
+    .masthead{ flex-direction: column; align-items: flex-start; gap: 10px; }
+    .meta-line{ text-align:left; }
+  }
+
+  @media (max-width: 480px){
+    .controls{ flex-direction: column; align-items: stretch; }
+    .controls > select,
+    .controls > #genBtn{ width: 100%; }
+    .controls > .format-wrap{ width: 100%; }
+    .controls > .format-wrap select{ width: 100%; }
+    #downloadBtn{ align-self: flex-end; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="masthead-title"><span class="slash">/</span>dev<span class="slash">/</span>digest<span class="cursor" aria-hidden="true"></span></h1>
+    <div class="masthead-right">
+      <div class="meta-line" id="metaLine">
+        issue <span class="issue">#000</span><br>
+        <span id="dateLine">not generated</span>
+      </div>
+    </div>
+  </header>
+  <p class="tagline"># a changelog for the world's tech stack — models, algorithms, releases</p>
+
+  <main>
+    <div class="controls">
+      <select id="scopeSelect" aria-label="Focus area">
+        <option value="all">all categories</option>
+        <option value="models">models &amp; AI research</option>
+        <option value="products">product &amp; company releases</option>
+        <option value="algorithms">algorithms &amp; systems</option>
+      </select>
+      <button id="genBtn" type="button">generate latest issue</button>
+      <span class="format-wrap" id="formatWrap" hidden>
+        <select id="formatSelect" aria-label="Download format">
+          <option value="md">.md</option>
+          <option value="html">.html</option>
+        </select>
+      </span>
+      <button id="downloadBtn" class="icon-btn" type="button" disabled aria-label="Download issue" title="Download issue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M12 3v12"/>
+          <path d="M7 10l5 5 5-5"/>
+          <path d="M4 19h16"/>
+        </svg>
+      </button>
+    </div>
+    <div class="status" id="statusLine" role="status" aria-live="polite"></div>
+
+    <div id="output">
+      <div class="empty" id="emptyState"><span class="arrow">→</span> run <code>generate latest issue</code> to pull this week's updates</div>
+    </div>
+  </main>
+
+  <footer class="footer-note">
+    entries are drafted by Claude from live web search at generation time; verify against primary sources before citing. no data is stored — each run is a fresh pull.
+  </footer>
+
+</div>
+
+<script>
+const genBtn = document.getElementById('genBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const formatSelect = document.getElementById('formatSelect');
+const formatWrap = document.getElementById('formatWrap');
+const scopeSelect = document.getElementById('scopeSelect');
+const statusLine = document.getElementById('statusLine');
+const output = document.getElementById('output');
+const dateLine = document.getElementById('dateLine');
+const metaLine = document.getElementById('metaLine');
+
+function setDownloadEnabled(enabled){
+  downloadBtn.disabled = !enabled;
+  formatWrap.hidden = !enabled;
+}
+
+let issueNum = 0;
+let lastIssue = { number: 0, date: '', byCategory: {} }; // cat -> items[]
+
+function hashFor(str){
+  let h = 0;
+  for(let i=0;i<str.length;i++){ h = (h*31 + str.charCodeAt(i)) >>> 0; }
+  return h.toString(16).slice(0,7);
+}
+
+const sectionMeta = {
+  model:     { label: 'models & research' },
+  algorithm: { label: 'algorithms & systems' },
+  product:   { label: 'product & company releases' }
+};
+
+function categoryPrompt(cat, today){
+  const focus = {
+    model: 'new or meaningfully upgraded AI/ML models (LLMs, image/audio/video models, or notable research models) and the papers or techniques behind them',
+    algorithm: 'new algorithms, systems techniques, infrastructure breakthroughs, or technical methods — not consumer product news',
+    product: 'company product launches, major feature releases, and hardware/software announcements ("Company X released Product Y")'
+  }[cat];
+
+  return `You are a technical news editor for hands-on engineers and researchers.
+Today's date is ${today}.
+Use web search to find 3 to 4 distinct, recent (last 7-10 days, or most recent available) global developments about: ${focus}.
+Skip rumors and opinion pieces; prefer primary announcements (company blogs, official docs, papers, reputable tech press). Do 2-3 targeted searches at most, then stop searching and answer.
+
+Respond with ONLY a raw JSON array (no markdown fences, no prose before or after). Each element must have exactly these fields:
+- "headline": short punchy headline, under 12 words, no trailing period
+- "summary": 2-3 sentences, technical and specific (mention concrete numbers/specs/benchmarks where available), written in your own words, no quotations
+- "source_name": the publication or company blog name
+- "source_url": the direct URL
+
+Return nothing but the JSON array.`;
+}
+
+async function fetchCategory(cat, today, attempt){
+  attempt = attempt || 1;
+  let response;
+  try{
+    response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        max_tokens: 1500,
+        system: categoryPrompt(cat, today),
+        messages: [ { role: "user", content: "Generate these entries now." } ],
+        tools: [ { type: "web_search_20250305", name: "web_search" } ]
+      })
+    });
+  } catch(networkErr){
+    if(attempt < 2){
+      await new Promise(r => setTimeout(r, 800));
+      return fetchCategory(cat, today, attempt + 1);
+    }
+    throw new Error((networkErr.name || 'NetworkError') + ': ' + (networkErr.message || 'request could not be sent'));
+  }
+
+  if(!response.ok){
+    let bodyText = '';
+    try{ bodyText = (await response.text()).slice(0, 200); } catch(e){}
+    if((response.status === 429 || response.status >= 500) && attempt < 2){
+      await new Promise(r => setTimeout(r, 1000));
+      return fetchCategory(cat, today, attempt + 1);
+    }
+    throw new Error('HTTP ' + response.status + (bodyText ? ' — ' + bodyText : ''));
+  }
+
+  const data = await response.json();
+  const textBlocks = (data.content || [])
+    .filter(b => b.type === "text")
+    .map(b => b.text)
+    .join("\n");
+
+  if(!textBlocks.trim()){
+    throw new Error('empty response body');
+  }
+
+  let cleaned = textBlocks.trim().replace(/^```json/i, '').replace(/^```/,'').replace(/```$/,'').trim();
+  const firstBracket = cleaned.indexOf('[');
+  const lastBracket = cleaned.lastIndexOf(']');
+  if(firstBracket !== -1 && lastBracket !== -1) cleaned = cleaned.slice(firstBracket, lastBracket + 1);
+
+  let items;
+  try{
+    items = JSON.parse(cleaned);
+  } catch(parseErr){
+    throw new Error('could not parse JSON: ' + cleaned.slice(0,120));
+  }
+  if(!Array.isArray(items)) throw new Error(cat + ' returned malformed data (not an array)');
+  return items;
+}
+
+let timerHandle = null;
+function startTimer(){
+  const startedAt = Date.now();
+  const activeLanes = new Set();
+  timerHandle = { activeLanes, interval: null };
+  timerHandle.interval = setInterval(() => {
+    const secs = Math.floor((Date.now() - startedAt) / 1000);
+    const lanes = [...activeLanes].join(', ') || 'wrapping up';
+    statusLine.innerHTML = '<span>$ searching (' + secs + 's) — still fetching: ' + lanes + '</span>';
+  }, 500);
+  return timerHandle;
+}
+function stopTimer(){
+  if(timerHandle) clearInterval(timerHandle.interval);
+  timerHandle = null;
+}
+
+async function generateIssue(){
+  genBtn.disabled = true;
+  setDownloadEnabled(false);
+  output.innerHTML = '';
+  issueNum += 1;
+  const now = new Date();
+  metaLine.innerHTML = 'issue <span class="issue">#' + String(issueNum).padStart(3,'0') + '</span><br>' + now.toDateString();
+  const today = now.toISOString().slice(0,10);
+  lastIssue = { number: issueNum, date: now.toDateString(), isoDate: today, byCategory: {} };
+
+  const scope = scopeSelect.value;
+  const scopeToCategory = { models: 'model', products: 'product', algorithms: 'algorithm' };
+  const categories = scope === 'all' ? ['model','algorithm','product'] : [scopeToCategory[scope]];
+
+  const controller = { timedOut: false };
+  const overallTimeoutMs = 75000;
+  const timeoutGuard = new Promise((_, reject) => {
+    setTimeout(() => { controller.timedOut = true; reject(new Error('timed out after 75s')); }, overallTimeoutMs);
+  });
+
+  const timer = startTimer();
+  categories.forEach(c => timer.activeLanes.add(sectionMeta[c].label));
+
+  // create empty section shells up front so results can drop in as they arrive
+  categories.forEach(cat => {
+    const el = document.createElement('div');
+    el.className = 'section';
+    el.id = 'section-' + cat;
+    el.innerHTML = `<div class="section-head"><span class="label">${sectionMeta[cat].label}</span><span class="count">searching…</span></div>`;
+    output.appendChild(el);
+  });
+
+  const results = await Promise.allSettled(
+    categories.map((cat, idx) =>
+      new Promise(resolve => setTimeout(resolve, idx * 350))
+        .then(() => Promise.race([fetchCategory(cat, today), timeoutGuard]))
+        .then(items => {
+          timer.activeLanes.delete(sectionMeta[cat].label);
+          renderSection(cat, items);
+          return items;
+        }).catch(err => {
+          timer.activeLanes.delete(sectionMeta[cat].label);
+          renderSectionError(cat, err);
+          throw err;
+        })
+    )
+  );
+
+  stopTimer();
+  genBtn.disabled = false;
+
+  const succeeded = results.filter(r => r.status === 'fulfilled').length;
+  const failed = results.length - succeeded;
+  setDownloadEnabled(Object.keys(lastIssue.byCategory).length > 0);
+
+  if(succeeded === 0){
+    const firstErr = results.find(r => r.status === 'rejected');
+    const errMsg = firstErr ? (firstErr.reason && firstErr.reason.message) : 'unknown error';
+    statusLine.innerHTML = '<span class="err">✗ all lanes failed — ' + escapeHtml(errMsg) + '</span>';
+    output.innerHTML = '<div class="empty"><span class="arrow">→</span> generation failed — see error above, then retry</div>';
+  } else if(failed > 0){
+    statusLine.innerHTML = '<span class="ok">✓ issue generated</span> <span class="err">(' + failed + ' lane' + (failed>1?'s':'') + ' failed — see details in that section)</span>';
+  } else {
+    statusLine.innerHTML = '<span class="ok">✓ issue generated</span>';
+  }
+}
+
+function renderSection(cat, items){
+  lastIssue.byCategory[cat] = items;
+  const el = document.getElementById('section-' + cat);
+  if(!el) return;
+  if(!items.length){
+    el.innerHTML = `<div class="section-head"><span class="label">${sectionMeta[cat].label}</span><span class="count">0 entries</span></div>`;
+    return;
+  }
+  let html = `<div class="section-head"><span class="label">${sectionMeta[cat].label}</span><span class="count">${items.length} entr${items.length===1?'y':'ies'}</span></div>`;
+  items.forEach(it => {
+    const hash = hashFor((it.headline||'') + (it.source_url||''));
+    const safeHeadline = escapeHtml(it.headline || 'untitled update');
+    const safeSummary = escapeHtml(it.summary || '');
+    const safeSource = escapeHtml(it.source_name || 'source');
+    const url = it.source_url || '#';
+    html += `<div class="entry">
+      <div class="entry-top">
+        <span class="entry-tag">${cat}</span>
+        <span class="entry-hash">#${hash}</span>
+      </div>
+      <h3 class="entry-title">${safeHeadline}</h3>
+      <p class="entry-body">${safeSummary}</p>
+      <div class="entry-source"><a href="${url}" target="_blank" rel="noopener noreferrer">${safeSource} ↗</a></div>
+    </div>`;
+  });
+  el.innerHTML = html;
+}
+
+function renderSectionError(cat, err){
+  const el = document.getElementById('section-' + cat);
+  if(!el) return;
+  const msg = err && err.message ? err.message : 'unknown error';
+  el.innerHTML = `<div class="section-head"><span class="label">${sectionMeta[cat].label}</span><span class="count">failed</span></div>
+    <div class="empty" style="margin-top:0;"><span class="arrow">→</span> ${escapeHtml(msg)}</div>`;
+}
+
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function triggerDownload(filename, content, mime){
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function buildMarkdown(){
+  const order = ['model','algorithm','product'];
+  let md = `# /dev/digest — issue #${String(lastIssue.number).padStart(3,'0')}\n\n`;
+  md += `_${lastIssue.date}_\n\n`;
+  order.forEach(cat => {
+    const items = lastIssue.byCategory[cat];
+    if(!items || !items.length) return;
+    md += `## ${sectionMeta[cat].label}\n\n`;
+    items.forEach(it => {
+      md += `**${it.headline || 'untitled update'}**\n\n`;
+      md += `${it.summary || ''}\n\n`;
+      md += `Source: [${it.source_name || 'source'}](${it.source_url || '#'})\n\n`;
+      md += `---\n\n`;
+    });
+  });
+  return md;
+}
+
+function getThemeVars(){
+  const styles = getComputedStyle(document.documentElement);
+  const keys = ['--bg','--card','--hairline','--ink','--ink-dim','--amber','--add'];
+  const vars = {};
+  keys.forEach(k => { vars[k.slice(2)] = styles.getPropertyValue(k).trim(); });
+  return vars;
+}
+
+function buildHtmlExport(){
+  const order = ['model','algorithm','product'];
+  const v = getThemeVars();
+  let sections = '';
+  order.forEach(cat => {
+    const items = lastIssue.byCategory[cat];
+    if(!items || !items.length) return;
+    sections += `<div class="section">
+      <div class="section-head"><span class="label">${escapeHtml(sectionMeta[cat].label)}</span><span class="count">${items.length} entr${items.length===1?'y':'ies'}</span></div>\n`;
+    items.forEach(it => {
+      const hash = hashFor((it.headline||'') + (it.source_url||''));
+      sections += `      <div class="entry">
+        <div class="entry-top"><span class="entry-tag">${escapeHtml(cat)}</span><span class="entry-hash">#${hash}</span></div>
+        <h3 class="entry-title">${escapeHtml(it.headline || 'untitled update')}</h3>
+        <p class="entry-body">${escapeHtml(it.summary || '')}</p>
+        <div class="entry-source"><a href="${it.source_url || '#'}" target="_blank" rel="noopener noreferrer">${escapeHtml(it.source_name || 'source')} ↗</a></div>
+      </div>\n`;
+    });
+    sections += `    </div>\n`;
+  });
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>/dev/digest — issue #${String(lastIssue.number).padStart(3,'0')}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,72,400;0,72,600;1,72,500&family=Inter:wght@400;500&display=swap');
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: ${v.bg};
+    color: ${v.ink};
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+  .masthead-title{
+    font-family: 'Newsreader', serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .masthead-title .slash{ color: ${v.amber}; font-weight: 400; }
+  .meta-line{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: ${v['ink-dim']};
+    margin-bottom: 4px;
+  }
+  .meta-line .issue{ color: ${v.amber}; }
+  .tagline{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: ${v['ink-dim']};
+    border-bottom: 1px solid ${v.hairline};
+    padding-bottom: 22px;
+    margin-bottom: 8px;
+  }
+  .section{ margin-top: 36px; }
+  .section-head{
+    display:flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid ${v.hairline};
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .section-head .label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: ${v.amber};
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .section-head .count{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: ${v['ink-dim']};
+  }
+  .entry{
+    background: ${v.card};
+    border: 1px solid ${v.hairline};
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .entry-top{
+    display:flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .entry-tag{ font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: ${v.add}; }
+  .entry-tag::before{ content: "+ "; }
+  .entry-hash{ font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: ${v['ink-dim']}; }
+  .entry-title{
+    font-family: 'Newsreader', serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 4px 0 6px;
+    line-height: 1.3;
+  }
+  .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; }
+  .entry-source{ font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; }
+  .entry-source a{ color: ${v['ink-dim']}; text-decoration: none; border-bottom: 1px dotted ${v.hairline}; }
+  .footer-note{
+    margin-top: 44px;
+    padding-top: 16px;
+    border-top: 1px solid ${v.hairline};
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: ${v['ink-dim']};
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="masthead-title"><span class="slash">/</span>dev<span class="slash">/</span>digest</h1>
+  <div class="meta-line">issue <span class="issue">#${String(lastIssue.number).padStart(3,'0')}</span> — ${escapeHtml(lastIssue.date)}</div>
+  <div class="tagline"># a changelog for the world's tech stack — models, algorithms, releases</div>
+${sections}
+  <div class="footer-note">generated by /dev/digest from live web search — verify against primary sources before citing.</div>
+</div>
+</body>
+</html>`;
+}
+
+function downloadIssue(){
+  if(!Object.keys(lastIssue.byCategory).length) return;
+  const format = formatSelect.value;
+  const stamp = String(lastIssue.number).padStart(3,'0');
+  const dateStamp = lastIssue.isoDate || new Date().toISOString().slice(0,10);
+  const base = `dev-digest-issue-${stamp}-${dateStamp}`;
+  if(format === 'md'){
+    triggerDownload(`${base}.md`, buildMarkdown(), 'text/markdown');
+  } else {
+    triggerDownload(`${base}.html`, buildHtmlExport(), 'text/html');
+  }
+}
+
+genBtn.addEventListener('click', generateIssue);
+downloadBtn.addEventListener('click', downloadIssue);
+</script>
+</body>
+</html>
