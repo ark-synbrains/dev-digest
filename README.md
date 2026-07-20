@@ -115,12 +115,12 @@ Two ways to generate and email `/dev/digest` on a timer:
 1. **Cursor Automation (preferred)** — paste the config in
    [`.cursor/automations/dev-digest-hourly.md`](.cursor/automations/dev-digest-hourly.md)
    at [cursor.com/automations](https://cursor.com/automations), every hour at
-   **:00 IST** (`CRON_TZ=Asia/Kolkata 0 * * * *`), 2-run trial via memory.
+   **:00 IST** (`CRON_TZ=Asia/Kolkata 0 * * * *`), 1-run trial via memory.
    Uses this environment’s SMTP secrets.
 2. **GitHub Actions fallback** —
    [`.github/workflows/dev-digest-hourly.yml`](.github/workflows/dev-digest-hourly.yml)
    runs `agent/` every hour at **:00 IST** (`30 * * * *` UTC) and auto-disables
-   after **2 successful sends**.
+   after **1 successful send**.
 
 ### Agent CLI
 
