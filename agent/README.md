@@ -25,7 +25,8 @@ Copy `.env.example` to `.env` (local) or set GitHub Actions secrets/variables:
 | `SMTP_USER` | usually | — | SMTP auth username |
 | `SMTP_PASS` | if user set | — | SMTP auth password / app password |
 | `SMTP_FROM_EMAIL` | yes (send) | `/dev/digest <digest@newsletters.synbrains.ai>` | From header |
-| `NEWSLETTER_TO_EMAIL` | yes | `archana.rk@synbrains.ai` | Recipient |
+| `NEWSLETTER_TO_EMAILS` | yes | `archana.rk@synbrains.ai` | Comma/semicolon/whitespace-separated recipient list |
+| `NEWSLETTER_TO_EMAIL` | no | — | Single-address fallback if `NEWSLETTER_TO_EMAILS` is unset |
 | `NEWSLETTER_REPLY_TO` | no | — | Reply-To header |
 | `NEWSLETTER_SCOPE` | no | `all` | `all` \| `models` \| `products` \| `algorithms` |
 | `NEWSLETTER_INTERVAL_HOURS` | no | `12` | Scheduler interval |
@@ -41,7 +42,8 @@ Repository → Settings → Secrets and variables → Actions:
 - `SMTP_PASS`
 - `SMTP_FROM_EMAIL` (optional if the default from-address is correct)
 - `SMTP_PORT` / `SMTP_SECURE` (optional)
-- `NEWSLETTER_TO_EMAIL` (optional if the default recipient is correct)
+- `NEWSLETTER_TO_EMAILS` — comma-separated list, e.g. `a@x.com,b@y.com`
+  (or `NEWSLETTER_TO_EMAIL` for a single address)
 
 ### Example providers
 
@@ -58,14 +60,14 @@ Use an address your SMTP provider allows you to send from for `SMTP_FROM_EMAIL`.
 
 ```bash
 cd agent
-cp .env.example .env   # fill in Anthropic + SMTP settings
+cp .env.example .env   # fill in Anthropic + SMTP + NEWSLETTER_TO_EMAILS
 npm install
 
 # Generate + print markdown (no send)
 npm run dry-run
 
-# Generate with sample content + send (needs SMTP_*)
-node src/index.js --fixture
+# Generate with sample content + send to all recipients (needs SMTP_*)
+NEWSLETTER_TO_EMAILS='a@x.com,b@y.com' node src/index.js --fixture
 
 # Full live generate + send
 npm start

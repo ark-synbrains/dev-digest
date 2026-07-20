@@ -28,11 +28,12 @@ async function sleep(ms) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   // Load interval without requiring secrets yet (runOnce validates when sending)
-  const config = loadConfig({ requireSendSecrets: false });
+  const config = loadConfig();
   const intervalMs = config.intervalHours * 60 * 60 * 1000;
 
   console.log(
-    `[dev-digest] scheduler started — every ${config.intervalHours}h → ${config.to}`
+    `[dev-digest] scheduler started — every ${config.intervalHours}h → ` +
+      `${config.recipients.length} recipient(s): ${config.recipients.join(', ')}`
   );
 
   // Run immediately on start, then every interval

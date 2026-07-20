@@ -3,7 +3,7 @@
  * /dev/digest newsletter agent — one-shot run.
  *
  * Generates a fresh issue (Anthropic + web search) and emails it via SMTP
- * to NEWSLETTER_TO_EMAIL.
+ * to every address in NEWSLETTER_TO_EMAILS (or NEWSLETTER_TO_EMAIL).
  *
  * Usage:
  *   node src/index.js
@@ -102,18 +102,35 @@ export async function runOnce(options = {}) {
     requireSmtp: true,
   });
   console.log(
-    `[dev-digest] sending to ${sendConfig.to} from ${sendConfig.from} via ${sendConfig.smtp.host}:${sendConfig.smtp.port}…`
+    `[dev-digest] sending to ${sendConfig.recipients.length} recipient(s) ` +
+      `(${sendConfig.recipients.join(', ')}) from ${sendConfig.from} ` +
+      `via ${sendConfig.smtp.host}:${sendConfig.smtp.port}…`
   );
 
   const sent = await sendNewsletter({
     smtp: sendConfig.smtp,
     from: sendConfig.from,
-    to: sendConfig.to,
+    to: sendConfig.recipients,
     replyTo: sendConfig.replyTo,
     issue,
   });
 
-  console.log(`[dev-digest] sent: ${sent.id} — ${sent.subject}`);
+  for (const result of sent.sent) {
+    console.log(`[dev-digest] sent → ${result.to}: ${result.id}`);
+  }
+  for (const failure of sent.failed) {
+    console.error(`[dev-digest] failed → ${failure.to}: ${failure.error}`);
+  }
+  console.log(
+    `[dev-digest] done: ${sent.sent.length}/${sendConfig.recipients.length} delivered — ${sent.subject}`
+  );
+
+  if (sent.failed.length > 0) {
+    throw new Error(
+      `Partial send failure: ${sent.failed.length} of ${sendConfig.recipients.length} recipients failed`
+    );
+  }
+
   return { issue, sent, dryRun: false };
 }
 

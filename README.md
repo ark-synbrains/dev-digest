@@ -98,18 +98,18 @@ what counts as a "model," "algorithm," or "product" entry.
 
 The `agent/` package is a server-side port of the same generation logic. It
 builds a fresh issue with Anthropic web search and emails it over **SMTP** to
-`NEWSLETTER_TO_EMAIL`.
+every address in `NEWSLETTER_TO_EMAILS`.
 
 - **Schedule:** GitHub Actions workflow `.github/workflows/newsletter.yml`
   runs on cron `0 */12 * * *` (every 12 hours UTC), plus manual dispatch.
 - **Config:** see [`agent/README.md`](agent/README.md) and `agent/.env.example`.
 - **Required secrets:** `ANTHROPIC_API_KEY`, `SMTP_HOST`, `SMTP_USER`,
-  `SMTP_PASS`, and optionally `SMTP_FROM_EMAIL` / `NEWSLETTER_TO_EMAIL`.
+  `SMTP_PASS`, and `NEWSLETTER_TO_EMAILS` (comma-separated list).
 
 ```bash
 cd agent && npm install
-cp .env.example .env   # set Anthropic + SMTP + NEWSLETTER_TO_EMAIL
-npm start              # one-shot generate + send
+cp .env.example .env   # set Anthropic + SMTP + NEWSLETTER_TO_EMAILS
+npm start              # one-shot generate + send to all recipients
 npm run schedule       # loop every 12 hours
 ```
 
