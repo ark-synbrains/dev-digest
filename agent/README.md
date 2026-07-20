@@ -8,7 +8,8 @@ Server-side agent that generates a `/dev/digest` issue (same three lanes as
 
 | Mode | How |
 |------|-----|
-| **GitHub Actions (recommended)** | `.github/workflows/newsletter.yml` runs on `0 */12 * * *` (every 12 hours UTC) and on manual `workflow_dispatch` |
+| **Cursor Automation** | Create from [`.cursor/automations/send-dev-digest.md`](../.cursor/automations/send-dev-digest.md) at [cursor.com/automations/new](https://cursor.com/automations/new) — cron `0 */12 * * *` |
+| **GitHub Actions** | `.github/workflows/newsletter.yml` runs on `0 */12 * * *` (every 12 hours UTC) and on manual `workflow_dispatch` |
 | **Long-running process** | `npm run schedule` — loops every `NEWSLETTER_INTERVAL_HOURS` (default 12) |
 | **One-shot** | `npm start` |
 

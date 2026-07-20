@@ -100,8 +100,11 @@ The `agent/` package is a server-side port of the same generation logic. It
 builds a fresh issue with Anthropic web search and emails it over **SMTP** to
 every address in `NEWSLETTER_TO_EMAILS`.
 
-- **Schedule:** GitHub Actions workflow `.github/workflows/newsletter.yml`
-  runs on cron `0 */12 * * *` (every 12 hours UTC), plus manual dispatch.
+- **Cursor Automation:** ready-to-create definition in
+  [`.cursor/automations/send-dev-digest.md`](.cursor/automations/send-dev-digest.md)
+  (scheduled cloud agent, cron `0 */12 * * *`).
+- **GitHub Actions fallback:** `.github/workflows/newsletter.yml` on the same
+  cron, plus manual dispatch.
 - **Config:** see [`agent/README.md`](agent/README.md) and `agent/.env.example`.
 - **Required secrets:** `ANTHROPIC_API_KEY`, `SMTP_HOST`, `SMTP_USER`,
   `SMTP_PASS`, and `NEWSLETTER_TO_EMAILS` (comma-separated list).
@@ -125,12 +128,9 @@ npm run schedule       # loop every 12 hours
 ## File structure
 
 ```
-tech-digest-agent.html              interactive single-file generator UI
-agent/                              scheduled newsletter agent (generate + email)
-  src/index.js                      one-shot generate + send
-  src/scheduler.js                  long-running every-N-hours loop
-  src/generate.js                   Anthropic + web search port of the UI logic
-  src/email.js                      HTML/text render + SMTP send
-.github/workflows/newsletter.yml    cron every 12 hours
-README.md                           this file
+tech-digest-agent.html                 interactive single-file generator UI
+agent/                                 newsletter agent (generate + SMTP send)
+.cursor/automations/send-dev-digest.md Cursor Automation prompt (every 12h)
+.github/workflows/newsletter.yml       GitHub Actions cron every 12 hours
+README.md                              this file
 ```
