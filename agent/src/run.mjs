@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { researchDigest } from './research.mjs';
 import { validateAndRankDigest } from './validate.mjs';
 import { buildIssue } from './render.mjs';
+import { sanitizeIssue } from './sanitize.mjs';
 import { sendSmtpEmail } from './smtp.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -35,8 +36,12 @@ function parseRecipients(raw) {
     .filter(Boolean);
 }
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/** Display / subject date: DD Mon YYYY (e.g. 20 Jul 2026). */
 function formatDate(d = new Date()) {
-  return d.toDateString();
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${dd} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
 }
 
 function dateStamp(d = new Date()) {
@@ -54,10 +59,10 @@ async function main() {
   const date = formatDate(now);
   const stamp = dateStamp(now);
 
-  console.log('Researching Hive Digest lanes…');
+  console.log('Researching Hive Digest lanes...');
   const raw = await researchDigest();
 
-  console.log('Validating & ranking by insight score…');
+  console.log('Validating & ranking by insight score...');
   const { byCategory, sectionOrder, report } = validateAndRankDigest(raw);
   console.log(
     JSON.stringify(
@@ -79,7 +84,8 @@ async function main() {
     throw new Error('No digest entries passed validation / insight ranking');
   }
 
-  const issue = buildIssue({ date, byCategory, sectionOrder });
+  // Sanitize fancy/unicode glyphs out of the final newsletter before send.
+  const issue = sanitizeIssue(buildIssue({ date, byCategory, sectionOrder }));
 
   if (dryRun) {
     const outDir = join(ROOT, 'out');
