@@ -1,8 +1,8 @@
-# /dev/digest — hourly newsletter automation (trial: 2 runs)
+# /dev/digest — hourly newsletter automation (trial: 1 run)
 #
 # Schedule: every hour at :00 IST (Asia/Kolkata).
 # GitHub Actions cron is UTC-only, so this is minute 30 UTC (= :00 IST).
-# Trial: after 2 successful sends, the workflow disables itself.
+# Trial: after 1 successful send, the workflow disables itself.
 #
 # Required GitHub Actions secrets:
 #   SMTP_HOST
@@ -15,7 +15,7 @@
 # Optional secrets / vars:
 #   SMTP_SECURE        (true/false; defaults to true when port is 465)
 #   SMTP_REPLY_TO
-#   DIGEST_MAX_RUNS    (default 2 for this trial workflow)
+#   DIGEST_MAX_RUNS    (default 1 for this trial workflow)
 
 name: /dev/digest hourly
 
@@ -45,7 +45,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const maxRuns = Number(process.env.DIGEST_MAX_RUNS || '2');
+            const maxRuns = Number(process.env.DIGEST_MAX_RUNS || '1');
             const workflowId = 'dev-digest-hourly.yml';
             const { data } = await github.rest.actions.listWorkflowRuns({
               owner: context.repo.owner,
@@ -78,7 +78,7 @@ jobs:
               core.setOutput('issue_number', String(prior + 2));
             }
         env:
-          DIGEST_MAX_RUNS: '2'
+          DIGEST_MAX_RUNS: '1'
 
       - name: Skip if trial complete
         if: steps.limit.outputs.skip == 'true'

@@ -10,7 +10,7 @@ Use this when creating the automation at [cursor.com/automations/new](https://cu
 | --- | --- |
 | **Name** | `/dev/digest` hourly newsletter |
 | **Trigger** | Scheduled → Custom cron (every hour IST): `CRON_TZ=Asia/Kolkata 0 * * * *` |
-| **Trial** | Leave enabled for **2 hourly runs**, then disable (or keep the prompt’s memory-based 2-run guard) |
+| **Trial** | Leave enabled for **1 hourly run**, then disable (or keep the prompt’s memory-based 1-run guard) |
 | **Repository** | `ark-synbrains/dev-digest` @ `main` |
 | **Environment** | `ark-synbrains/dev-digest` (needs SMTP + recipient secrets — see below) |
 | **Tools** | Memories on · PR creation optional/off |
@@ -33,9 +33,9 @@ Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 You are the /dev/digest newsletter automation for repo ark-synbrains/dev-digest.
 
 ## Run limit (trial)
-Only successfully generate+send TWICE total.
+Only successfully generate+send ONCE total.
 1. Read automation memories for `digest_runs_completed` (integer, default 0).
-2. If digest_runs_completed >= 2: do NOT generate or send. Reply that the 2-run trial is complete and the automation should be disabled. Stop.
+2. If digest_runs_completed >= 1: do NOT generate or send. Reply that the 1-run trial is complete and the automation should be disabled. Stop.
 3. Otherwise continue.
 
 ## Task
@@ -61,7 +61,7 @@ Generate a fresh /dev/digest technical newsletter and email it via SMTP.
 
 ### After success
 Update memories: increment `digest_runs_completed`, set `digest_issue_number`, store subject + SMTP messageId.
-Report issue number, messageId, and remaining trial runs.
+Report issue number, messageId, and that the 1-run trial is complete.
 
 ### Failure
 Do not pretend success. Record the error in memory and stop.
@@ -70,5 +70,5 @@ Do not pretend success. Record the error in memory and stop.
 ## `/automate` one-liner (local Cursor)
 
 ```
-/automate Every hour at :00 IST (cron: CRON_TZ=Asia/Kolkata 0 * * * *), generate the /dev/digest technical newsletter for ark-synbrains/dev-digest and email it via SMTP using SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/SMTP_FROM and NEWSLETTER_TO_EMAILS. Limit to 2 successful sends via memory, then stop. Prefer running npm start --prefix agent when available.
+/automate Every hour at :00 IST (cron: CRON_TZ=Asia/Kolkata 0 * * * *), generate the /dev/digest technical newsletter for ark-synbrains/dev-digest and email it via SMTP using SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/SMTP_FROM and NEWSLETTER_TO_EMAILS. Limit to 1 successful send via memory, then stop. Prefer running npm start --prefix agent when available.
 ```
