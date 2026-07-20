@@ -19,15 +19,12 @@ No build step, no server, no dependencies to install. Open the file and go.
 - **Retry & timeout handling** — transient network errors and 429/5xx
   responses are retried once automatically; a lane that still fails shows the
   real error message inline instead of a generic failure.
-- **Light / dark theme toggle** — a small switch in the masthead flips between
-  a warm "paper terminal" light theme and a "phosphor terminal" dark theme
-  (green accents in both, since green phosphor was the classic easy-on-the-eyes
-  CRT choice — worth noting that's more terminal folklore than settled
-  research, but it fits the concept either way).
+- **Phosphor terminal look** — the generator UI uses a dark "phosphor terminal"
+  palette (green accents on near-black).
 - **Download the issue** — export the current issue as Markdown (`.md`, plain
   text, good for pasting into Notion/GitHub/Slack) or as a styled, standalone
-  HTML file that mirrors the site's design and captures whichever theme was
-  active at download time.
+  HTML file. Exported / emailed newsletter HTML is **always dark theme**, even
+  if the surrounding UI look changes later.
 - **Responsive layout** — usable from small phone screens up through wide
   desktop viewports; controls stack into a touch-friendly single column below
   480px.
@@ -42,9 +39,7 @@ No build step, no server, no dependencies to install. Open the file and go.
    status with an elapsed timer; sections fill in as they complete.
 4. Once at least one lane succeeds, the download icon (↓) becomes active and
    a format dropdown appears next to it. Pick `.md` or `.html` and click the
-   icon to save the issue.
-5. Use the toggle switch in the top-right of the masthead to flip between
-   light and dark themes at any time.
+   icon to save the issue. HTML downloads always use the dark newsletter theme.
 
 ## Important: where this runs
 
@@ -64,24 +59,10 @@ built for.
 Everything lives in one file, so customization means editing CSS variables or
 a few small JS functions directly.
 
-**Colors** — both themes are defined as CSS custom properties near the top of
-the `<style>` block:
-```css
-:root{ /* light theme */
-  --bg: #F2EEE4;
-  --amber: #3F6B4A;   /* primary accent */
-  --add: #2F5C43;     /* entry-tag color */
-  --del: #9C3B2C;     /* error/warning color */
-  /* …etc */
-}
-html[data-theme="dark"]{ /* dark theme overrides */
-  --bg: #0F1516;
-  --amber: #5FBE87;
-  /* …etc */
-}
-```
-Change the hex values to retheme either mode; every component reads from
-these variables, including the downloadable HTML export.
+**Colors** — the UI palette is defined as CSS custom properties near the top of
+the `<style>` block (`:root`). The downloadable / emailed newsletter HTML uses
+a fixed dark palette (`NEWSLETTER_DARK` in the script, and matching inline
+colors in `agent/src/render.mjs`) so exports stay dark regardless of UI tweaks.
 
 **Category focus / prompts** — the `categoryPrompt(cat, today)` function in
 the `<script>` block controls what each lane searches for and how many items
@@ -96,8 +77,8 @@ what counts as a "model," "algorithm," or "product" entry.
 
 ## Known limitations
 
-- **Session-only** — nothing persists. Reloading the page resets the theme to
-  light and clears the current issue; there's no local storage or backend.
+- **Session-only** — nothing persists. Reloading the page clears the current
+  issue; there's no local storage or backend.
 - **No scheduling** — this generates an issue on demand when you click the
   button. It doesn't run on a timer or send email. Turning this into an
   automatically-recurring, emailed newsletter would mean moving the same
@@ -113,14 +94,14 @@ what counts as a "model," "algorithm," or "product" entry.
 Two ways to generate and email `/dev/digest` on a timer:
 
 1. **Cursor Automation (preferred)** — paste the config in
-   [`.cursor/automations/dev-digest-hourly.md`](.cursor/automations/dev-digest-hourly.md)
+   [`.cursor/automations/newsletter.md`](.cursor/automations/newsletter.md)
    at [cursor.com/automations](https://cursor.com/automations), every hour at
-   **:00 IST** (`CRON_TZ=Asia/Kolkata 0 * * * *`), 1-run trial via memory.
+   **:00 IST** (`CRON_TZ=Asia/Kolkata 0 * * * *`). No run limit — each hour
+   generates and emails a new digest identified by date (no issue numbers).
    Uses this environment’s SMTP secrets.
 2. **GitHub Actions fallback** —
    [`.github/workflows/dev-digest-hourly.yml`](.github/workflows/dev-digest-hourly.yml)
-   runs `agent/` every hour at **:00 IST** (`30 * * * *` UTC) and auto-disables
-   after **1 successful send**.
+   runs `agent/` every hour at **:00 IST** (`30 * * * *` UTC) with no send cap.
 
 ### Agent CLI
 
@@ -149,6 +130,6 @@ Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 tech-digest-agent.html              browser artifact UI
 agent/                              Node newsletter generator + SMTP sender
 .github/workflows/dev-digest-hourly.yml
-.cursor/automations/dev-digest-hourly.md
+.cursor/automations/newsletter.md
 README.md
 ```

@@ -277,7 +277,6 @@
     <h1 class="masthead-title"><span class="slash">/</span>dev<span class="slash">/</span>digest<span class="cursor" aria-hidden="true"></span></h1>
     <div class="masthead-right">
       <div class="meta-line" id="metaLine">
-        issue <span class="issue">#000</span><br>
         <span id="dateLine">not generated</span>
       </div>
     </div>
@@ -336,8 +335,7 @@ function setDownloadEnabled(enabled){
   formatWrap.hidden = !enabled;
 }
 
-let issueNum = 0;
-let lastIssue = { number: 0, date: '', byCategory: {} }; // cat -> items[]
+let lastIssue = { date: '', isoDate: '', byCategory: {} }; // cat -> items[]
 
 function hashFor(str){
   let h = 0;
@@ -451,11 +449,10 @@ async function generateIssue(){
   genBtn.disabled = true;
   setDownloadEnabled(false);
   output.innerHTML = '';
-  issueNum += 1;
   const now = new Date();
-  metaLine.innerHTML = 'issue <span class="issue">#' + String(issueNum).padStart(3,'0') + '</span><br>' + now.toDateString();
+  metaLine.innerHTML = '<span class="issue">' + now.toDateString() + '</span>';
   const today = now.toISOString().slice(0,10);
-  lastIssue = { number: issueNum, date: now.toDateString(), isoDate: today, byCategory: {} };
+  lastIssue = { date: now.toDateString(), isoDate: today, byCategory: {} };
 
   const scope = scopeSelect.value;
   const scopeToCategory = { models: 'model', products: 'product', algorithms: 'algorithm' };
@@ -570,7 +567,7 @@ function triggerDownload(filename, content, mime){
 
 function buildMarkdown(){
   const order = ['model','algorithm','product'];
-  let md = `# /dev/digest — issue #${String(lastIssue.number).padStart(3,'0')}\n\n`;
+  let md = `# /dev/digest\n\n`;
   md += `_${lastIssue.date}_\n\n`;
   order.forEach(cat => {
     const items = lastIssue.byCategory[cat];
@@ -586,17 +583,20 @@ function buildMarkdown(){
   return md;
 }
 
-function getThemeVars(){
-  const styles = getComputedStyle(document.documentElement);
-  const keys = ['--bg','--card','--hairline','--ink','--ink-dim','--amber','--add'];
-  const vars = {};
-  keys.forEach(k => { vars[k.slice(2)] = styles.getPropertyValue(k).trim(); });
-  return vars;
-}
+// Generated newsletter HTML is always dark (phosphor terminal), independent of any UI theme.
+const NEWSLETTER_DARK = {
+  bg: '#0F1516',
+  card: '#1A2423',
+  hairline: '#2B3836',
+  ink: '#E6E8E1',
+  'ink-dim': '#8CA39A',
+  amber: '#5FBE87',
+  add: '#7FD9A0',
+};
 
 function buildHtmlExport(){
   const order = ['model','algorithm','product'];
-  const v = getThemeVars();
+  const v = NEWSLETTER_DARK;
   let sections = '';
   order.forEach(cat => {
     const items = lastIssue.byCategory[cat];
@@ -616,12 +616,15 @@ function buildHtmlExport(){
   });
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" style="color-scheme:dark;">
 <head>
 <meta charset="UTF-8">
-<title>/dev/digest — issue #${String(lastIssue.number).padStart(3,'0')}</title>
+<meta name="color-scheme" content="dark only">
+<meta name="supported-color-schemes" content="dark">
+<title>/dev/digest — ${escapeHtml(lastIssue.date)}</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,72,400;0,72,600;1,72,500&family=Inter:wght@400;500&display=swap');
+  :root{ color-scheme: dark only; }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
@@ -629,14 +632,16 @@ function buildHtmlExport(){
     color: ${v.ink};
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    color-scheme: dark;
   }
-  .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+  .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; background: ${v.bg}; color: ${v.ink}; }
   .masthead-title{
     font-family: 'Newsreader', serif;
     font-size: 34px;
     font-weight: 600;
     letter-spacing: -0.01em;
     margin: 0 0 8px;
+    color: ${v.ink};
   }
   .masthead-title .slash{ color: ${v.amber}; font-weight: 400; }
   .meta-line{
@@ -645,7 +650,7 @@ function buildHtmlExport(){
     color: ${v['ink-dim']};
     margin-bottom: 4px;
   }
-  .meta-line .issue{ color: ${v.amber}; }
+  .meta-line{ color: ${v.amber}; }
   .tagline{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12.5px;
@@ -694,8 +699,9 @@ function buildHtmlExport(){
     font-weight: 600;
     margin: 4px 0 6px;
     line-height: 1.3;
+    color: ${v.ink};
   }
-  .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; }
+  .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; color: ${v.ink}; }
   .entry-source{ font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; }
   .entry-source a{ color: ${v['ink-dim']}; text-decoration: none; border-bottom: 1px dotted ${v.hairline}; }
   .footer-note{
@@ -712,7 +718,7 @@ function buildHtmlExport(){
 <body>
 <div class="wrap">
   <h1 class="masthead-title"><span class="slash">/</span>dev<span class="slash">/</span>digest</h1>
-  <div class="meta-line">issue <span class="issue">#${String(lastIssue.number).padStart(3,'0')}</span> — ${escapeHtml(lastIssue.date)}</div>
+  <div class="meta-line">${escapeHtml(lastIssue.date)}</div>
   <div class="tagline"># a changelog for the world's tech stack — models, algorithms, releases</div>
 ${sections}
   <div class="footer-note">generated by /dev/digest from live web search — verify against primary sources before citing.</div>
@@ -724,9 +730,8 @@ ${sections}
 function downloadIssue(){
   if(!Object.keys(lastIssue.byCategory).length) return;
   const format = formatSelect.value;
-  const stamp = String(lastIssue.number).padStart(3,'0');
   const dateStamp = lastIssue.isoDate || new Date().toISOString().slice(0,10);
-  const base = `dev-digest-issue-${stamp}-${dateStamp}`;
+  const base = `dev-digest-${dateStamp}`;
   if(format === 'md'){
     triggerDownload(`${base}.md`, buildMarkdown(), 'text/markdown');
   } else {
