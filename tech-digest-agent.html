@@ -586,17 +586,20 @@ function buildMarkdown(){
   return md;
 }
 
-function getThemeVars(){
-  const styles = getComputedStyle(document.documentElement);
-  const keys = ['--bg','--card','--hairline','--ink','--ink-dim','--amber','--add'];
-  const vars = {};
-  keys.forEach(k => { vars[k.slice(2)] = styles.getPropertyValue(k).trim(); });
-  return vars;
-}
+// Generated newsletter HTML is always dark (phosphor terminal), independent of any UI theme.
+const NEWSLETTER_DARK = {
+  bg: '#0F1516',
+  card: '#1A2423',
+  hairline: '#2B3836',
+  ink: '#E6E8E1',
+  'ink-dim': '#8CA39A',
+  amber: '#5FBE87',
+  add: '#7FD9A0',
+};
 
 function buildHtmlExport(){
   const order = ['model','algorithm','product'];
-  const v = getThemeVars();
+  const v = NEWSLETTER_DARK;
   let sections = '';
   order.forEach(cat => {
     const items = lastIssue.byCategory[cat];
@@ -616,12 +619,15 @@ function buildHtmlExport(){
   });
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" style="color-scheme:dark;">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="dark only">
+<meta name="supported-color-schemes" content="dark">
 <title>/dev/digest — issue #${String(lastIssue.number).padStart(3,'0')}</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,72,400;0,72,600;1,72,500&family=Inter:wght@400;500&display=swap');
+  :root{ color-scheme: dark only; }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
@@ -629,14 +635,16 @@ function buildHtmlExport(){
     color: ${v.ink};
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    color-scheme: dark;
   }
-  .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+  .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; background: ${v.bg}; color: ${v.ink}; }
   .masthead-title{
     font-family: 'Newsreader', serif;
     font-size: 34px;
     font-weight: 600;
     letter-spacing: -0.01em;
     margin: 0 0 8px;
+    color: ${v.ink};
   }
   .masthead-title .slash{ color: ${v.amber}; font-weight: 400; }
   .meta-line{
@@ -694,8 +702,9 @@ function buildHtmlExport(){
     font-weight: 600;
     margin: 4px 0 6px;
     line-height: 1.3;
+    color: ${v.ink};
   }
-  .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; }
+  .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; color: ${v.ink}; }
   .entry-source{ font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; }
   .entry-source a{ color: ${v['ink-dim']}; text-decoration: none; border-bottom: 1px dotted ${v.hairline}; }
   .footer-note{

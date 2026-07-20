@@ -44,20 +44,7 @@ function hourStamp(d = new Date()) {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
-  const maxRuns = Number(process.env.DIGEST_MAX_RUNS || '0'); // 0 = unlimited
   const state = loadState();
-
-  if (maxRuns > 0 && state.runsCompleted >= maxRuns) {
-    console.log(
-      JSON.stringify({
-        ok: true,
-        skipped: true,
-        reason: `Trial complete: ${state.runsCompleted}/${maxRuns} runs already sent`,
-        runsCompleted: state.runsCompleted,
-      })
-    );
-    process.exit(0);
-  }
 
   console.log('Researching digest lanes…');
   const byCategory = await researchDigest();
@@ -117,9 +104,6 @@ async function main() {
   ].slice(-20);
   saveState(state);
 
-  const remaining =
-    maxRuns > 0 ? Math.max(0, maxRuns - state.runsCompleted) : null;
-
   console.log(
     JSON.stringify(
       {
@@ -130,7 +114,6 @@ async function main() {
         accepted: result.accepted,
         recipients: to.length,
         runsCompleted: state.runsCompleted,
-        remainingTrialRuns: remaining,
       },
       null,
       2
