@@ -58,9 +58,11 @@ function shortHook(headline) {
     }
   }
 
-  // Soft title-case cleanup for subject scanability
+  // Soft cleanup for subject scanability
   h = h.replace(/\s+/g, ' ').trim();
   if (h.length > 52) h = `${h.slice(0, 49).trimEnd()}...`;
+  // Capitalize first letter for inbox scan
+  h = h.charAt(0).toUpperCase() + h.slice(1);
   return h;
 }
 
