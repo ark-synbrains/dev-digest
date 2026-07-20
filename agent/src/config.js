@@ -50,10 +50,7 @@ export function parseRecipientList(raw, { required = false } = {}) {
   return recipients;
 }
 
-export function loadConfig({
-  requireAnthropic = false,
-  requireResend = false,
-} = {}) {
+export function loadConfig({ requireResend = false } = {}) {
   const recipientsRaw =
     optional('NEWSLETTER_TO_EMAILS') ||
     optional('NEWSLETTER_TO_EMAIL', 'archana.rk@synbrains.ai');
@@ -66,15 +63,9 @@ export function loadConfig({
     optional('NEWSLETTER_FROM_EMAIL', '/dev/digest <digest@newsletters.synbrains.ai>')
   );
   const replyTo = optional('NEWSLETTER_REPLY_TO', '');
-  const anthropicApiKey = optional('ANTHROPIC_API_KEY');
   const resendApiKey = optional('RESEND_API_KEY');
-  const model = optional('ANTHROPIC_MODEL', 'claude-sonnet-4-6');
   const scope = optional('NEWSLETTER_SCOPE', 'all'); // all | models | products | algorithms
   const intervalHours = Number(optional('NEWSLETTER_INTERVAL_HOURS', '12'));
-
-  if (requireAnthropic && !anthropicApiKey) {
-    throw new Error('Missing required environment variable: ANTHROPIC_API_KEY');
-  }
 
   if (requireResend) {
     if (!resendApiKey) {
@@ -95,9 +86,7 @@ export function loadConfig({
     recipients,
     from,
     replyTo: replyTo || undefined,
-    anthropicApiKey,
     resendApiKey,
-    model,
     scope,
     intervalHours,
   };

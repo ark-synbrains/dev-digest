@@ -2,13 +2,13 @@
 /**
  * /dev/digest newsletter agent — one-shot run.
  *
- * Generates a fresh issue (Anthropic + web search) and emails it via Resend
- * to every address in NEWSLETTER_TO_EMAILS (or NEWSLETTER_TO_EMAIL).
+ * Pulls a fresh issue from Hacker News + Dev.to + curated RSS feeds,
+ * then emails it via Resend to every address in NEWSLETTER_TO_EMAILS.
  *
  * Usage:
  *   node src/index.js
  *   node src/index.js --dry-run          # generate only, print markdown
- *   node src/index.js --fixture         # skip Anthropic; use sample issue
+ *   node src/index.js --fixture         # skip live sources; use sample issue
  */
 
 import { loadConfig } from './config.js';
@@ -33,7 +33,7 @@ function buildFixtureIssue() {
         {
           headline: 'Fixture model update for agent smoke test',
           summary:
-            'This is a sample entry used when the agent runs with --fixture. Replace by running without --fixture once ANTHROPIC_API_KEY is set.',
+            'This is a sample entry used when the agent runs with --fixture. Live runs pull from Hacker News, Dev.to, and curated RSS feeds.',
           source_name: '/dev/digest',
           source_url: 'https://github.com/ark-synbrains/dev-digest',
         },
@@ -63,22 +63,16 @@ function buildFixtureIssue() {
 
 export async function runOnce(options = {}) {
   const { dryRun = false, fixture = false } = options;
-  const config = loadConfig({
-    requireAnthropic: !dryRun && !fixture,
-    requireResend: false,
-  });
+  const config = loadConfig({ requireResend: false });
 
   console.log(
-    `[dev-digest] generating issue (scope=${config.scope}${fixture ? ', fixture' : ''})…`
+    `[dev-digest] generating issue (scope=${config.scope}` +
+      `${fixture ? ', fixture' : ', sources=HN+Dev.to+RSS'})…`
   );
 
   const issue = fixture
     ? buildFixtureIssue()
-    : await generateIssue({
-        apiKey: config.anthropicApiKey || requiredForGenerate(),
-        model: config.model,
-        scope: config.scope,
-      });
+    : await generateIssue({ scope: config.scope });
 
   const entryCount = Object.values(issue.byCategory).reduce(
     (n, items) => n + (items?.length || 0),
@@ -97,10 +91,7 @@ export async function runOnce(options = {}) {
     return { issue, sent: null, dryRun: true };
   }
 
-  const sendConfig = loadConfig({
-    requireAnthropic: false,
-    requireResend: true,
-  });
+  const sendConfig = loadConfig({ requireResend: true });
   console.log(
     `[dev-digest] sending to ${sendConfig.recipients.length} recipient(s) ` +
       `(${sendConfig.recipients.join(', ')}) from ${sendConfig.from} via Resend…`
@@ -131,10 +122,6 @@ export async function runOnce(options = {}) {
   }
 
   return { issue, sent, dryRun: false };
-}
-
-function requiredForGenerate() {
-  throw new Error('Missing required environment variable: ANTHROPIC_API_KEY');
 }
 
 const isMain =

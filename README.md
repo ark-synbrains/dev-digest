@@ -96,34 +96,29 @@ what counts as a "model," "algorithm," or "product" entry.
 
 ## Automated email agent (every 12 hours)
 
-The `agent/` package is a server-side port of the same generation logic. It
-builds a fresh issue with Anthropic web search and emails it via **Resend** to
-every address in `NEWSLETTER_TO_EMAILS`.
+The `agent/` package builds a fresh issue from **Hacker News, Dev.to, and
+curated RSS feeds**, then emails it via **Resend** to every address in
+`NEWSLETTER_TO_EMAILS`. (The HTML UI still uses Claude web search; the
+scheduled agent uses these public sources instead.)
 
-- **Cursor Automation:** ready-to-create definition in
-  [`.cursor/automations/send-dev-digest.md`](.cursor/automations/send-dev-digest.md)
-  (scheduled cloud agent, cron `0 */12 * * *`).
-- **GitHub Actions fallback:** `.github/workflows/newsletter.yml` on the same
-  cron, plus manual dispatch.
-- **Config:** see [`agent/README.md`](agent/README.md) and `agent/.env.example`.
-- **Required secrets:** `ANTHROPIC_API_KEY`, `RESEND_API_KEY`, and
-  `NEWSLETTER_TO_EMAILS` (comma-separated list).
+- **Cursor Automation:** [`.cursor/automations/send-dev-digest.md`](.cursor/automations/send-dev-digest.md)
+- **GitHub Actions:** `.github/workflows/newsletter.yml` (`0 */12 * * *`)
+- **Secrets:** `RESEND_API_KEY`, `NEWSLETTER_TO_EMAILS` (optional `RESEND_FROM_EMAIL`)
+- **Config:** [`agent/README.md`](agent/README.md), sources in `agent/src/sources.js`
 
 ```bash
 cd agent && npm install
-cp .env.example .env   # set Anthropic + Resend + NEWSLETTER_TO_EMAILS
-npm start              # one-shot generate + send to all recipients
-npm run schedule       # loop every 12 hours
+cp .env.example .env   # set Resend + NEWSLETTER_TO_EMAILS
+npm run dry-run        # live generate from public sources
+npm start              # generate + send
 ```
 
 ## Known limitations
 
 - **Session-only (HTML UI)** — nothing persists in the browser tool. Reloading
   the page resets the theme to light and clears the current issue.
-- **Search quality varies** — results depend on what's indexed and available
-  at generation time; always check the linked source before citing an entry.
-- **Three API calls per run** — one per lane (fewer if you scope to a single
-  category), each doing a small number of web searches.
+- **Source coverage varies** — HN/Dev.to/RSS quality depends on what's
+  published recently; always check linked sources before citing.
 - **Domain verification** — production sends need `newsletters.synbrains.ai`
   verified in Resend (sandbox `onboarding@resend.dev` only reaches your
   Resend account email).
@@ -132,7 +127,8 @@ npm run schedule       # loop every 12 hours
 
 ```
 tech-digest-agent.html                 interactive single-file generator UI
-agent/                                 newsletter agent (generate + Resend send)
+agent/                                 newsletter agent (HN/Dev.to/RSS + Resend)
+  src/sources.js                       feed URLs and search queries per lane
 .cursor/automations/send-dev-digest.md Cursor Automation prompt (every 12h)
 .github/workflows/newsletter.yml       GitHub Actions cron every 12 hours
 README.md                              this file

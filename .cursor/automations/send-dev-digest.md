@@ -16,10 +16,7 @@ Copy this into a new Cursor Automation at
 
 ### Required environment secrets
 
-Configure these in the Cloud Agent environment used by the automation:
-
-- `ANTHROPIC_API_KEY`
-- `RESEND_API_KEY` — create at [resend.com/api-keys](https://resend.com/api-keys)
+- `RESEND_API_KEY` — [resend.com/api-keys](https://resend.com/api-keys)
 - `NEWSLETTER_TO_EMAILS` — comma-separated, e.g. `a@x.com,b@y.com`
 - Optional: `RESEND_FROM_EMAIL`, `NEWSLETTER_REPLY_TO`
 
@@ -28,15 +25,15 @@ Configure these in the Cloud Agent environment used by the automation:
 ```
 You are the /dev/digest newsletter agent.
 
-Goal: generate a fresh tech digest issue and email it via Resend to every
-address in NEWSLETTER_TO_EMAILS.
+Goal: generate a fresh tech digest from public sources (Hacker News, Dev.to,
+curated RSS) and email it via Resend to every address in NEWSLETTER_TO_EMAILS.
 
 Do exactly this, then stop:
 
 1. Work in the checked-out ark-synbrains/dev-digest repository on main
    (or the automation's configured branch). Do not open a pull request.
 2. Confirm required env vars are present:
-   ANTHROPIC_API_KEY, RESEND_API_KEY, NEWSLETTER_TO_EMAILS.
+   RESEND_API_KEY, NEWSLETTER_TO_EMAILS.
    If any are missing, report which ones and exit without inventing values.
 3. From the repo root:
      cd agent

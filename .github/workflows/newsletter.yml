@@ -15,7 +15,7 @@ on:
           - 'false'
           - 'true'
       fixture:
-        description: 'Use sample fixture content instead of Anthropic'
+        description: 'Use sample fixture content instead of live sources'
         required: false
         default: 'false'
         type: choice
@@ -50,7 +50,6 @@ jobs:
 
       - name: Run newsletter agent
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
           # Comma-separated list, e.g. "a@x.com,b@y.com"
@@ -59,7 +58,6 @@ jobs:
           NEWSLETTER_TO_EMAIL: ${{ secrets.NEWSLETTER_TO_EMAIL }}
           NEWSLETTER_REPLY_TO: ${{ secrets.NEWSLETTER_REPLY_TO }}
           NEWSLETTER_SCOPE: ${{ vars.NEWSLETTER_SCOPE }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
         run: |
           ARGS=()
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then

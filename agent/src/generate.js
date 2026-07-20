@@ -1,13 +1,16 @@
 /**
- * Server-side port of the /dev/digest generation logic from tech-digest-agent.html.
- * Calls Anthropic Messages API with web_search and returns structured issue data.
+ * Generate /dev/digest issues from free public sources:
+ * Hacker News (Algolia), Dev.to, and curated RSS feeds.
+ * No Anthropic / web-search API key required.
  */
 
-const SECTION_META = {
-  model: { label: 'models & research' },
-  algorithm: { label: 'algorithms & systems' },
-  product: { label: 'product & company releases' },
-};
+import {
+  SECTION_META,
+  HN_QUERIES,
+  DEVTO_TAGS,
+  RSS_FEEDS,
+  LANE_KEYWORDS,
+} from './sources.js';
 
 const SCOPE_TO_CATEGORIES = {
   all: ['model', 'algorithm', 'product'],
@@ -16,120 +19,265 @@ const SCOPE_TO_CATEGORIES = {
   algorithms: ['algorithm'],
 };
 
-function categoryPrompt(cat, today) {
-  const focus = {
-    model:
-      'new or meaningfully upgraded AI/ML models (LLMs, image/audio/video models, or notable research models) and the papers or techniques behind them',
-    algorithm:
-      'new algorithms, systems techniques, infrastructure breakthroughs, or technical methods — not consumer product news',
-    product:
-      'company product launches, major feature releases, and hardware/software announcements ("Company X released Product Y")',
-  }[cat];
+const MAX_PER_LANE = 4;
+const LOOKBACK_DAYS = 10;
+const USER_AGENT = 'dev-digest-agent/1.0 (+https://github.com/ark-synbrains/dev-digest)';
 
-  return `You are a technical news editor for hands-on engineers and researchers.
-Today's date is ${today}.
-Use web search to find 3 to 4 distinct, recent (last 7-10 days, or most recent available) global developments about: ${focus}.
-Skip rumors and opinion pieces; prefer primary announcements (company blogs, official docs, papers, reputable tech press). Do 2-3 targeted searches at most, then stop searching and answer.
-
-Respond with ONLY a raw JSON array (no markdown fences, no prose before or after). Each element must have exactly these fields:
-- "headline": short punchy headline, under 12 words, no trailing period
-- "summary": 2-3 sentences, technical and specific (mention concrete numbers/specs/benchmarks where available), written in your own words, no quotations
-- "source_name": the publication or company blog name
-- "source_url": the direct URL
-
-Return nothing but the JSON array.`;
+function stripHtml(html) {
+  return String(html || '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
-function parseItems(textBlocks, cat) {
-  if (!textBlocks.trim()) {
-    throw new Error('empty response body');
-  }
+function truncate(text, max = 320) {
+  const t = stripHtml(text);
+  if (t.length <= max) return t;
+  return t.slice(0, max - 1).replace(/\s+\S*$/, '') + '…';
+}
 
-  let cleaned = textBlocks
-    .trim()
-    .replace(/^```json/i, '')
-    .replace(/^```/, '')
-    .replace(/```$/, '')
-    .trim();
+function headlineFrom(title) {
+  let h = stripHtml(title).replace(/\s+/g, ' ').trim();
+  h = h.replace(/[.!?]+$/, '');
+  const words = h.split(/\s+/);
+  if (words.length > 12) h = words.slice(0, 12).join(' ');
+  return h || 'untitled update';
+}
 
-  const firstBracket = cleaned.indexOf('[');
-  const lastBracket = cleaned.lastIndexOf(']');
-  if (firstBracket !== -1 && lastBracket !== -1) {
-    cleaned = cleaned.slice(firstBracket, lastBracket + 1);
-  }
+function matchesLane(cat, title, summary) {
+  const keywords = LANE_KEYWORDS[cat] || [];
+  const hay = `${title} ${summary}`.toLowerCase();
+  return keywords.some((k) => hay.includes(k.toLowerCase()));
+}
 
-  let items;
+async function fetchText(url, { attempt = 1 } = {}) {
+  let response;
   try {
-    items = JSON.parse(cleaned);
-  } catch {
-    throw new Error('could not parse JSON: ' + cleaned.slice(0, 120));
+    response = await fetch(url, {
+      headers: {
+        'User-Agent': USER_AGENT,
+        Accept: 'application/json, application/rss+xml, application/xml, text/xml, */*',
+      },
+    });
+  } catch (err) {
+    if (attempt < 2) {
+      await new Promise((r) => setTimeout(r, 600));
+      return fetchText(url, { attempt: attempt + 1 });
+    }
+    throw err;
   }
-  if (!Array.isArray(items)) {
-    throw new Error(cat + ' returned malformed data (not an array)');
+
+  if (!response.ok) {
+    if ((response.status === 429 || response.status >= 500) && attempt < 2) {
+      await new Promise((r) => setTimeout(r, 800));
+      return fetchText(url, { attempt: attempt + 1 });
+    }
+    throw new Error(`HTTP ${response.status} for ${url}`);
+  }
+  return response.text();
+}
+
+async function fetchJson(url) {
+  const text = await fetchText(url);
+  return JSON.parse(text);
+}
+
+async function fetchHnStories(cat, sinceUnix) {
+  const queries = HN_QUERIES[cat] || [];
+  const hits = [];
+
+  for (const query of queries) {
+    const params = new URLSearchParams({
+      query,
+      tags: 'story',
+      hitsPerPage: '20',
+      numericFilters: `created_at_i>${sinceUnix}`,
+    });
+    const url = `https://hn.algolia.com/api/v1/search?${params}`;
+    try {
+      const data = await fetchJson(url);
+      for (const hit of data.hits || []) {
+        const title = hit.title || hit.story_title;
+        const urlOut = hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`;
+        if (!title || !urlOut) continue;
+        hits.push({
+          headline: headlineFrom(title),
+          summary:
+            truncate(hit.story_text || hit.comment_text || '') ||
+            `Trending on Hacker News (${hit.points || 0} points, ${hit.num_comments || 0} comments). ${title}`,
+          source_name: hit.author ? `HN / ${hit.author}` : 'Hacker News',
+          source_url: urlOut,
+          _score: (hit.points || 0) + (hit.num_comments || 0) * 0.5,
+          _origin: 'hn',
+        });
+      }
+    } catch (err) {
+      console.warn(`[dev-digest] HN fetch failed for ${cat}:`, err.message || err);
+    }
+  }
+
+  return hits;
+}
+
+async function fetchDevto(cat) {
+  const tags = DEVTO_TAGS[cat] || [];
+  const hits = [];
+
+  for (const tag of tags.slice(0, 2)) {
+    const url = `https://dev.to/api/articles?tag=${encodeURIComponent(tag)}&top=10&per_page=12`;
+    try {
+      const articles = await fetchJson(url);
+      for (const a of articles || []) {
+        if (!a.title || !a.url) continue;
+        const published = a.published_at ? Date.parse(a.published_at) : 0;
+        const ageMs = Date.now() - published;
+        if (published && ageMs > LOOKBACK_DAYS * 24 * 60 * 60 * 1000) continue;
+        hits.push({
+          headline: headlineFrom(a.title),
+          summary: truncate(a.description || a.title),
+          source_name: a.user?.name ? `Dev.to / ${a.user.name}` : 'Dev.to',
+          source_url: a.url,
+          _score: (a.positive_reactions_count || 0) + (a.comments_count || 0),
+          _origin: 'devto',
+        });
+      }
+    } catch (err) {
+      console.warn(`[dev-digest] Dev.to fetch failed for tag=${tag}:`, err.message || err);
+    }
+  }
+
+  return hits;
+}
+
+function parseRssItems(xml, sourceName) {
+  const items = [];
+  const blocks = xml.match(/<item[\s\S]*?<\/item>/gi) || xml.match(/<entry[\s\S]*?<\/entry>/gi) || [];
+
+  for (const block of blocks) {
+    const title =
+      (block.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '';
+    const linkTagged =
+      (block.match(/<link[^>]*>([\s\S]*?)<\/link>/i) || [])[1] || '';
+    const linkHref =
+      (block.match(/<link[^>]+href=["']([^"']+)["']/i) || [])[1] || '';
+    const desc =
+      (block.match(/<description[^>]*>([\s\S]*?)<\/description>/i) ||
+        block.match(/<summary[^>]*>([\s\S]*?)<\/summary>/i) ||
+        block.match(/<content[^>]*>([\s\S]*?)<\/content>/i) ||
+        [])[1] || '';
+    const pub =
+      (block.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) ||
+        block.match(/<updated[^>]*>([\s\S]*?)<\/updated>/i) ||
+        block.match(/<published[^>]*>([\s\S]*?)<\/published>/i) ||
+        [])[1] || '';
+
+    const source_url = stripHtml(linkHref || linkTagged);
+    const headline = headlineFrom(title);
+    if (!headline || !source_url || !/^https?:\/\//i.test(source_url)) continue;
+
+    const published = pub ? Date.parse(stripHtml(pub)) : NaN;
+    items.push({
+      headline,
+      summary: truncate(desc) || `${headline} — via ${sourceName}`,
+      source_name: sourceName,
+      source_url,
+      _published: Number.isFinite(published) ? published : 0,
+      _origin: 'rss',
+      _score: Number.isFinite(published) ? published / 1e10 : 0,
+    });
+  }
+
+  return items;
+}
+
+async function fetchRss(cat) {
+  const feeds = RSS_FEEDS[cat] || [];
+  const hits = [];
+  const cutoff = Date.now() - LOOKBACK_DAYS * 24 * 60 * 60 * 1000;
+
+  await Promise.all(
+    feeds.map(async (feed) => {
+      try {
+        const xml = await fetchText(feed.url);
+        const items = parseRssItems(xml, feed.name).filter(
+          (it) => !it._published || it._published >= cutoff
+        );
+        hits.push(...items);
+      } catch (err) {
+        console.warn(`[dev-digest] RSS failed (${feed.name}):`, err.message || err);
+      }
+    })
+  );
+
+  return hits;
+}
+
+function dedupeKey(item) {
+  try {
+    const u = new URL(item.source_url);
+    return `${u.hostname}${u.pathname}`.toLowerCase().replace(/\/$/, '');
+  } catch {
+    return (item.headline || '').toLowerCase();
+  }
+}
+
+function selectLaneItems(cat, candidates) {
+  const seen = new Set();
+  const filtered = [];
+
+  for (const item of candidates) {
+    if (!matchesLane(cat, item.headline, item.summary) && item._origin !== 'rss') {
+      // Keep RSS from curated feeds even if keyword miss; drop off-topic HN/Dev.to
+      continue;
+    }
+    const key = dedupeKey(item);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    filtered.push(item);
+  }
+
+  // Prefer RSS (primary sources), then score
+  filtered.sort((a, b) => {
+    const originRank = (o) => (o === 'rss' ? 2 : o === 'hn' ? 1 : 0);
+    const dr = originRank(b._origin) - originRank(a._origin);
+    if (dr !== 0) return dr;
+    return (b._score || 0) - (a._score || 0);
+  });
+
+  return filtered.slice(0, MAX_PER_LANE).map(({ headline, summary, source_name, source_url }) => ({
+    headline,
+    summary,
+    source_name,
+    source_url,
+  }));
+}
+
+async function fetchCategory(cat) {
+  const sinceUnix = Math.floor(Date.now() / 1000) - LOOKBACK_DAYS * 24 * 60 * 60;
+  const [hn, devto, rss] = await Promise.all([
+    fetchHnStories(cat, sinceUnix),
+    fetchDevto(cat),
+    fetchRss(cat),
+  ]);
+
+  const items = selectLaneItems(cat, [...rss, ...hn, ...devto]);
+  if (items.length === 0) {
+    throw new Error(`no recent items found for ${cat}`);
   }
   return items;
 }
 
-async function fetchCategory({ cat, today, apiKey, model, attempt = 1 }) {
-  let response;
-  try {
-    response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model,
-        max_tokens: 1500,
-        system: categoryPrompt(cat, today),
-        messages: [{ role: 'user', content: 'Generate these entries now.' }],
-        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-      }),
-    });
-  } catch (networkErr) {
-    if (attempt < 2) {
-      await new Promise((r) => setTimeout(r, 800));
-      return fetchCategory({ cat, today, apiKey, model, attempt: attempt + 1 });
-    }
-    throw new Error(
-      (networkErr.name || 'NetworkError') +
-        ': ' +
-        (networkErr.message || 'request could not be sent')
-    );
-  }
-
-  if (!response.ok) {
-    let bodyText = '';
-    try {
-      bodyText = (await response.text()).slice(0, 200);
-    } catch {
-      /* ignore */
-    }
-    if ((response.status === 429 || response.status >= 500) && attempt < 2) {
-      await new Promise((r) => setTimeout(r, 1000));
-      return fetchCategory({ cat, today, apiKey, model, attempt: attempt + 1 });
-    }
-    throw new Error(
-      'HTTP ' + response.status + (bodyText ? ' — ' + bodyText : '')
-    );
-  }
-
-  const data = await response.json();
-  const textBlocks = (data.content || [])
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('\n');
-
-  return parseItems(textBlocks, cat);
-}
-
 /**
- * Generate a full newsletter issue.
- * @returns {Promise<{ number: number, date: string, isoDate: string, byCategory: Record<string, any[]>, errors: Record<string, string> }>}
+ * Generate a full newsletter issue from public sources.
  */
-export async function generateIssue({ apiKey, model, scope = 'all', issueNumber }) {
+export async function generateIssue({ scope = 'all', issueNumber } = {}) {
   const now = new Date();
   const isoDate = now.toISOString().slice(0, 10);
   const date = now.toDateString();
@@ -144,8 +292,8 @@ export async function generateIssue({ apiKey, model, scope = 'all', issueNumber 
 
   const results = await Promise.allSettled(
     categories.map((cat, idx) =>
-      new Promise((resolve) => setTimeout(resolve, idx * 350)).then(() =>
-        fetchCategory({ cat, today: isoDate, apiKey, model })
+      new Promise((resolve) => setTimeout(resolve, idx * 200)).then(() =>
+        fetchCategory(cat)
       )
     )
   );
