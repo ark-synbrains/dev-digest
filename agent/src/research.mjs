@@ -22,8 +22,32 @@ async function fetchText(url) {
   return res.text();
 }
 
+function decodeHtmlEntities(s) {
+  let out = String(s || '');
+  for (let i = 0; i < 3; i += 1) {
+    const prev = out;
+    out = out
+      .replace(/&amp;/gi, '&')
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>')
+      .replace(/&quot;/gi, '"')
+      .replace(/&apos;/gi, "'")
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+        const code = parseInt(hex, 16);
+        return Number.isFinite(code) ? String.fromCodePoint(code) : '';
+      })
+      .replace(/&#(\d+);/g, (_, dec) => {
+        const code = Number(dec);
+        return Number.isFinite(code) ? String.fromCodePoint(code) : '';
+      });
+    if (out === prev) break;
+  }
+  return out;
+}
+
 function stripHtml(s) {
-  return String(s || '')
+  return decodeHtmlEntities(s)
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();

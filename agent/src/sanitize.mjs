@@ -1,6 +1,7 @@
 /**
  * Normalize newsletter copy to plain ASCII-safe text for email clients.
- * Removes curly quotes, arrows, ellipses, zero-width chars, and other odd glyphs.
+ * Decodes HTML entities, then removes curly quotes, arrows, ellipses, and
+ * other odd glyphs that show up poorly in mail clients.
  */
 
 const REPLACEMENTS = [
@@ -17,10 +18,56 @@ const REPLACEMENTS = [
 ];
 
 /**
+ * Decode HTML entities from feed text (e.g. HN story_text uses &#x27;).
+ * Handles common named entities plus decimal/hex numeric entities.
+ * Runs multiple passes so double-encoded forms like &amp;#x27; resolve.
+ */
+export function decodeHtmlEntities(input) {
+  let s = String(input ?? '');
+
+  for (let i = 0; i < 3; i += 1) {
+    const prev = s;
+    s = s
+      .replace(/&amp;/gi, '&')
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>')
+      .replace(/&quot;/gi, '"')
+      .replace(/&apos;/gi, "'")
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+        const code = parseInt(hex, 16);
+        if (!Number.isFinite(code) || code < 0 || code > 0x10ffff) return '';
+        try {
+          return String.fromCodePoint(code);
+        } catch {
+          return '';
+        }
+      })
+      .replace(/&#(\d+);/g, (_, dec) => {
+        const code = Number(dec);
+        if (!Number.isFinite(code) || code < 0 || code > 0x10ffff) return '';
+        try {
+          return String.fromCodePoint(code);
+        } catch {
+          return '';
+        }
+      });
+    if (s === prev) break;
+  }
+
+  return s;
+}
+
+/**
  * Sanitize a string for newsletter subject/body content.
  */
 export function sanitizeNewsletterText(input) {
-  let s = String(input ?? '');
+  let s = decodeHtmlEntities(input);
+
+  // If feed text still contains tags after decode, keep the tag name as words
+  // so "<canvas>" becomes "canvas" instead of disappearing or leaking markup.
+  s = s.replace(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>/g, ' $1 ');
+
   try {
     s = s.normalize('NFKC');
   } catch {
@@ -52,7 +99,7 @@ export function sanitizeNewsletterText(input) {
 }
 
 /**
- * Sanitize digest entry fields in-place (headline/summary/source_name).
+ * Sanitize digest entry fields (headline/summary/source_name).
  * URLs are left unchanged aside from trimming.
  */
 export function sanitizeDigestEntries(byCategory) {
@@ -71,15 +118,13 @@ export function sanitizeDigestEntries(byCategory) {
 
 /**
  * Final pass on a built issue (subject/text/html content strings).
- * HTML tags are preserved; only text nodes' weird chars are cleaned via
- * a conservative attribute/text sweep that does not strip markup.
  */
 export function sanitizeIssue(issue) {
   return {
     ...issue,
     subject: sanitizeNewsletterText(issue.subject),
     text: sanitizeNewsletterText(issue.text),
-    // For HTML: replace known fancy glyphs still present in template/content
+    // Do not decode HTML entities in the finished document (would break &amp; etc.)
     html: sanitizeHtmlDocument(issue.html),
     date: sanitizeNewsletterText(issue.date),
   };
@@ -90,8 +135,7 @@ function sanitizeHtmlDocument(html) {
   for (const [re, to] of REPLACEMENTS) {
     s = s.replace(re, to);
   }
-  // Remove any remaining non-ASCII outside of HTML entities-safe ASCII
-  // but keep the markup intact (tags are ASCII).
+  // Keep markup/ASCII entities intact; only strip leftover non-ASCII glyphs.
   s = s.replace(/[^\x09\x0A\x0D\x20-\x7E]/g, '');
   return s;
 }
