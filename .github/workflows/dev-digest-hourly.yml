@@ -14,7 +14,6 @@
 # Optional secrets / vars:
 #   SMTP_SECURE        (true/false; defaults to true when port is 465)
 #   SMTP_REPLY_TO
-#   DIGEST_ISSUE_NUMBER (override next issue number; otherwise agent/state.json)
 
 name: /dev/digest hourly
 
@@ -58,5 +57,4 @@ jobs:
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
           SMTP_REPLY_TO: ${{ secrets.SMTP_REPLY_TO }}
           NEWSLETTER_TO_EMAILS: ${{ secrets.NEWSLETTER_TO_EMAILS }}
-          DIGEST_ISSUE_NUMBER: ${{ vars.DIGEST_ISSUE_NUMBER }}
         run: npm start --prefix agent

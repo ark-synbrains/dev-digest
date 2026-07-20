@@ -94,10 +94,11 @@ what counts as a "model," "algorithm," or "product" entry.
 Two ways to generate and email `/dev/digest` on a timer:
 
 1. **Cursor Automation (preferred)** — paste the config in
-   [`.cursor/automations/dev-digest-hourly.md`](.cursor/automations/dev-digest-hourly.md)
+   [`.cursor/automations/newsletter.md`](.cursor/automations/newsletter.md)
    at [cursor.com/automations](https://cursor.com/automations), every hour at
    **:00 IST** (`CRON_TZ=Asia/Kolkata 0 * * * *`). No run limit — each hour
-   generates and emails a new issue. Uses this environment’s SMTP secrets.
+   generates and emails a new digest identified by date (no issue numbers).
+   Uses this environment’s SMTP secrets.
 2. **GitHub Actions fallback** —
    [`.github/workflows/dev-digest-hourly.yml`](.github/workflows/dev-digest-hourly.yml)
    runs `agent/` every hour at **:00 IST** (`30 * * * *` UTC) with no send cap.
@@ -129,6 +130,6 @@ Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 tech-digest-agent.html              browser artifact UI
 agent/                              Node newsletter generator + SMTP sender
 .github/workflows/dev-digest-hourly.yml
-.cursor/automations/dev-digest-hourly.md
+.cursor/automations/newsletter.md
 README.md
 ```
