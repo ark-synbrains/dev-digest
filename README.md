@@ -48,7 +48,7 @@ knowledge graph of the agent, automations, and docs.
 
 **Visualize the graph** (opens in a new tab):
 
-<a href="https://cdn.jsdelivr.net/gh/ark-synbrains/dev-digest@main/graphify-out/graph.html" target="_blank" rel="noopener noreferrer"><strong>Open interactive graph.html</strong></a>
+<a href="https://htmlpreview.github.io/?https://github.com/ark-synbrains/dev-digest/blob/main/graphify-out/graph.html" target="_blank" rel="noopener noreferrer"><strong>Open interactive graph.html</strong></a>
 
 Also available locally at [`graphify-out/graph.html`](graphify-out/graph.html)
 (open the file in a browser after cloning). Companion artifacts:
