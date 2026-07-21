@@ -45,14 +45,9 @@ Brand: **Hive by Synbrains** (accents `#EE462F` → `#7610C7`).
 
 This repo includes a checked-in [graphify](https://github.com/Graphify-Labs/graphify)
 knowledge graph of the agent, automations, and docs.
-
-**Visualize the graph** (opens in a new tab):
-
-<a href="https://htmlpreview.github.io/?https://github.com/ark-synbrains/dev-digest/blob/main/graphify-out/graph.html" target="_blank" rel="noopener noreferrer"><strong>Open interactive graph.html</strong></a>
-
-Also available locally at [`graphify-out/graph.html`](graphify-out/graph.html)
-(open the file in a browser after cloning). Companion artifacts:
-
+ 
+Artifacts:
+- [`graphify-out/graph.html`](graphify-out/graph.html) — interactive graph (open the file in a browser after cloning locally)
 - [`graphify-out/graph.json`](graphify-out/graph.json) — queryable graph data
 - [`graphify-out/GRAPH_REPORT.md`](graphify-out/GRAPH_REPORT.md) — communities, god nodes, suggested questions
 
