@@ -11,6 +11,9 @@ node_modules/
 agent/out/
 **/out/
 
+# graphify knowledge-graph output (rebuild with `graphify update .` / `/graphify .`)
+graphify-out/
+
 # Environment & secrets (SMTP credentials, local overrides)
 .env
 .env.*
@@ -55,10 +58,12 @@ Desktop.ini
 .classpath
 .settings/
 
-# Cursor / local agent scratch (keep shared automations tracked)
+# Cursor / local agent scratch (keep shared automations + graphify rules tracked)
 .cursor/*
 !.cursor/automations/
 !.cursor/automations/**
+!.cursor/rules/
+!.cursor/rules/**
 
 # Temporary / misc
 tmp/
