@@ -18,10 +18,11 @@ Brand: **Hive by Synbrains** (accents `#EE462F` → `#7610C7`).
   scored for engineer understanding. Higher-scoring stories appear first;
   weaker sections sort last. **Scores are never shown** in the newsletter.
 - **Scoped runs** — narrow a run to just one lane in the HTML tool.
-- **Retry & timeout handling** — transient network errors and 429/5xx
-  responses are retried with backoff. The Node agent also paces arXiv
-  (≥3s between calls), falls back to OpenAlex for papers, and can still
-  ship an HN-only digest if paper APIs stay unavailable.
+- **Retry & timeout handling** — every upstream (HN, arXiv, OpenAlex, and
+  the HTML tool’s Anthropic calls) retries transient 429/408/5xx with
+  backoff. The Node agent paces per host, times out hung requests, falls
+  back across sources (arXiv→OpenAlex→HN; alternate HN queries per lane),
+  and soft-fails individual queries so one rate-limit cannot abort the digest.
 - **Hive branding** — dark UI with Synbrains red→purple gradient accents,
   matching [hive.synbrains.ai](https://hive.synbrains.ai/).
 - **Download the issue** — export Markdown or standalone dark HTML

@@ -3,11 +3,12 @@
  * Uses public APIs (HN Algolia + arXiv, with OpenAlex paper backup) so
  * scheduled runs don't need an LLM key.
  *
- * Resilience:
- * - Retry transient HTTP 429 / 5xx (and arXiv "Rate exceeded." bodies)
- * - Pace arXiv at ≥3s between calls (API Terms of Use)
- * - Fall back to OpenAlex when arXiv fails after retries
- * - Soft-fail paper sources so HN-only digests still generate
+ * Resilience (applies to EVERY upstream — HN, arXiv, OpenAlex):
+ * - Per-host pacing to avoid burst 429s
+ * - Retry transient 429 / 408 / 425 / 5xx (and soft "Rate exceeded." bodies)
+ * - Request timeouts so a hung source cannot stall the run
+ * - Soft-fail each query so one source never aborts the digest
+ * - Lane backups: OpenAlex after arXiv; alternate HN queries for product
  */
 
 const HN_URL = 'https://hn.algolia.com/api/v1/search';
@@ -15,13 +16,96 @@ const ARXIV_URL = 'https://export.arxiv.org/api/query';
 const OPENALEX_URL = 'https://api.openalex.org/works';
 
 const USER_AGENT = 'hive-digest-agent/1.0 (+https://hive.synbrains.ai/; mailto:news@synbrains.ai)';
-const ARXIV_MIN_INTERVAL_MS = 3200;
 const MAX_FETCH_ATTEMPTS = 4;
+const FETCH_TIMEOUT_MS = 20_000;
 
-let lastArxivRequestAt = 0;
+/** Minimum gap between requests to the same host (ms). */
+const HOST_MIN_INTERVAL_MS = {
+  'export.arxiv.org': 3200, // arXiv API TOU: ≤1 req / 3s
+  'api.openalex.org': 250, // polite pool
+  'hn.algolia.com': 200, // avoid parallel burst 429s
+};
+
+const hostState = new Map(); // host -> { lastAt, queue, consecutiveRateLimits, openCircuit }
+const CIRCUIT_TRIP_AFTER = 1; // one exhausted rate-limit cycle trips the host for this run
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function hostOf(url) {
+  try {
+    return new URL(url).host;
+  } catch {
+    return '';
+  }
+}
+
+function minIntervalFor(url) {
+  return HOST_MIN_INTERVAL_MS[hostOf(url)] ?? 100;
+}
+
+function getHostState(host) {
+  let state = hostState.get(host);
+  if (!state) {
+    state = { lastAt: 0, queue: Promise.resolve(), consecutiveRateLimits: 0, openCircuit: false };
+    hostState.set(host, state);
+  }
+  return state;
+}
+
+function noteRateLimit(url) {
+  const state = getHostState(hostOf(url) || 'unknown');
+  state.consecutiveRateLimits += 1;
+  if (state.consecutiveRateLimits >= CIRCUIT_TRIP_AFTER && !state.openCircuit) {
+    state.openCircuit = true;
+    console.warn(
+      `${hostOf(url)}: circuit open after ${state.consecutiveRateLimits} consecutive rate limits — skipping further calls this run`
+    );
+  }
+}
+
+function noteSuccess(url) {
+  const state = getHostState(hostOf(url) || 'unknown');
+  state.consecutiveRateLimits = 0;
+  state.openCircuit = false;
+}
+
+function assertCircuitClosed(url, label) {
+  const host = hostOf(url) || 'unknown';
+  const state = getHostState(host);
+  if (state.openCircuit) {
+    throw new Error(`HTTP 429 circuit-open for ${host} (${label})`);
+  }
+}
+
+/**
+ * Serialize + pace requests per host so parallel callers cannot stampede.
+ */
+async function withHostPace(url, fn) {
+  const host = hostOf(url) || 'unknown';
+  const state = getHostState(host);
+
+  let release;
+  const myTurn = new Promise((resolve) => {
+    release = resolve;
+  });
+  const prev = state.queue;
+  // Keep the gate alive even if a prior request threw.
+  state.queue = prev.then(
+    () => myTurn,
+    () => myTurn
+  );
+
+  await prev.catch(() => {});
+  try {
+    const wait = minIntervalFor(url) - (Date.now() - state.lastAt);
+    if (state.lastAt && wait > 0) await sleep(wait);
+    return await fn();
+  } finally {
+    state.lastAt = Date.now();
+    release();
+  }
 }
 
 function retryAfterMs(res, attempt) {
@@ -34,7 +118,6 @@ function retryAfterMs(res, attempt) {
       return Math.min(Math.max(asDate - Date.now(), 0), 60_000);
     }
   }
-  // Exponential backoff with light jitter; longer base for rate limits.
   const base = res?.status === 429 ? 4000 : 1000;
   return Math.min(base * 2 ** (attempt - 1) + Math.floor(Math.random() * 400), 30_000);
 }
@@ -44,65 +127,81 @@ function isRateExceededBody(text) {
     .slice(0, 64)
     .trim()
     .toLowerCase();
-  return head.startsWith('rate exceeded');
+  return head.startsWith('rate exceeded') || head.includes('too many requests');
 }
 
-async function paceArxiv() {
-  const elapsed = Date.now() - lastArxivRequestAt;
-  if (lastArxivRequestAt && elapsed < ARXIV_MIN_INTERVAL_MS) {
-    await sleep(ARXIV_MIN_INTERVAL_MS - elapsed);
-  }
+function isRetryableStatus(status) {
+  return status === 408 || status === 425 || status === 429 || status >= 500;
 }
 
 /**
- * Fetch with retries for transient failures.
+ * Fetch with per-host pacing, timeout, and retries for transient failures.
  * @param {string} url
- * @param {{ asJson?: boolean, beforeAttempt?: () => Promise<void>, afterAttempt?: () => void }} [opts]
+ * @param {{ asJson?: boolean, label?: string }} [opts]
  */
-async function fetchWithRetry(url, { asJson = false, beforeAttempt, afterAttempt } = {}) {
+async function fetchWithRetry(url, { asJson = false, label = 'upstream' } = {}) {
   let lastError;
+
   for (let attempt = 1; attempt <= MAX_FETCH_ATTEMPTS; attempt += 1) {
     try {
-      if (beforeAttempt) await beforeAttempt();
-      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
-      const text = await res.text();
-      afterAttempt?.();
+      assertCircuitClosed(url, label);
+
+      const { res, text } = await withHostPace(url, async () => {
+        const res = await fetch(url, {
+          headers: { 'User-Agent': USER_AGENT },
+          signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+        });
+        const text = await res.text();
+        return { res, text };
+      });
 
       if (res.ok && isRateExceededBody(text)) {
         lastError = new Error(`HTTP 429 (Rate exceeded.) for ${url}`);
         if (attempt < MAX_FETCH_ATTEMPTS) {
           console.warn(
-            `Rate limited by upstream (soft body) on attempt ${attempt}/${MAX_FETCH_ATTEMPTS}; backing off…`
+            `${label}: rate limited (soft body) attempt ${attempt}/${MAX_FETCH_ATTEMPTS}; backing off…`
           );
           await sleep(retryAfterMs({ status: 429, headers: res.headers }, attempt));
           continue;
         }
+        noteRateLimit(url);
         throw lastError;
       }
 
       if (!res.ok) {
         lastError = new Error(`HTTP ${res.status} for ${url}`);
-        const retryable = res.status === 429 || res.status >= 500;
-        if (retryable && attempt < MAX_FETCH_ATTEMPTS) {
+        if (isRetryableStatus(res.status) && attempt < MAX_FETCH_ATTEMPTS) {
           console.warn(
-            `HTTP ${res.status} on attempt ${attempt}/${MAX_FETCH_ATTEMPTS} for ${url}; backing off…`
+            `${label}: HTTP ${res.status} attempt ${attempt}/${MAX_FETCH_ATTEMPTS}; backing off…`
           );
           await sleep(retryAfterMs(res, attempt));
           continue;
         }
+        if (res.status === 429) noteRateLimit(url);
         throw lastError;
       }
 
       if (asJson) {
         try {
-          return JSON.parse(text);
+          const parsed = JSON.parse(text);
+          noteSuccess(url);
+          return parsed;
         } catch (err) {
-          throw new Error(`Invalid JSON from ${url}: ${err.message}`);
+          lastError = new Error(`Invalid JSON from ${url}: ${err.message}`);
+          // Upstream sometimes returns HTML/error pages under load — retry.
+          if (attempt < MAX_FETCH_ATTEMPTS) {
+            console.warn(
+              `${label}: invalid JSON attempt ${attempt}/${MAX_FETCH_ATTEMPTS}; retrying…`
+            );
+            await sleep(retryAfterMs({ status: 503, headers: res.headers }, attempt));
+            continue;
+          }
+          throw lastError;
         }
       }
+      noteSuccess(url);
       return text;
     } catch (err) {
-      // Final HTTP / parse errors thrown above — do not treat as network retry.
       if (
         err instanceof Error &&
         (err.message.startsWith('HTTP ') || err.message.startsWith('Invalid JSON'))
@@ -110,32 +209,21 @@ async function fetchWithRetry(url, { asJson = false, beforeAttempt, afterAttempt
         throw err;
       }
       lastError = err instanceof Error ? err : new Error(String(err));
-      afterAttempt?.();
+      const timedOut =
+        lastError.name === 'TimeoutError' ||
+        lastError.name === 'AbortError' ||
+        /aborted|timeout/i.test(lastError.message);
       if (attempt < MAX_FETCH_ATTEMPTS) {
         console.warn(
-          `Network error on attempt ${attempt}/${MAX_FETCH_ATTEMPTS}: ${lastError.message}; retrying…`
+          `${label}: ${timedOut ? 'timeout' : 'network'} error attempt ${attempt}/${MAX_FETCH_ATTEMPTS}: ${lastError.message}; retrying…`
         );
-        await sleep(retryAfterMs(null, attempt));
+        await sleep(retryAfterMs(timedOut ? { status: 408 } : null, attempt));
         continue;
       }
       throw lastError;
     }
   }
   throw lastError || new Error(`Failed to fetch ${url}`);
-}
-
-async function fetchJson(url) {
-  return fetchWithRetry(url, { asJson: true });
-}
-
-async function fetchArxivText(url) {
-  return fetchWithRetry(url, {
-    asJson: false,
-    beforeAttempt: paceArxiv,
-    afterAttempt: () => {
-      lastArxivRequestAt = Date.now();
-    },
-  });
 }
 
 function decodeHtmlEntities(s) {
@@ -175,6 +263,15 @@ function truncate(s, n = 320) {
   return t.slice(0, n - 1).trimEnd() + '...';
 }
 
+async function settled(label, promise) {
+  try {
+    return await promise;
+  } catch (err) {
+    console.warn(`${label} research failed (${err?.message || err}); using empty set.`);
+    return [];
+  }
+}
+
 async function searchHn(query, hitsPerPage = 8) {
   const params = new URLSearchParams({
     query,
@@ -182,7 +279,10 @@ async function searchHn(query, hitsPerPage = 8) {
     hitsPerPage: String(hitsPerPage),
     numericFilters: `created_at_i>${Math.floor(Date.now() / 1000) - 7 * 24 * 3600}`,
   });
-  const data = await fetchJson(`${HN_URL}?${params}`);
+  const data = await fetchWithRetry(`${HN_URL}?${params}`, {
+    asJson: true,
+    label: `HN[${query}]`,
+  });
   return (data.hits || [])
     .filter((h) => h.url && h.title)
     .map((h) => {
@@ -198,6 +298,24 @@ async function searchHn(query, hitsPerPage = 8) {
         _score: (h.points || 0) + (h.num_comments || 0) * 0.5,
       };
     });
+}
+
+/**
+ * Try HN queries in order until one returns results (or all soft-fail).
+ */
+async function searchHnWithFallback(queries, label) {
+  const collected = [];
+  for (const query of queries) {
+    const items = await settled(`${label} / HN[${query}]`, searchHn(query));
+    if (items.length) {
+      if (collected.length === 0 && query !== queries[0]) {
+        console.warn(`${label}: primary HN query empty/failed; using backup query "${query}".`);
+      }
+      collected.push(...items);
+      break;
+    }
+  }
+  return collected;
 }
 
 function parseArxiv(xml) {
@@ -227,7 +345,10 @@ async function searchArxiv(searchQuery, maxResults = 6) {
     sortBy: 'submittedDate',
     sortOrder: 'descending',
   });
-  const xml = await fetchArxivText(`${ARXIV_URL}?${params}`);
+  const xml = await fetchWithRetry(`${ARXIV_URL}?${params}`, {
+    asJson: false,
+    label: 'arXiv',
+  });
   return parseArxiv(xml);
 }
 
@@ -249,7 +370,10 @@ async function searchOpenAlex(searchQuery, maxResults = 6) {
     sort: 'publication_date:desc',
     per_page: String(maxResults),
   });
-  const data = await fetchJson(`${OPENALEX_URL}?${params}`);
+  const data = await fetchWithRetry(`${OPENALEX_URL}?${params}`, {
+    asJson: true,
+    label: 'OpenAlex',
+  });
   return (data.results || [])
     .map((work) => {
       const year = Number(work.publication_year);
@@ -335,21 +459,12 @@ function pickTop(items, n) {
     }));
 }
 
-async function settled(label, promise) {
-  try {
-    return await promise;
-  } catch (err) {
-    console.warn(`${label} research failed (${err?.message || err}); using empty set.`);
-    return [];
-  }
-}
-
 export async function researchDigest() {
-  // HN tolerates parallelism; arXiv must be sequential + paced (TOU: 1 req / 3s).
+  // Per-host pacing serializes bursts; Promise.all still overlaps different hosts.
   const [hnModels, hnProducts, hnAlgo] = await Promise.all([
-    settled('HN LLM', searchHn('LLM')),
-    settled('HN Show HN', searchHn('Show HN')),
-    settled('HN open source', searchHn('open source')),
+    searchHnWithFallback(['LLM', 'language model', 'GPT'], 'models lane'),
+    searchHnWithFallback(['Show HN', 'launch', 'product launch'], 'product lane'),
+    searchHnWithFallback(['open source', 'opensource', 'self-hosted'], 'algorithms lane'),
   ]);
 
   const paperModels = await searchPapers({
@@ -364,18 +479,27 @@ export async function researchDigest() {
     openAlexQuery: 'test-time compute OR mixture of experts OR LLM reasoning systems',
   });
 
-  return {
-    model: pickTop([...hnModels, ...paperModels], 8),
-    algorithm: pickTop([...paperAlgo, ...hnAlgo], 8),
-    product: pickTop(hnProducts, 8),
-  };
+  const model = pickTop([...hnModels, ...paperModels], 8);
+  const algorithm = pickTop([...paperAlgo, ...hnAlgo], 8);
+  const product = pickTop(hnProducts, 8);
+
+  if (!model.length && !algorithm.length && !product.length) {
+    throw new Error(
+      'All research sources returned empty after retries/fallbacks (HN, arXiv, OpenAlex)'
+    );
+  }
+
+  return { model, algorithm, product };
 }
 
 // Test helpers (not used by the agent CLI).
 export const __test = {
   isRateExceededBody,
+  isRetryableStatus,
   retryAfterMs,
   reconstructAbstract,
   parseArxiv,
   truncate,
+  minIntervalFor,
+  HOST_MIN_INTERVAL_MS,
 };

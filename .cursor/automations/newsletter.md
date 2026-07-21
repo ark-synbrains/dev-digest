@@ -52,7 +52,7 @@ Do not use issue numbers — identify each digest by its date only.
 ### Preferred implementation
 - Run: `npm install --prefix agent && npm start --prefix agent`
   - The agent validates entries, scores insight value, ranks items high→low, and orders sections by average score. Scores are logged only.
-  - Research already retries arXiv 429/5xx with backoff, paces arXiv calls (≥3s), falls back to OpenAlex for papers, and can degrade to HN-only. Warnings in the log about backups are OK — still send if the digest has entries.
+  - Research retries 429/408/5xx for every upstream (HN, arXiv, OpenAlex), paces per host, times out hung requests, falls back across sources (arXiv→OpenAlex→HN; alternate HN queries), and soft-fails individual queries. Warnings about backups are OK — still send if the digest has entries.
 - Sending uses nodemailer SMTP with env secrets:
   - SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM
   - NEWSLETTER_TO_EMAILS (comma/semicolon-separated)
