@@ -33,7 +33,7 @@ Brand: **Hive by Synbrains** (accents `#EE462F` → `#7610C7`).
 
 ## How to use it
 
-1. Open `tech-digest-agent.html` inside a Claude.ai artifact (see
+1. Open `hive-digest.html` inside a Claude.ai artifact (see
    **Important: where this runs**, below).
 2. Optionally narrow the scope with the dropdown.
 3. Click **generate Hive Digest**. Lanes fill in as they complete; entries
@@ -90,7 +90,7 @@ graphify explain "fetchWithRetry"
 
 [`.github/workflows/graphify.yml`](.github/workflows/graphify.yml) runs
 `graphify update . --force` on pushes to `main` that touch code
-(`agent/**`, `tech-digest-agent.html`, and common source extensions), then
+(`agent/**`, `hive-digest.html`, and common source extensions), then
 commits refreshed `graphify-out/` artifacts when the graph changes.
 Manual runs: Actions → **graphify** → **Run workflow**.
 
@@ -110,7 +110,7 @@ API key configured client-side.
 Email/export palettes are fixed in `NEWSLETTER_DARK` and `agent/src/render.mjs`.
 
 **Insight ranking** — `agent/src/validate.mjs` (`validateAndRankDigest`) for
-the Node agent; mirrored client-side in `tech-digest-agent.html`.
+the Node agent; mirrored client-side in `hive-digest.html`.
 
 **Category focus / prompts** — `categoryPrompt(cat, today)` in the HTML
 `<script>` block.
@@ -155,7 +155,7 @@ Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 ## File structure
 
 ```
-tech-digest-agent.html              browser artifact UI (Hive branded)
+hive-digest.html              browser artifact UI (Hive branded)
 agent/                              Node generator + validate/rank + SMTP
   src/validate.mjs                  schema validation + insight scoring
   src/research.mjs                  HN + arXiv research (OpenAlex / HN fallback)

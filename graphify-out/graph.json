@@ -30,19 +30,6 @@
         "confidence": "EXTRACTED",
         "confidence_score": 1.0,
         "source_file": ".cursor/automations/newsletter.md"
-      },
-      {
-        "id": "client_insight_ranking_flow",
-        "label": "Client-Side Insight Ranking Flow",
-        "nodes": [
-          "tech_digest_agent_validate_item",
-          "tech_digest_agent_score_insight",
-          "tech_digest_agent_rank_items"
-        ],
-        "relation": "implement",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "tech-digest-agent.html"
       }
     ]
   },
@@ -53,10 +40,10 @@
       "source_file": "agent/package.json",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_package",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "package.json",
-      "id": "agent_package"
+      "norm_label": "package.json"
     },
     {
       "label": "name",
@@ -64,10 +51,10 @@
       "source_file": "agent/package.json",
       "source_location": "L2",
       "_origin": "ast",
+      "id": "agent_package_name",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "name",
-      "id": "agent_package_name"
+      "norm_label": "name"
     },
     {
       "label": "version",
@@ -75,10 +62,10 @@
       "source_file": "agent/package.json",
       "source_location": "L3",
       "_origin": "ast",
+      "id": "agent_package_version",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "version",
-      "id": "agent_package_version"
+      "norm_label": "version"
     },
     {
       "label": "private",
@@ -86,10 +73,10 @@
       "source_file": "agent/package.json",
       "source_location": "L4",
       "_origin": "ast",
+      "id": "agent_package_private",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "private",
-      "id": "agent_package_private"
+      "norm_label": "private"
     },
     {
       "label": "type",
@@ -97,10 +84,10 @@
       "source_file": "agent/package.json",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "agent_package_type",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "type",
-      "id": "agent_package_type"
+      "norm_label": "type"
     },
     {
       "label": "description",
@@ -108,10 +95,10 @@
       "source_file": "agent/package.json",
       "source_location": "L6",
       "_origin": "ast",
+      "id": "agent_package_description",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "description",
-      "id": "agent_package_description"
+      "norm_label": "description"
     },
     {
       "label": "scripts",
@@ -119,10 +106,10 @@
       "source_file": "agent/package.json",
       "source_location": "L7",
       "_origin": "ast",
+      "id": "agent_package_scripts",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "scripts",
-      "id": "agent_package_scripts"
+      "norm_label": "scripts"
     },
     {
       "label": "start",
@@ -130,10 +117,10 @@
       "source_file": "agent/package.json",
       "source_location": "L8",
       "_origin": "ast",
+      "id": "agent_package_scripts_start",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "start",
-      "id": "agent_package_scripts_start"
+      "norm_label": "start"
     },
     {
       "label": "generate",
@@ -141,10 +128,10 @@
       "source_file": "agent/package.json",
       "source_location": "L9",
       "_origin": "ast",
+      "id": "agent_package_scripts_generate",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "generate",
-      "id": "agent_package_scripts_generate"
+      "norm_label": "generate"
     },
     {
       "label": "test",
@@ -152,10 +139,10 @@
       "source_file": "agent/package.json",
       "source_location": "L10",
       "_origin": "ast",
+      "id": "agent_package_scripts_test",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "test",
-      "id": "agent_package_scripts_test"
+      "norm_label": "test"
     },
     {
       "label": "engines",
@@ -163,10 +150,10 @@
       "source_file": "agent/package.json",
       "source_location": "L12",
       "_origin": "ast",
+      "id": "agent_package_engines",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "engines",
-      "id": "agent_package_engines"
+      "norm_label": "engines"
     },
     {
       "label": "node",
@@ -174,10 +161,10 @@
       "source_file": "agent/package.json",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "agent_package_engines_node",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "node",
-      "id": "agent_package_engines_node"
+      "norm_label": "node"
     },
     {
       "label": "dependencies",
@@ -185,10 +172,10 @@
       "source_file": "agent/package.json",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "agent_package_dependencies",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "dependencies",
-      "id": "agent_package_dependencies"
+      "norm_label": "dependencies"
     },
     {
       "label": "nodemailer",
@@ -196,10 +183,10 @@
       "source_file": "agent/package.json",
       "source_location": "L16",
       "_origin": "ast",
+      "id": "agent_package_dependencies_nodemailer",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "nodemailer",
-      "id": "agent_package_dependencies_nodemailer"
+      "norm_label": "nodemailer"
     },
     {
       "label": "nodemailer",
@@ -207,10 +194,10 @@
       "source_file": "agent/package.json",
       "source_location": "L16",
       "_origin": "ast",
+      "id": "nodemailer",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "nodemailer",
-      "id": "nodemailer"
+      "norm_label": "nodemailer"
     },
     {
       "label": "render.mjs",
@@ -218,10 +205,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_render",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "render.mjs",
-      "id": "agent_src_render"
+      "norm_label": "render.mjs"
     },
     {
       "label": "HIVE",
@@ -229,10 +216,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L8",
       "_origin": "ast",
+      "id": "agent_src_render_hive",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "hive",
-      "id": "agent_src_render_hive"
+      "norm_label": "hive"
     },
     {
       "label": "SECTION_META",
@@ -240,10 +227,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L19",
       "_origin": "ast",
+      "id": "agent_src_render_section_meta",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "section_meta",
-      "id": "agent_src_render_section_meta"
+      "norm_label": "section_meta"
     },
     {
       "label": "DEFAULT_ORDER",
@@ -251,10 +238,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "agent_src_render_default_order",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "default_order",
-      "id": "agent_src_render_default_order"
+      "norm_label": "default_order"
     },
     {
       "label": "escapeHtml()",
@@ -262,10 +249,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "agent_src_render_escapehtml",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "escapehtml()",
-      "id": "agent_src_render_escapehtml"
+      "norm_label": "escapehtml()"
     },
     {
       "label": "accentBar()",
@@ -273,10 +260,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L35",
       "_origin": "ast",
+      "id": "agent_src_render_accentbar",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "accentbar()",
-      "id": "agent_src_render_accentbar"
+      "norm_label": "accentbar()"
     },
     {
       "label": "buildIssue()",
@@ -284,10 +271,10 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L39",
       "_origin": "ast",
+      "id": "agent_src_render_buildissue",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "buildissue()",
-      "id": "agent_src_render_buildissue"
+      "norm_label": "buildissue()"
     },
     {
       "label": "research.mjs",
@@ -295,10 +282,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_research",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "research.mjs",
-      "id": "agent_src_research"
+      "norm_label": "research.mjs"
     },
     {
       "label": "HOST_MIN_INTERVAL_MS",
@@ -306,10 +293,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L23",
       "_origin": "ast",
+      "id": "agent_src_research_host_min_interval_ms",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "host_min_interval_ms",
-      "id": "agent_src_research_host_min_interval_ms"
+      "norm_label": "host_min_interval_ms"
     },
     {
       "label": "hostState",
@@ -317,10 +304,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L29",
       "_origin": "ast",
+      "id": "agent_src_research_hoststate",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "hoststate",
-      "id": "agent_src_research_hoststate"
+      "norm_label": "hoststate"
     },
     {
       "label": "sleep()",
@@ -328,10 +315,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L32",
       "_origin": "ast",
+      "id": "agent_src_research_sleep",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "sleep()",
-      "id": "agent_src_research_sleep"
+      "norm_label": "sleep()"
     },
     {
       "label": "hostOf()",
@@ -339,10 +326,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L36",
       "_origin": "ast",
+      "id": "agent_src_research_hostof",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "hostof()",
-      "id": "agent_src_research_hostof"
+      "norm_label": "hostof()"
     },
     {
       "label": "minIntervalFor()",
@@ -350,10 +337,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L44",
       "_origin": "ast",
+      "id": "agent_src_research_minintervalfor",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "minintervalfor()",
-      "id": "agent_src_research_minintervalfor"
+      "norm_label": "minintervalfor()"
     },
     {
       "label": "getHostState()",
@@ -361,10 +348,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L48",
       "_origin": "ast",
+      "id": "agent_src_research_gethoststate",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "gethoststate()",
-      "id": "agent_src_research_gethoststate"
+      "norm_label": "gethoststate()"
     },
     {
       "label": "noteRateLimit()",
@@ -372,10 +359,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L57",
       "_origin": "ast",
+      "id": "agent_src_research_noteratelimit",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "noteratelimit()",
-      "id": "agent_src_research_noteratelimit"
+      "norm_label": "noteratelimit()"
     },
     {
       "label": "noteSuccess()",
@@ -383,10 +370,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L68",
       "_origin": "ast",
+      "id": "agent_src_research_notesuccess",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "notesuccess()",
-      "id": "agent_src_research_notesuccess"
+      "norm_label": "notesuccess()"
     },
     {
       "label": "assertCircuitClosed()",
@@ -394,10 +381,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L74",
       "_origin": "ast",
+      "id": "agent_src_research_assertcircuitclosed",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "assertcircuitclosed()",
-      "id": "agent_src_research_assertcircuitclosed"
+      "norm_label": "assertcircuitclosed()"
     },
     {
       "label": "withHostPace()",
@@ -405,10 +392,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L85",
       "_origin": "ast",
+      "id": "agent_src_research_withhostpace",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "withhostpace()",
-      "id": "agent_src_research_withhostpace"
+      "norm_label": "withhostpace()"
     },
     {
       "label": "retryAfterMs()",
@@ -416,10 +403,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L111",
       "_origin": "ast",
+      "id": "agent_src_research_retryafterms",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "retryafterms()",
-      "id": "agent_src_research_retryafterms"
+      "norm_label": "retryafterms()"
     },
     {
       "label": "isRateExceededBody()",
@@ -427,10 +414,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L125",
       "_origin": "ast",
+      "id": "agent_src_research_israteexceededbody",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "israteexceededbody()",
-      "id": "agent_src_research_israteexceededbody"
+      "norm_label": "israteexceededbody()"
     },
     {
       "label": "isRetryableStatus()",
@@ -438,10 +425,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L133",
       "_origin": "ast",
+      "id": "agent_src_research_isretryablestatus",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "isretryablestatus()",
-      "id": "agent_src_research_isretryablestatus"
+      "norm_label": "isretryablestatus()"
     },
     {
       "label": "fetchWithRetry()",
@@ -449,10 +436,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L142",
       "_origin": "ast",
+      "id": "agent_src_research_fetchwithretry",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "fetchwithretry()",
-      "id": "agent_src_research_fetchwithretry"
+      "norm_label": "fetchwithretry()"
     },
     {
       "label": "decodeHtmlEntities()",
@@ -460,10 +447,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L229",
       "_origin": "ast",
+      "id": "agent_src_research_decodehtmlentities",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "decodehtmlentities()",
-      "id": "agent_src_research_decodehtmlentities"
+      "norm_label": "decodehtmlentities()"
     },
     {
       "label": "stripHtml()",
@@ -471,10 +458,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L253",
       "_origin": "ast",
+      "id": "agent_src_research_striphtml",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "striphtml()",
-      "id": "agent_src_research_striphtml"
+      "norm_label": "striphtml()"
     },
     {
       "label": "truncate()",
@@ -482,10 +469,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L260",
       "_origin": "ast",
+      "id": "agent_src_research_truncate",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "truncate()",
-      "id": "agent_src_research_truncate"
+      "norm_label": "truncate()"
     },
     {
       "label": "settled()",
@@ -493,10 +480,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L266",
       "_origin": "ast",
+      "id": "agent_src_research_settled",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "settled()",
-      "id": "agent_src_research_settled"
+      "norm_label": "settled()"
     },
     {
       "label": "searchHn()",
@@ -504,10 +491,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L275",
       "_origin": "ast",
+      "id": "agent_src_research_searchhn",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "searchhn()",
-      "id": "agent_src_research_searchhn"
+      "norm_label": "searchhn()"
     },
     {
       "label": "searchHnWithFallback()",
@@ -515,10 +502,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L306",
       "_origin": "ast",
+      "id": "agent_src_research_searchhnwithfallback",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "searchhnwithfallback()",
-      "id": "agent_src_research_searchhnwithfallback"
+      "norm_label": "searchhnwithfallback()"
     },
     {
       "label": "parseArxiv()",
@@ -526,10 +513,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L321",
       "_origin": "ast",
+      "id": "agent_src_research_parsearxiv",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "parsearxiv()",
-      "id": "agent_src_research_parsearxiv"
+      "norm_label": "parsearxiv()"
     },
     {
       "label": "searchArxiv()",
@@ -537,10 +524,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L340",
       "_origin": "ast",
+      "id": "agent_src_research_searcharxiv",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "searcharxiv()",
-      "id": "agent_src_research_searcharxiv"
+      "norm_label": "searcharxiv()"
     },
     {
       "label": "searchOpenAlex()",
@@ -548,10 +535,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L359",
       "_origin": "ast",
+      "id": "agent_src_research_searchopenalex",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "searchopenalex()",
-      "id": "agent_src_research_searchopenalex"
+      "norm_label": "searchopenalex()"
     },
     {
       "label": "reconstructAbstract()",
@@ -559,10 +546,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L400",
       "_origin": "ast",
+      "id": "agent_src_research_reconstructabstract",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "reconstructabstract()",
-      "id": "agent_src_research_reconstructabstract"
+      "norm_label": "reconstructabstract()"
     },
     {
       "label": "searchPapers()",
@@ -570,10 +557,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L413",
       "_origin": "ast",
+      "id": "agent_src_research_searchpapers",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "searchpapers()",
-      "id": "agent_src_research_searchpapers"
+      "norm_label": "searchpapers()"
     },
     {
       "label": "dedupe()",
@@ -581,10 +568,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L439",
       "_origin": "ast",
+      "id": "agent_src_research_dedupe",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "dedupe()",
-      "id": "agent_src_research_dedupe"
+      "norm_label": "dedupe()"
     },
     {
       "label": "pickTop()",
@@ -592,10 +579,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L451",
       "_origin": "ast",
+      "id": "agent_src_research_picktop",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "picktop()",
-      "id": "agent_src_research_picktop"
+      "norm_label": "picktop()"
     },
     {
       "label": "researchDigest()",
@@ -603,10 +590,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L462",
       "_origin": "ast",
+      "id": "agent_src_research_researchdigest",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "researchdigest()",
-      "id": "agent_src_research_researchdigest"
+      "norm_label": "researchdigest()"
     },
     {
       "label": "__test",
@@ -614,10 +601,10 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L496",
       "_origin": "ast",
+      "id": "agent_src_research_mjs_agent_src_research_test",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "__test",
-      "id": "agent_src_research_mjs_agent_src_research_test"
+      "norm_label": "__test"
     },
     {
       "label": "research.test.mjs",
@@ -625,10 +612,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_research_test_mjs_agent_src_research_test",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "research.test.mjs",
-      "id": "agent_src_research_test_mjs_agent_src_research_test"
+      "norm_label": "research.test.mjs"
     },
     {
       "label": "headers",
@@ -636,10 +623,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "agent_src_research_test_headers",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "headers",
-      "id": "agent_src_research_test_headers"
+      "norm_label": "headers"
     },
     {
       "label": "abs",
@@ -647,10 +634,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L34",
       "_origin": "ast",
+      "id": "agent_src_research_test_abs",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "abs",
-      "id": "agent_src_research_test_abs"
+      "norm_label": "abs"
     },
     {
       "label": "parsed",
@@ -658,10 +645,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L45",
       "_origin": "ast",
+      "id": "agent_src_research_test_parsed",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "parsed",
-      "id": "agent_src_research_test_parsed"
+      "norm_label": "parsed"
     },
     {
       "label": "run.mjs",
@@ -669,10 +656,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_run",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "run.mjs",
-      "id": "agent_src_run"
+      "norm_label": "run.mjs"
     },
     {
       "label": "__dirname",
@@ -680,10 +667,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L11",
       "_origin": "ast",
+      "id": "agent_src_run_dirname",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "__dirname",
-      "id": "agent_src_run_dirname"
+      "norm_label": "__dirname"
     },
     {
       "label": "ROOT",
@@ -691,10 +678,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L12",
       "_origin": "ast",
+      "id": "agent_src_run_root",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "root",
-      "id": "agent_src_run_root"
+      "norm_label": "root"
     },
     {
       "label": "STATE_PATH",
@@ -702,10 +689,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "agent_src_run_state_path",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "state_path",
-      "id": "agent_src_run_state_path"
+      "norm_label": "state_path"
     },
     {
       "label": "loadState()",
@@ -713,10 +700,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "agent_src_run_loadstate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "loadstate()",
-      "id": "agent_src_run_loadstate"
+      "norm_label": "loadstate()"
     },
     {
       "label": "saveState()",
@@ -724,10 +711,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L22",
       "_origin": "ast",
+      "id": "agent_src_run_savestate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "savestate()",
-      "id": "agent_src_run_savestate"
+      "norm_label": "savestate()"
     },
     {
       "label": "requireEnv()",
@@ -735,10 +722,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L26",
       "_origin": "ast",
+      "id": "agent_src_run_requireenv",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "requireenv()",
-      "id": "agent_src_run_requireenv"
+      "norm_label": "requireenv()"
     },
     {
       "label": "parseRecipients()",
@@ -746,10 +733,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L32",
       "_origin": "ast",
+      "id": "agent_src_run_parserecipients",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "parserecipients()",
-      "id": "agent_src_run_parserecipients"
+      "norm_label": "parserecipients()"
     },
     {
       "label": "MONTHS",
@@ -757,10 +744,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L39",
       "_origin": "ast",
+      "id": "agent_src_run_months",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "months",
-      "id": "agent_src_run_months"
+      "norm_label": "months"
     },
     {
       "label": "formatDate()",
@@ -768,10 +755,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L42",
       "_origin": "ast",
+      "id": "agent_src_run_formatdate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "formatdate()",
-      "id": "agent_src_run_formatdate"
+      "norm_label": "formatdate()"
     },
     {
       "label": "dateStamp()",
@@ -779,10 +766,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L47",
       "_origin": "ast",
+      "id": "agent_src_run_datestamp",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "datestamp()",
-      "id": "agent_src_run_datestamp"
+      "norm_label": "datestamp()"
     },
     {
       "label": "hourStamp()",
@@ -790,10 +777,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L51",
       "_origin": "ast",
+      "id": "agent_src_run_hourstamp",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "hourstamp()",
-      "id": "agent_src_run_hourstamp"
+      "norm_label": "hourstamp()"
     },
     {
       "label": "main()",
@@ -801,10 +788,10 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L55",
       "_origin": "ast",
+      "id": "agent_src_run_main",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "main()",
-      "id": "agent_src_run_main"
+      "norm_label": "main()"
     },
     {
       "label": "sanitize.mjs",
@@ -812,10 +799,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_sanitize",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitize.mjs",
-      "id": "agent_src_sanitize"
+      "norm_label": "sanitize.mjs"
     },
     {
       "label": "REPLACEMENTS",
@@ -823,10 +810,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L7",
       "_origin": "ast",
+      "id": "agent_src_sanitize_replacements",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "replacements",
-      "id": "agent_src_sanitize_replacements"
+      "norm_label": "replacements"
     },
     {
       "label": "decodeHtmlEntities()",
@@ -834,10 +821,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "agent_src_sanitize_decodehtmlentities",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "decodehtmlentities()",
-      "id": "agent_src_sanitize_decodehtmlentities"
+      "norm_label": "decodehtmlentities()"
     },
     {
       "label": "sanitizeNewsletterText()",
@@ -845,10 +832,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L64",
       "_origin": "ast",
+      "id": "agent_src_sanitize_sanitizenewslettertext",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizenewslettertext()",
-      "id": "agent_src_sanitize_sanitizenewslettertext"
+      "norm_label": "sanitizenewslettertext()"
     },
     {
       "label": "sanitizeDigestEntries()",
@@ -856,10 +843,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L105",
       "_origin": "ast",
+      "id": "agent_src_sanitize_sanitizedigestentries",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizedigestentries()",
-      "id": "agent_src_sanitize_sanitizedigestentries"
+      "norm_label": "sanitizedigestentries()"
     },
     {
       "label": "sanitizeIssue()",
@@ -867,10 +854,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L122",
       "_origin": "ast",
+      "id": "agent_src_sanitize_sanitizeissue",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizeissue()",
-      "id": "agent_src_sanitize_sanitizeissue"
+      "norm_label": "sanitizeissue()"
     },
     {
       "label": "sanitizeHtmlDocument()",
@@ -878,10 +865,10 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L133",
       "_origin": "ast",
+      "id": "agent_src_sanitize_sanitizehtmldocument",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizehtmldocument()",
-      "id": "agent_src_sanitize_sanitizehtmldocument"
+      "norm_label": "sanitizehtmldocument()"
     },
     {
       "label": "smtp.mjs",
@@ -889,10 +876,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_smtp",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "smtp.mjs",
-      "id": "agent_src_smtp"
+      "norm_label": "smtp.mjs"
     },
     {
       "label": "requireEnv()",
@@ -900,10 +887,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L3",
       "_origin": "ast",
+      "id": "agent_src_smtp_requireenv",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "requireenv()",
-      "id": "agent_src_smtp_requireenv"
+      "norm_label": "requireenv()"
     },
     {
       "label": "optionalEnv()",
@@ -911,10 +898,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L9",
       "_origin": "ast",
+      "id": "agent_src_smtp_optionalenv",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "optionalenv()",
-      "id": "agent_src_smtp_optionalenv"
+      "norm_label": "optionalenv()"
     },
     {
       "label": "parseBool()",
@@ -922,10 +909,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "agent_src_smtp_parsebool",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "parsebool()",
-      "id": "agent_src_smtp_parsebool"
+      "norm_label": "parsebool()"
     },
     {
       "label": "getSmtpConfig()",
@@ -933,10 +920,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "agent_src_smtp_getsmtpconfig",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "getsmtpconfig()",
-      "id": "agent_src_smtp_getsmtpconfig"
+      "norm_label": "getsmtpconfig()"
     },
     {
       "label": "createTransport()",
@@ -944,10 +931,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L45",
       "_origin": "ast",
+      "id": "agent_src_smtp_createtransport",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "createtransport()",
-      "id": "agent_src_smtp_createtransport"
+      "norm_label": "createtransport()"
     },
     {
       "label": "sendSmtpEmail()",
@@ -955,10 +942,10 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L61",
       "_origin": "ast",
+      "id": "agent_src_smtp_sendsmtpemail",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "sendsmtpemail()",
-      "id": "agent_src_smtp_sendsmtpemail"
+      "norm_label": "sendsmtpemail()"
     },
     {
       "label": "validate.mjs",
@@ -966,10 +953,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "agent_src_validate",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validate.mjs",
-      "id": "agent_src_validate"
+      "norm_label": "validate.mjs"
     },
     {
       "label": "REQUIRED",
@@ -977,10 +964,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L6",
       "_origin": "ast",
+      "id": "agent_src_validate_required",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "required",
-      "id": "agent_src_validate_required"
+      "norm_label": "required"
     },
     {
       "label": "PRIMARY_HOST_HINTS",
@@ -988,10 +975,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L8",
       "_origin": "ast",
+      "id": "agent_src_validate_primary_host_hints",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "primary_host_hints",
-      "id": "agent_src_validate_primary_host_hints"
+      "norm_label": "primary_host_hints"
     },
     {
       "label": "INSIGHT_TERMS",
@@ -999,10 +986,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L24",
       "_origin": "ast",
+      "id": "agent_src_validate_insight_terms",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "insight_terms",
-      "id": "agent_src_validate_insight_terms"
+      "norm_label": "insight_terms"
     },
     {
       "label": "BOILERPLATE",
@@ -1010,10 +997,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L57",
       "_origin": "ast",
+      "id": "agent_src_validate_boilerplate",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "boilerplate",
-      "id": "agent_src_validate_boilerplate"
+      "norm_label": "boilerplate"
     },
     {
       "label": "isHttpUrl()",
@@ -1021,10 +1008,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L63",
       "_origin": "ast",
+      "id": "agent_src_validate_ishttpurl",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "ishttpurl()",
-      "id": "agent_src_validate_ishttpurl"
+      "norm_label": "ishttpurl()"
     },
     {
       "label": "clamp()",
@@ -1032,10 +1019,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L72",
       "_origin": "ast",
+      "id": "agent_src_validate_clamp",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "clamp()",
-      "id": "agent_src_validate_clamp"
+      "norm_label": "clamp()"
     },
     {
       "label": "wordCount()",
@@ -1043,10 +1030,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L76",
       "_origin": "ast",
+      "id": "agent_src_validate_wordcount",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "wordcount()",
-      "id": "agent_src_validate_wordcount"
+      "norm_label": "wordcount()"
     },
     {
       "label": "validateItem()",
@@ -1054,10 +1041,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L87",
       "_origin": "ast",
+      "id": "agent_src_validate_validateitem",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validateitem()",
-      "id": "agent_src_validate_validateitem"
+      "norm_label": "validateitem()"
     },
     {
       "label": "scoreInsight()",
@@ -1065,10 +1052,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L116",
       "_origin": "ast",
+      "id": "agent_src_validate_scoreinsight",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "scoreinsight()",
-      "id": "agent_src_validate_scoreinsight"
+      "norm_label": "scoreinsight()"
     },
     {
       "label": "stripRankingFields()",
@@ -1076,10 +1063,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L171",
       "_origin": "ast",
+      "id": "agent_src_validate_striprankingfields",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "striprankingfields()",
-      "id": "agent_src_validate_striprankingfields"
+      "norm_label": "striprankingfields()"
     },
     {
       "label": "validateAndRankDigest()",
@@ -1087,10 +1074,10 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L186",
       "_origin": "ast",
+      "id": "agent_src_validate_validateandrankdigest",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validateandrankdigest()",
-      "id": "agent_src_validate_validateandrankdigest"
+      "norm_label": "validateandrankdigest()"
     },
     {
       "label": "Hive Digest (monthly) Cursor Automation",
@@ -1219,9 +1206,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Emailed HTML must always use the dark Hive theme; do not switch to light.",
-      "community": 5,
+      "community": 1,
       "norm_label": "dark hive theme",
-      "community_name": "Hive Branding & UI",
+      "community_name": "Automation & Delivery",
       "id": "cursor_automations_newsletter_dark_hive_theme"
     },
     {
@@ -1305,9 +1292,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 1,
       "norm_label": "hive digest",
-      "community_name": "Hive Branding & UI",
+      "community_name": "Automation & Delivery",
       "id": "readme_hive_digest"
     },
     {
@@ -1319,9 +1306,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 1,
       "norm_label": "hive by synbrains",
-      "community_name": "Hive Branding & UI",
+      "community_name": "Automation & Delivery",
       "id": "readme_synbrains_hive"
     },
     {
@@ -1333,9 +1320,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 1,
       "norm_label": "three content lanes",
-      "community_name": "Hive Branding & UI",
+      "community_name": "Automation & Delivery",
       "id": "readme_three_lanes"
     },
     {
@@ -1391,9 +1378,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 1,
       "norm_label": "agent cli (agent/)",
-      "community_name": "Hive Branding & UI",
+      "community_name": "Automation & Delivery",
       "id": "readme_agent_cli"
     },
     {
@@ -1423,149 +1410,6 @@
       "norm_label": "automatic merged branch deletion",
       "community_name": "Branch Cleanup CI",
       "id": "readme_delete_merged_branch"
-    },
-    {
-      "label": "Hive Digest Browser UI",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 5,
-      "norm_label": "hive digest browser ui",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_hive_digest_ui"
-    },
-    {
-      "label": "Anthropic Messages API",
-      "file_type": "concept",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Browser calls api.anthropic.com directly with web search; only succeeds inside a Claude.ai artifact or equivalent proxy \u2014 plain browser open has no client-side API key.",
-      "community": 5,
-      "norm_label": "anthropic messages api",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_anthropic_api"
-    },
-    {
-      "label": "categoryPrompt",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 5,
-      "norm_label": "categoryprompt",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_category_prompt"
-    },
-    {
-      "label": "fetchCategory",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 5,
-      "norm_label": "fetchcategory",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_fetch_category"
-    },
-    {
-      "label": "validateItem",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "validateitem",
-      "community_name": "Automation & Delivery",
-      "id": "tech_digest_agent_validate_item"
-    },
-    {
-      "label": "scoreInsight",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Insight scores reorder sections and filter entries but are never surfaced in the UI or exported newsletter.",
-      "community": 1,
-      "norm_label": "scoreinsight",
-      "community_name": "Automation & Delivery",
-      "id": "tech_digest_agent_score_insight"
-    },
-    {
-      "label": "rankItems",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "rankitems",
-      "community_name": "Automation & Delivery",
-      "id": "tech_digest_agent_rank_items"
-    },
-    {
-      "label": "NEWSLETTER_DARK Theme Palette",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Generated newsletter HTML is always dark Hive theme; insight scores are never included.",
-      "community": 5,
-      "norm_label": "newsletter_dark theme palette",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_newsletter_dark"
-    },
-    {
-      "label": "Claude Web Search Tool",
-      "file_type": "concept",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 5,
-      "norm_label": "claude web search tool",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_web_search"
-    },
-    {
-      "label": "generateIssue",
-      "file_type": "code",
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 5,
-      "norm_label": "generateissue",
-      "community_name": "Hive Branding & UI",
-      "id": "tech_digest_agent_generate_issue"
     }
   ],
   "links": [
@@ -1576,9 +1420,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_dependencies"
+      "target": "agent_package_dependencies",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1587,9 +1431,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_description"
+      "target": "agent_package_description",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1598,9 +1442,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_engines"
+      "target": "agent_package_engines",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1609,9 +1453,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_name"
+      "target": "agent_package_name",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1620,9 +1464,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_private"
+      "target": "agent_package_private",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1631,9 +1475,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_scripts"
+      "target": "agent_package_scripts",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1642,9 +1486,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_type"
+      "target": "agent_package_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1653,9 +1497,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_version"
+      "target": "agent_package_version",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1664,9 +1508,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_generate"
+      "target": "agent_package_scripts_generate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1675,9 +1519,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_start"
+      "target": "agent_package_scripts_start",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1686,9 +1530,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_test"
+      "target": "agent_package_scripts_test",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1697,9 +1541,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_engines",
-      "target": "agent_package_engines_node"
+      "target": "agent_package_engines_node",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1708,9 +1552,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_dependencies",
-      "target": "agent_package_dependencies_nodemailer"
+      "target": "agent_package_dependencies_nodemailer",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1720,9 +1564,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_package_dependencies_nodemailer",
-      "target": "nodemailer"
+      "target": "nodemailer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1731,9 +1575,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_accentbar"
+      "target": "agent_src_render_accentbar",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1742,9 +1586,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_buildissue"
+      "target": "agent_src_render_buildissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1753,9 +1597,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_default_order"
+      "target": "agent_src_render_default_order",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1764,9 +1608,9 @@
       "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_escapehtml"
+      "target": "agent_src_render_escapehtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1775,9 +1619,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_hive"
+      "target": "agent_src_render_hive",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1786,9 +1630,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_section_meta"
+      "target": "agent_src_render_section_meta",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -1798,9 +1642,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize"
+      "target": "agent_src_sanitize",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1810,9 +1654,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizedigestentries"
+      "target": "agent_src_sanitize_sanitizedigestentries",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1822,9 +1666,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizeissue"
+      "target": "agent_src_sanitize_sanitizeissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1834,9 +1678,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizenewslettertext"
+      "target": "agent_src_sanitize_sanitizenewslettertext",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -1846,9 +1690,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_render"
+      "target": "agent_src_render",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1858,9 +1702,9 @@
       "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_render_escapehtml"
+      "target": "agent_src_render_escapehtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1870,9 +1714,9 @@
       "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_render_accentbar"
+      "target": "agent_src_render_accentbar",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1918,9 +1762,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_render_buildissue"
+      "target": "agent_src_render_buildissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1930,9 +1774,9 @@
       "source_location": "L88",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_render_buildissue"
+      "target": "agent_src_render_buildissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1941,9 +1785,9 @@
       "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_assertcircuitclosed"
+      "target": "agent_src_research_assertcircuitclosed",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1952,9 +1796,9 @@
       "source_location": "L229",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_decodehtmlentities"
+      "target": "agent_src_research_decodehtmlentities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1963,9 +1807,9 @@
       "source_location": "L439",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_dedupe"
+      "target": "agent_src_research_dedupe",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1974,9 +1818,9 @@
       "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_fetchwithretry"
+      "target": "agent_src_research_fetchwithretry",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1985,9 +1829,9 @@
       "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_gethoststate"
+      "target": "agent_src_research_gethoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1996,9 +1840,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_host_min_interval_ms"
+      "target": "agent_src_research_host_min_interval_ms",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2007,9 +1851,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2018,9 +1862,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_hoststate"
+      "target": "agent_src_research_hoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -2030,9 +1874,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_israteexceededbody"
+      "target": "agent_src_research_israteexceededbody",
+      "confidence_score": 0.5
     },
     {
       "relation": "indirect_call",
@@ -2042,9 +1886,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_isretryablestatus"
+      "target": "agent_src_research_isretryablestatus",
+      "confidence_score": 0.5
     },
     {
       "relation": "indirect_call",
@@ -2054,9 +1898,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_minintervalfor"
+      "target": "agent_src_research_minintervalfor",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -2065,9 +1909,9 @@
       "source_location": "L496",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_mjs_agent_src_research_test"
+      "target": "agent_src_research_mjs_agent_src_research_test",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2076,9 +1920,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_noteratelimit"
+      "target": "agent_src_research_noteratelimit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2087,9 +1931,9 @@
       "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_notesuccess"
+      "target": "agent_src_research_notesuccess",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -2099,9 +1943,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_parsearxiv"
+      "target": "agent_src_research_parsearxiv",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -2110,9 +1954,9 @@
       "source_location": "L451",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_picktop"
+      "target": "agent_src_research_picktop",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -2122,9 +1966,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_reconstructabstract"
+      "target": "agent_src_research_reconstructabstract",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -2133,9 +1977,9 @@
       "source_location": "L462",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_researchdigest"
+      "target": "agent_src_research_researchdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -2145,9 +1989,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_retryafterms"
+      "target": "agent_src_research_retryafterms",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -2156,9 +2000,9 @@
       "source_location": "L340",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searcharxiv"
+      "target": "agent_src_research_searcharxiv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2167,9 +2011,9 @@
       "source_location": "L275",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchhn"
+      "target": "agent_src_research_searchhn",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2178,9 +2022,9 @@
       "source_location": "L306",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchhnwithfallback"
+      "target": "agent_src_research_searchhnwithfallback",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2189,9 +2033,9 @@
       "source_location": "L359",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchopenalex"
+      "target": "agent_src_research_searchopenalex",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2200,9 +2044,9 @@
       "source_location": "L413",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchpapers"
+      "target": "agent_src_research_searchpapers",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2211,9 +2055,9 @@
       "source_location": "L266",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_settled"
+      "target": "agent_src_research_settled",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2222,9 +2066,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_sleep"
+      "target": "agent_src_research_sleep",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2233,9 +2077,9 @@
       "source_location": "L253",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_striphtml"
+      "target": "agent_src_research_striphtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -2245,9 +2089,9 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
-      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_truncate"
+      "target": "agent_src_research_truncate",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -2256,9 +2100,9 @@
       "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_withhostpace"
+      "target": "agent_src_research_withhostpace",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2268,9 +2112,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research"
+      "target": "agent_src_research",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2280,9 +2124,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_research"
+      "target": "agent_src_research",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2292,9 +2136,9 @@
       "source_location": "L164",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_sleep"
+      "target": "agent_src_research_sleep",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2304,9 +2148,9 @@
       "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_sleep"
+      "target": "agent_src_research_sleep",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2316,9 +2160,9 @@
       "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_assertcircuitclosed",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2328,9 +2172,9 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_minintervalfor",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2340,9 +2184,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_noteratelimit",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2352,9 +2196,9 @@
       "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_notesuccess",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2364,9 +2208,9 @@
       "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_hostof"
+      "target": "agent_src_research_hostof",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2376,9 +2220,9 @@
       "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_minintervalfor"
+      "target": "agent_src_research_minintervalfor",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2388,9 +2232,9 @@
       "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_assertcircuitclosed",
-      "target": "agent_src_research_gethoststate"
+      "target": "agent_src_research_gethoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2400,9 +2244,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_noteratelimit",
-      "target": "agent_src_research_gethoststate"
+      "target": "agent_src_research_gethoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2412,9 +2256,9 @@
       "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_notesuccess",
-      "target": "agent_src_research_gethoststate"
+      "target": "agent_src_research_gethoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2424,9 +2268,9 @@
       "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_gethoststate"
+      "target": "agent_src_research_gethoststate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2436,9 +2280,9 @@
       "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_noteratelimit"
+      "target": "agent_src_research_noteratelimit",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2448,9 +2292,9 @@
       "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_notesuccess"
+      "target": "agent_src_research_notesuccess",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2460,9 +2304,9 @@
       "source_location": "L147",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_assertcircuitclosed"
+      "target": "agent_src_research_assertcircuitclosed",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2472,9 +2316,9 @@
       "source_location": "L149",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_withhostpace"
+      "target": "agent_src_research_withhostpace",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2484,9 +2328,9 @@
       "source_location": "L164",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_retryafterms"
+      "target": "agent_src_research_retryafterms",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2496,9 +2340,9 @@
       "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_israteexceededbody"
+      "target": "agent_src_research_israteexceededbody",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2508,9 +2352,9 @@
       "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_isretryablestatus"
+      "target": "agent_src_research_isretryablestatus",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2520,9 +2364,9 @@
       "source_location": "L348",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searcharxiv",
-      "target": "agent_src_research_fetchwithretry"
+      "target": "agent_src_research_fetchwithretry",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2532,9 +2376,9 @@
       "source_location": "L282",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchhn",
-      "target": "agent_src_research_fetchwithretry"
+      "target": "agent_src_research_fetchwithretry",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2544,9 +2388,9 @@
       "source_location": "L373",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_fetchwithretry"
+      "target": "agent_src_research_fetchwithretry",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2556,9 +2400,9 @@
       "source_location": "L254",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_striphtml",
-      "target": "agent_src_research_decodehtmlentities"
+      "target": "agent_src_research_decodehtmlentities",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2568,9 +2412,9 @@
       "source_location": "L325",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_parsearxiv",
-      "target": "agent_src_research_striphtml"
+      "target": "agent_src_research_striphtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2580,9 +2424,9 @@
       "source_location": "L381",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_striphtml"
+      "target": "agent_src_research_striphtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2592,9 +2436,9 @@
       "source_location": "L261",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_truncate",
-      "target": "agent_src_research_striphtml"
+      "target": "agent_src_research_striphtml",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2604,9 +2448,9 @@
       "source_location": "L331",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_parsearxiv",
-      "target": "agent_src_research_truncate"
+      "target": "agent_src_research_truncate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2616,9 +2460,9 @@
       "source_location": "L289",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchhn",
-      "target": "agent_src_research_truncate"
+      "target": "agent_src_research_truncate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2628,9 +2472,9 @@
       "source_location": "L388",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_truncate"
+      "target": "agent_src_research_truncate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2640,9 +2484,9 @@
       "source_location": "L309",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchhnwithfallback",
-      "target": "agent_src_research_settled"
+      "target": "agent_src_research_settled",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2652,9 +2496,9 @@
       "source_location": "L309",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchhnwithfallback",
-      "target": "agent_src_research_searchhn"
+      "target": "agent_src_research_searchhn",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2664,9 +2508,9 @@
       "source_location": "L465",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_searchhnwithfallback"
+      "target": "agent_src_research_searchhnwithfallback",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2676,9 +2520,9 @@
       "source_location": "L352",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searcharxiv",
-      "target": "agent_src_research_parsearxiv"
+      "target": "agent_src_research_parsearxiv",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2688,9 +2532,9 @@
       "source_location": "L415",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchpapers",
-      "target": "agent_src_research_searcharxiv"
+      "target": "agent_src_research_searcharxiv",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2700,9 +2544,9 @@
       "source_location": "L388",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_reconstructabstract"
+      "target": "agent_src_research_reconstructabstract",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2712,9 +2556,9 @@
       "source_location": "L425",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_searchpapers",
-      "target": "agent_src_research_searchopenalex"
+      "target": "agent_src_research_searchopenalex",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2724,9 +2568,9 @@
       "source_location": "L470",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_searchpapers"
+      "target": "agent_src_research_searchpapers",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2736,9 +2580,9 @@
       "source_location": "L453",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_picktop",
-      "target": "agent_src_research_dedupe"
+      "target": "agent_src_research_dedupe",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2748,9 +2592,9 @@
       "source_location": "L482",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_picktop"
+      "target": "agent_src_research_picktop",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2760,9 +2604,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_research_researchdigest"
+      "target": "agent_src_research_researchdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2772,9 +2616,9 @@
       "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_research_researchdigest"
+      "target": "agent_src_research_researchdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2784,9 +2628,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_mjs_agent_src_research_test"
+      "target": "agent_src_research_mjs_agent_src_research_test",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2795,9 +2639,9 @@
       "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_abs"
+      "target": "agent_src_research_test_abs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2806,9 +2650,9 @@
       "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_headers"
+      "target": "agent_src_research_test_headers",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2817,9 +2661,9 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_parsed"
+      "target": "agent_src_research_test_parsed",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2828,9 +2672,9 @@
       "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_datestamp"
+      "target": "agent_src_run_datestamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2839,9 +2683,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_dirname"
+      "target": "agent_src_run_dirname",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2850,9 +2694,9 @@
       "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_formatdate"
+      "target": "agent_src_run_formatdate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2861,9 +2705,9 @@
       "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_hourstamp"
+      "target": "agent_src_run_hourstamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2872,9 +2716,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_loadstate"
+      "target": "agent_src_run_loadstate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2883,9 +2727,9 @@
       "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_main"
+      "target": "agent_src_run_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2894,9 +2738,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_months"
+      "target": "agent_src_run_months",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2905,9 +2749,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_parserecipients"
+      "target": "agent_src_run_parserecipients",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2916,9 +2760,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_requireenv"
+      "target": "agent_src_run_requireenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2927,9 +2771,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_root"
+      "target": "agent_src_run_root",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2938,9 +2782,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_savestate"
+      "target": "agent_src_run_savestate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2949,9 +2793,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_state_path"
+      "target": "agent_src_run_state_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2961,9 +2805,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_sanitize"
+      "target": "agent_src_sanitize",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2973,9 +2817,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_sanitize_sanitizeissue"
+      "target": "agent_src_sanitize_sanitizeissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2985,9 +2829,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_smtp"
+      "target": "agent_src_smtp",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2997,9 +2841,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_smtp_sendsmtpemail"
+      "target": "agent_src_smtp_sendsmtpemail",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3009,9 +2853,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_validate"
+      "target": "agent_src_validate",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -3021,9 +2865,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_validate_validateandrankdigest"
+      "target": "agent_src_validate_validateandrankdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3033,9 +2877,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_loadstate"
+      "target": "agent_src_run_loadstate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3045,9 +2889,9 @@
       "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_savestate"
+      "target": "agent_src_run_savestate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3057,9 +2901,9 @@
       "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_requireenv"
+      "target": "agent_src_run_requireenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3069,9 +2913,9 @@
       "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_parserecipients"
+      "target": "agent_src_run_parserecipients",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3081,9 +2925,9 @@
       "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_formatdate"
+      "target": "agent_src_run_formatdate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3093,9 +2937,9 @@
       "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_datestamp"
+      "target": "agent_src_run_datestamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3105,9 +2949,9 @@
       "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_run_hourstamp"
+      "target": "agent_src_run_hourstamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3117,9 +2961,9 @@
       "source_location": "L88",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_sanitize_sanitizeissue"
+      "target": "agent_src_sanitize_sanitizeissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3129,9 +2973,9 @@
       "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_smtp_sendsmtpemail"
+      "target": "agent_src_smtp_sendsmtpemail",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3141,9 +2985,9 @@
       "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_validate_validateandrankdigest"
+      "target": "agent_src_validate_validateandrankdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3152,9 +2996,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_decodehtmlentities"
+      "target": "agent_src_sanitize_decodehtmlentities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3163,9 +3007,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_replacements"
+      "target": "agent_src_sanitize_replacements",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3174,9 +3018,9 @@
       "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizedigestentries"
+      "target": "agent_src_sanitize_sanitizedigestentries",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3185,9 +3029,9 @@
       "source_location": "L133",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizehtmldocument"
+      "target": "agent_src_sanitize_sanitizehtmldocument",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3196,9 +3040,9 @@
       "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizeissue"
+      "target": "agent_src_sanitize_sanitizeissue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3207,9 +3051,9 @@
       "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizenewslettertext"
+      "target": "agent_src_sanitize_sanitizenewslettertext",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3219,9 +3063,9 @@
       "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize_sanitizenewslettertext",
-      "target": "agent_src_sanitize_decodehtmlentities"
+      "target": "agent_src_sanitize_decodehtmlentities",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3231,9 +3075,9 @@
       "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize_sanitizedigestentries",
-      "target": "agent_src_sanitize_sanitizenewslettertext"
+      "target": "agent_src_sanitize_sanitizenewslettertext",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3243,9 +3087,9 @@
       "source_location": "L125",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize_sanitizeissue",
-      "target": "agent_src_sanitize_sanitizenewslettertext"
+      "target": "agent_src_sanitize_sanitizenewslettertext",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3255,9 +3099,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_sanitize_sanitizeissue",
-      "target": "agent_src_sanitize_sanitizehtmldocument"
+      "target": "agent_src_sanitize_sanitizehtmldocument",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3266,9 +3110,9 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_createtransport"
+      "target": "agent_src_smtp_createtransport",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3277,9 +3121,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_getsmtpconfig"
+      "target": "agent_src_smtp_getsmtpconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3288,9 +3132,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_optionalenv"
+      "target": "agent_src_smtp_optionalenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3299,9 +3143,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_parsebool"
+      "target": "agent_src_smtp_parsebool",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3310,9 +3154,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_requireenv"
+      "target": "agent_src_smtp_requireenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3321,9 +3165,9 @@
       "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp",
-      "target": "agent_src_smtp_sendsmtpemail"
+      "target": "agent_src_smtp_sendsmtpemail",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3333,9 +3177,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_requireenv"
+      "target": "agent_src_smtp_requireenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3345,9 +3189,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_optionalenv"
+      "target": "agent_src_smtp_optionalenv",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3357,9 +3201,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_parsebool"
+      "target": "agent_src_smtp_parsebool",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3369,9 +3213,9 @@
       "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp_sendsmtpemail",
-      "target": "agent_src_smtp_getsmtpconfig"
+      "target": "agent_src_smtp_getsmtpconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3381,9 +3225,9 @@
       "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_smtp_sendsmtpemail",
-      "target": "agent_src_smtp_createtransport"
+      "target": "agent_src_smtp_createtransport",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3392,9 +3236,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_boilerplate"
+      "target": "agent_src_validate_boilerplate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3403,9 +3247,9 @@
       "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_clamp"
+      "target": "agent_src_validate_clamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3414,9 +3258,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_insight_terms"
+      "target": "agent_src_validate_insight_terms",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3425,9 +3269,9 @@
       "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_ishttpurl"
+      "target": "agent_src_validate_ishttpurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3436,9 +3280,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_primary_host_hints"
+      "target": "agent_src_validate_primary_host_hints",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3447,9 +3291,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_required"
+      "target": "agent_src_validate_required",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3458,9 +3302,9 @@
       "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_scoreinsight"
+      "target": "agent_src_validate_scoreinsight",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3469,9 +3313,9 @@
       "source_location": "L171",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_striprankingfields"
+      "target": "agent_src_validate_striprankingfields",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3480,9 +3324,9 @@
       "source_location": "L186",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_validateandrankdigest"
+      "target": "agent_src_validate_validateandrankdigest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3491,9 +3335,9 @@
       "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_validateitem"
+      "target": "agent_src_validate_validateitem",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3502,9 +3346,9 @@
       "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_wordcount"
+      "target": "agent_src_validate_wordcount",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3514,9 +3358,9 @@
       "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_validateitem",
-      "target": "agent_src_validate_ishttpurl"
+      "target": "agent_src_validate_ishttpurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3526,9 +3370,9 @@
       "source_location": "L135",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_clamp"
+      "target": "agent_src_validate_clamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3538,9 +3382,9 @@
       "source_location": "L134",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_wordcount"
+      "target": "agent_src_validate_wordcount",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3550,9 +3394,9 @@
       "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_validateitem",
-      "target": "agent_src_validate_wordcount"
+      "target": "agent_src_validate_wordcount",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3562,9 +3406,9 @@
       "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_validateitem"
+      "target": "agent_src_validate_validateitem",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3574,9 +3418,9 @@
       "source_location": "L195",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_validateitem"
+      "target": "agent_src_validate_validateitem",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3586,9 +3430,9 @@
       "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_scoreinsight"
+      "target": "agent_src_validate_scoreinsight",
+      "confidence_score": 1.0
     },
     {
       "relation": "indirect_call",
@@ -3598,9 +3442,9 @@
       "source_location": "L210",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_striprankingfields"
+      "target": "agent_src_validate_striprankingfields",
+      "confidence_score": 0.5
     },
     {
       "relation": "references",
@@ -3783,26 +3627,6 @@
       "target": "readme_insight_ranking"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_dark_hive_theme",
-      "target": "tech_digest_agent_hive_digest_ui"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_dark_hive_theme",
-      "target": "tech_digest_agent_newsletter_dark"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
@@ -3893,46 +3717,6 @@
       "target": "readme_three_lanes"
     },
     {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_hive_digest_ui",
-      "target": "readme_hive_digest"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_three_lanes",
-      "target": "tech_digest_agent_category_prompt"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_insight_ranking",
-      "target": "tech_digest_agent_rank_items"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_insight_ranking",
-      "target": "tech_digest_agent_score_insight"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
@@ -3941,106 +3725,6 @@
       "weight": 1.0,
       "source": "readme_cursor_automation",
       "target": "readme_github_actions_fallback"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_tech_digest_agent_html",
-      "target": "tech_digest_agent_hive_digest_ui"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_hive_digest_ui",
-      "target": "tech_digest_agent_generate_issue"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_hive_digest_ui",
-      "target": "tech_digest_agent_newsletter_dark"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_fetch_category",
-      "target": "tech_digest_agent_anthropic_api"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_fetch_category",
-      "target": "tech_digest_agent_category_prompt"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_fetch_category",
-      "target": "tech_digest_agent_web_search"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_generate_issue",
-      "target": "tech_digest_agent_fetch_category"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_rank_items",
-      "target": "tech_digest_agent_validate_item"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_score_insight",
-      "target": "tech_digest_agent_validate_item"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "tech_digest_agent_rank_items",
-      "target": "tech_digest_agent_score_insight"
     }
   ],
   "hyperedges": [
@@ -4071,20 +3755,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".cursor/automations/newsletter.md"
-    },
-    {
-      "id": "client_insight_ranking_flow",
-      "label": "Client-Side Insight Ranking Flow",
-      "nodes": [
-        "tech_digest_agent_validate_item",
-        "tech_digest_agent_score_insight",
-        "tech_digest_agent_rank_items"
-      ],
-      "relation": "implement",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tech-digest-agent.html"
     }
   ],
-  "built_at_commit": "ebe5cf2e0577296039eb1a0ebaf8d7833b7e28c7"
+  "built_at_commit": "64b72fe97a13e1a4eb26c72d0ad4b98a25e77330"
 }

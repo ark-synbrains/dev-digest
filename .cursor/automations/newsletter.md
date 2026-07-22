@@ -43,7 +43,7 @@ Do not open a PR or create a feature branch for a normal successful send.
   2. algorithms & systems
   3. product & company releases
 - Each entry: headline, 2–4 sentence engineer-focused summary, source_name, source_url (real links only).
-- Tone: Synbrains Hive insights for hands-on engineers. Match tech-digest-agent.html / Hive branding (red #EE462F → purple #7610C7 on dark).
+- Tone: Synbrains Hive insights for hands-on engineers. Match hive-digest.html / Hive branding (red #EE462F → purple #7610C7 on dark).
 - The emailed HTML newsletter must always use the dark Hive theme (do not switch to light).
 - Subject: `Hive Digest - DD Mon YYYY`
   - Example: `Hive Digest - 21 Jul 2026`
