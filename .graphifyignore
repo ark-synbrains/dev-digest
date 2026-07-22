@@ -1,9 +1,21 @@
-# Graphify install artifacts — never index the skill/tooling into the project graph
-.agents/skills/graphify/
-.cursor/rules/graphify.mdc
-# Ephemeral digest content GraphRAG corpus (separate from codebase graph)
+# Never index Cursor/agent rules or Graphify skill tooling into the project graph.
+# "Rules" must not become graph nodes — keep these patterns broad on purpose.
+.cursor/rules/
+.cursor/**/*.mdc
+.cursorrules
+**/.cursorrules
+**/.cursor/rules/
+.agents/
+**/.agents/
+**/AGENTS.md
+**/CLAUDE.md
+**/RULES.md
+**/rules.md
+
+# Local / ephemeral run outputs and unused alternate GraphRAG paths
 agent/out/
 agent/digest-corpus/
 agent/digest-graph/
-# Issued newsletter HTML/text archives (tracked in git, not part of code graph)
+
+# Issued newsletter archives are git-tracked but excluded from the *codebase* graph
 digests/

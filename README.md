@@ -90,7 +90,8 @@ graphify hook install
 This repo already includes:
 - `.cursor/rules/graphify.mdc` — always-on Cursor rule (query-first)
 - `.agents/skills/graphify/` — `/graphify` Agent Skill + references
-- `.graphifyignore` — excludes skill/rule artifacts from the generated graph
+- `.graphifyignore` — excludes Cursor/agent **rules**, skills, `digests/`, and
+  local `agent/out/` from the generated codebase graph (rules are never corpus)
 - `.gitattributes` — union-merge driver for `graphify-out/graph.json`
 
 ### Rebuild / query
@@ -135,7 +136,7 @@ flowchart TB
     G[enrichDigestWithGraphRag<br/>content knowledge graph]
     V[validateAndRankDigest<br/>insight score + GraphRAG boost]
     B[buildIssue → sanitizeIssue]
-    A[Archive digests/YYYY-MM-DD/<br/>+ tracked agent/out/]
+    A[Archive digests/YYYY-MM-DD/<br/>canonical tracked archive]
     S[sendSmtpEmail or stop on dry-run]
   end
 
@@ -175,7 +176,7 @@ Separate from the **codebase** map above, the Node sender (`agent/`) builds a
 **content** knowledge graph from research candidates each run:
 
 ```
-researchDigest → enrichDigestWithGraphRag → validateAndRankDigest → render → SMTP
+researchDigest → enrichDigestWithGraphRag → validateAndRankDigest → render → archive digests/ → SMTP
 ```
 
 How it works:
@@ -190,8 +191,9 @@ How it works:
 5. `scoreInsight()` applies the boost (capped at +12). Boosts are ranking-only
    and never appear in the emailed issue.
 
-Artifacts (tracked in git) land under `agent/out/digest-graph/<date>/`:
+Local (gitignored) GraphRAG/run scratch lands under `agent/out/digest-graph/<date>/`:
 `extraction.json`, `graph.json`, `boosts.json`, `corpus/`, `summary.json`.
+The emailed issue archive that is **tracked in git** is `digests/YYYY-MM-DD/`.
 
 | Env | Effect |
 | --- | --- |
@@ -244,9 +246,9 @@ Merged PR feature branches are deleted automatically by
 
 ```bash
 npm install --prefix agent
-# preview only (writes digests/YYYY-MM-DD/ + agent/out/)
+# preview only (writes digests/YYYY-MM-DD/; also local agent/out/)
 npm run generate --prefix agent
-# send for real (needs SMTP secrets below; also archives under digests/)
+# send for real (needs SMTP secrets below; archives under digests/)
 npm start --prefix agent
 ```
 
@@ -277,14 +279,14 @@ agent/                              Node sender (npm: hive-digest-agent)
   src/sanitize.mjs                  sanitizeDigestText / sanitizeIssue
   src/smtp.mjs                      nodemailer transport
   scripts/build_content_graph.py    Graphify build/cluster for content boosts
-  out/                              tracked run artifacts (HTML scratch + GraphRAG)
+  out/                              local scratch + GraphRAG (gitignored)
 graphify-out/                       codebase knowledge graph (graphify)
   graph.html                        interactive visualization
   graph.json                        queryable graph data
   GRAPH_REPORT.md                   communities / god nodes / questions
 .agents/skills/graphify/            /graphify Agent Skill + references
-.graphifyignore                     exclude skill/rule/digest/out from code graph
-.github/workflows/hive-digest.yml   monthly SMTP send + commit digests/ + agent/out/
+.graphifyignore                     exclude rules/skills/digests/out from code graph
+.github/workflows/hive-digest.yml   monthly SMTP send + commit digests/
 .github/workflows/graphify.yml      rebuild graphify-out on code pushes
 .cursor/automations/hive-digest.md  Cursor Automation recipe (monthly send)
 .cursor/rules/graphify.mdc          always-on Cursor graphify rule

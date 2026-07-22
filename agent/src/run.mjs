@@ -70,15 +70,17 @@ function hourStamp(d = new Date()) {
 
 /**
  * Persist every generated issue into the repo archive (digests/) and a local
- * scratch copy under agent/out/. Both dry-run and live sends call this.
+ * gitignored scratch copy under agent/out/. Both dry-run and live sends call this.
  *
  * Layout:
- *   digests/YYYY-MM-DD/
+ *   digests/YYYY-MM-DD/          (tracked)
  *     hive-digest.html
  *     hive-digest.txt
  *     ranking.json
  *     graphrag.json
  *     meta.json
+ *   agent/out/                   (gitignored)
+ *     digest-YYYY-MM-DD.*
  */
 function archiveIssue({
   stamp,
