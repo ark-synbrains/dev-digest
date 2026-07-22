@@ -26,10 +26,11 @@ Monthly automation entrypoints:
 
 ```bash
 npm install
-npm test
+npm test           # research + digest pipeline regression tests
 npm run generate   # dry-run → agent/out/
 npm start          # research + send (needs SMTP_* + NEWSLETTER_TO_EMAILS)
 ```
+
 
 `NEWSLETTER_TO_EMAILS` is the recipient-list secret name (historical); the
 product name is still **Hive Digest**.

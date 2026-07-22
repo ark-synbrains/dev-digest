@@ -94,7 +94,7 @@ async function main() {
     throw new Error('No digest entries passed validation / insight ranking');
   }
 
-  // Sanitize fancy/unicode glyphs out of the final newsletter before send.
+  // Sanitize fancy/unicode glyphs out of the final Hive Digest before send.
   const issue = sanitizeIssue(buildIssue({ date, byCategory, sectionOrder }));
 
   if (dryRun) {
