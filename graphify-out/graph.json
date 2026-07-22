@@ -1,38 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "monthly_hive_digest_automation_pipeline",
-        "label": "Monthly Hive Digest Automation Pipeline",
-        "nodes": [
-          "cursor_automations_newsletter_hive_digest_automation",
-          "github_workflows_newsletter_hive_digest_monthly",
-          "cursor_automations_newsletter_node_agent",
-          "cursor_automations_newsletter_smtp_delivery"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "README.md"
-      },
-      {
-        "id": "research_source_fallback_chain",
-        "label": "Research Source Fallback Chain",
-        "nodes": [
-          "cursor_automations_newsletter_hn_algolia",
-          "cursor_automations_newsletter_arxiv",
-          "cursor_automations_newsletter_openalex",
-          "cursor_automations_newsletter_source_fallback"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": ".cursor/automations/newsletter.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "package.json",
@@ -40,10 +9,10 @@
       "source_file": "agent/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_package",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "agent_package"
     },
     {
       "label": "name",
@@ -51,10 +20,10 @@
       "source_file": "agent/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "agent_package_name",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "agent_package_name"
     },
     {
       "label": "version",
@@ -62,10 +31,10 @@
       "source_file": "agent/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "agent_package_version",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "agent_package_version"
     },
     {
       "label": "private",
@@ -73,10 +42,10 @@
       "source_file": "agent/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "agent_package_private",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "agent_package_private"
     },
     {
       "label": "type",
@@ -84,10 +53,10 @@
       "source_file": "agent/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "agent_package_type",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "agent_package_type"
     },
     {
       "label": "description",
@@ -95,10 +64,10 @@
       "source_file": "agent/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "agent_package_description",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "agent_package_description"
     },
     {
       "label": "scripts",
@@ -106,10 +75,10 @@
       "source_file": "agent/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "agent_package_scripts",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "agent_package_scripts"
     },
     {
       "label": "start",
@@ -117,10 +86,10 @@
       "source_file": "agent/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "agent_package_scripts_start",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "start"
+      "norm_label": "start",
+      "id": "agent_package_scripts_start"
     },
     {
       "label": "generate",
@@ -128,10 +97,10 @@
       "source_file": "agent/package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "agent_package_scripts_generate",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "generate"
+      "norm_label": "generate",
+      "id": "agent_package_scripts_generate"
     },
     {
       "label": "test",
@@ -139,10 +108,10 @@
       "source_file": "agent/package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "agent_package_scripts_test",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "test"
+      "norm_label": "test",
+      "id": "agent_package_scripts_test"
     },
     {
       "label": "engines",
@@ -150,10 +119,10 @@
       "source_file": "agent/package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "agent_package_engines",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "engines"
+      "norm_label": "engines",
+      "id": "agent_package_engines"
     },
     {
       "label": "node",
@@ -161,10 +130,10 @@
       "source_file": "agent/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "agent_package_engines_node",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "node"
+      "norm_label": "node",
+      "id": "agent_package_engines_node"
     },
     {
       "label": "dependencies",
@@ -172,10 +141,10 @@
       "source_file": "agent/package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "agent_package_dependencies",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "agent_package_dependencies"
     },
     {
       "label": "nodemailer",
@@ -183,10 +152,10 @@
       "source_file": "agent/package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "agent_package_dependencies_nodemailer",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "nodemailer"
+      "norm_label": "nodemailer",
+      "id": "agent_package_dependencies_nodemailer"
     },
     {
       "label": "nodemailer",
@@ -194,10 +163,10 @@
       "source_file": "agent/package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "nodemailer",
       "community": 2,
       "community_name": "Agent Package Config",
-      "norm_label": "nodemailer"
+      "norm_label": "nodemailer",
+      "id": "nodemailer"
     },
     {
       "label": "render.mjs",
@@ -205,76 +174,76 @@
       "source_file": "agent/src/render.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_render",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "render.mjs"
+      "norm_label": "render.mjs",
+      "id": "agent_src_render"
     },
     {
       "label": "HIVE",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L8",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "agent_src_render_hive",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "hive"
+      "norm_label": "hive",
+      "id": "agent_src_render_hive"
     },
     {
       "label": "SECTION_META",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L19",
+      "source_location": "L23",
       "_origin": "ast",
-      "id": "agent_src_render_section_meta",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "section_meta"
+      "norm_label": "section_meta",
+      "id": "agent_src_render_section_meta"
     },
     {
       "label": "DEFAULT_ORDER",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
-      "id": "agent_src_render_default_order",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "default_order"
+      "norm_label": "default_order",
+      "id": "agent_src_render_default_order"
     },
     {
       "label": "escapeHtml()",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L27",
+      "source_location": "L31",
       "_origin": "ast",
-      "id": "agent_src_render_escapehtml",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "escapehtml()"
+      "norm_label": "escapehtml()",
+      "id": "agent_src_render_escapehtml"
     },
     {
       "label": "accentBar()",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
-      "id": "agent_src_render_accentbar",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "accentbar()"
+      "norm_label": "accentbar()",
+      "id": "agent_src_render_accentbar"
     },
     {
       "label": "buildIssue()",
       "file_type": "code",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L39",
+      "source_location": "L43",
       "_origin": "ast",
-      "id": "agent_src_render_buildissue",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "buildissue()"
+      "norm_label": "buildissue()",
+      "id": "agent_src_render_buildissue"
     },
     {
       "label": "research.mjs",
@@ -282,329 +251,329 @@
       "source_file": "agent/src/research.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_research",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "research.mjs"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "research.mjs",
+      "id": "agent_src_research"
     },
     {
       "label": "HOST_MIN_INTERVAL_MS",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L23",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "agent_src_research_host_min_interval_ms",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "host_min_interval_ms"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "host_min_interval_ms",
+      "id": "agent_src_research_host_min_interval_ms"
     },
     {
       "label": "hostState",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L29",
+      "source_location": "L32",
       "_origin": "ast",
-      "id": "agent_src_research_hoststate",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "hoststate"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "hoststate",
+      "id": "agent_src_research_hoststate"
     },
     {
       "label": "sleep()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L32",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "agent_src_research_sleep",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "sleep()"
+      "norm_label": "sleep()",
+      "id": "agent_src_research_sleep"
     },
     {
       "label": "hostOf()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L36",
+      "source_location": "L39",
       "_origin": "ast",
-      "id": "agent_src_research_hostof",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "hostof()"
+      "norm_label": "hostof()",
+      "id": "agent_src_research_hostof"
     },
     {
       "label": "minIntervalFor()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L44",
+      "source_location": "L47",
       "_origin": "ast",
-      "id": "agent_src_research_minintervalfor",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "minintervalfor()"
+      "norm_label": "minintervalfor()",
+      "id": "agent_src_research_minintervalfor"
     },
     {
       "label": "getHostState()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L48",
+      "source_location": "L51",
       "_origin": "ast",
-      "id": "agent_src_research_gethoststate",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "gethoststate()"
+      "norm_label": "gethoststate()",
+      "id": "agent_src_research_gethoststate"
     },
     {
       "label": "noteRateLimit()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L57",
+      "source_location": "L60",
       "_origin": "ast",
-      "id": "agent_src_research_noteratelimit",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "noteratelimit()"
+      "norm_label": "noteratelimit()",
+      "id": "agent_src_research_noteratelimit"
     },
     {
       "label": "noteSuccess()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L68",
+      "source_location": "L71",
       "_origin": "ast",
-      "id": "agent_src_research_notesuccess",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "notesuccess()"
+      "norm_label": "notesuccess()",
+      "id": "agent_src_research_notesuccess"
     },
     {
       "label": "assertCircuitClosed()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L74",
+      "source_location": "L77",
       "_origin": "ast",
-      "id": "agent_src_research_assertcircuitclosed",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "assertcircuitclosed()"
+      "norm_label": "assertcircuitclosed()",
+      "id": "agent_src_research_assertcircuitclosed"
     },
     {
       "label": "withHostPace()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L85",
+      "source_location": "L88",
       "_origin": "ast",
-      "id": "agent_src_research_withhostpace",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "withhostpace()"
+      "norm_label": "withhostpace()",
+      "id": "agent_src_research_withhostpace"
     },
     {
       "label": "retryAfterMs()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L111",
+      "source_location": "L114",
       "_origin": "ast",
-      "id": "agent_src_research_retryafterms",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "retryafterms()"
+      "norm_label": "retryafterms()",
+      "id": "agent_src_research_retryafterms"
     },
     {
       "label": "isRateExceededBody()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L125",
+      "source_location": "L128",
       "_origin": "ast",
-      "id": "agent_src_research_israteexceededbody",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "israteexceededbody()"
+      "norm_label": "israteexceededbody()",
+      "id": "agent_src_research_israteexceededbody"
     },
     {
       "label": "isRetryableStatus()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L133",
+      "source_location": "L136",
       "_origin": "ast",
-      "id": "agent_src_research_isretryablestatus",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "isretryablestatus()"
+      "norm_label": "isretryablestatus()",
+      "id": "agent_src_research_isretryablestatus"
     },
     {
       "label": "fetchWithRetry()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L142",
+      "source_location": "L145",
       "_origin": "ast",
-      "id": "agent_src_research_fetchwithretry",
       "community": 0,
       "community_name": "Research Resilience",
-      "norm_label": "fetchwithretry()"
+      "norm_label": "fetchwithretry()",
+      "id": "agent_src_research_fetchwithretry"
     },
     {
       "label": "decodeHtmlEntities()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L229",
+      "source_location": "L232",
       "_origin": "ast",
-      "id": "agent_src_research_decodehtmlentities",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "decodehtmlentities()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "decodehtmlentities()",
+      "id": "agent_src_research_decodehtmlentities"
     },
     {
       "label": "stripHtml()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L253",
+      "source_location": "L256",
       "_origin": "ast",
-      "id": "agent_src_research_striphtml",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "striphtml()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "striphtml()",
+      "id": "agent_src_research_striphtml"
     },
     {
       "label": "truncate()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L260",
+      "source_location": "L263",
       "_origin": "ast",
-      "id": "agent_src_research_truncate",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "truncate()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "truncate()",
+      "id": "agent_src_research_truncate"
     },
     {
       "label": "settled()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L266",
+      "source_location": "L269",
       "_origin": "ast",
-      "id": "agent_src_research_settled",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "settled()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "settled()",
+      "id": "agent_src_research_settled"
     },
     {
       "label": "searchHn()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L275",
+      "source_location": "L278",
       "_origin": "ast",
-      "id": "agent_src_research_searchhn",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "searchhn()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "searchhn()",
+      "id": "agent_src_research_searchhn"
     },
     {
       "label": "searchHnWithFallback()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L306",
+      "source_location": "L309",
       "_origin": "ast",
-      "id": "agent_src_research_searchhnwithfallback",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "searchhnwithfallback()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "searchhnwithfallback()",
+      "id": "agent_src_research_searchhnwithfallback"
     },
     {
       "label": "parseArxiv()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L321",
+      "source_location": "L324",
       "_origin": "ast",
-      "id": "agent_src_research_parsearxiv",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "parsearxiv()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "parsearxiv()",
+      "id": "agent_src_research_parsearxiv"
     },
     {
       "label": "searchArxiv()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L340",
+      "source_location": "L343",
       "_origin": "ast",
-      "id": "agent_src_research_searcharxiv",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "searcharxiv()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "searcharxiv()",
+      "id": "agent_src_research_searcharxiv"
     },
     {
       "label": "searchOpenAlex()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L359",
+      "source_location": "L362",
       "_origin": "ast",
-      "id": "agent_src_research_searchopenalex",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "searchopenalex()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "searchopenalex()",
+      "id": "agent_src_research_searchopenalex"
     },
     {
       "label": "reconstructAbstract()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L400",
+      "source_location": "L403",
       "_origin": "ast",
-      "id": "agent_src_research_reconstructabstract",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "reconstructabstract()"
+      "community": 11,
+      "community_name": "searchOpenAlex",
+      "norm_label": "reconstructabstract()",
+      "id": "agent_src_research_reconstructabstract"
     },
     {
       "label": "searchPapers()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L413",
+      "source_location": "L416",
       "_origin": "ast",
-      "id": "agent_src_research_searchpapers",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "searchpapers()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "searchpapers()",
+      "id": "agent_src_research_searchpapers"
     },
     {
       "label": "dedupe()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L439",
+      "source_location": "L442",
       "_origin": "ast",
-      "id": "agent_src_research_dedupe",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "dedupe()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "dedupe()",
+      "id": "agent_src_research_dedupe"
     },
     {
       "label": "pickTop()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L451",
+      "source_location": "L454",
       "_origin": "ast",
-      "id": "agent_src_research_picktop",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "picktop()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "picktop()",
+      "id": "agent_src_research_picktop"
     },
     {
       "label": "researchDigest()",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L462",
+      "source_location": "L465",
       "_origin": "ast",
-      "id": "agent_src_research_researchdigest",
-      "community": 0,
-      "community_name": "Research Resilience",
-      "norm_label": "researchdigest()"
+      "community": 10,
+      "community_name": "research.mjs",
+      "norm_label": "researchdigest()",
+      "id": "agent_src_research_researchdigest"
     },
     {
       "label": "__test",
       "file_type": "code",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L496",
+      "source_location": "L499",
       "_origin": "ast",
-      "id": "agent_src_research_mjs_agent_src_research_test",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "__test"
+      "norm_label": "__test",
+      "id": "agent_src_research_mjs_agent_src_research_test"
     },
     {
       "label": "research.test.mjs",
@@ -612,10 +581,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_research_test_mjs_agent_src_research_test",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "research.test.mjs"
+      "norm_label": "research.test.mjs",
+      "id": "agent_src_research_test_mjs_agent_src_research_test"
     },
     {
       "label": "headers",
@@ -623,10 +592,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L27",
       "_origin": "ast",
-      "id": "agent_src_research_test_headers",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "headers"
+      "norm_label": "headers",
+      "id": "agent_src_research_test_headers"
     },
     {
       "label": "abs",
@@ -634,10 +603,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "agent_src_research_test_abs",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "abs"
+      "norm_label": "abs",
+      "id": "agent_src_research_test_abs"
     },
     {
       "label": "parsed",
@@ -645,10 +614,10 @@
       "source_file": "agent/src/research.test.mjs",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "agent_src_research_test_parsed",
       "community": 8,
       "community_name": "Research Tests",
-      "norm_label": "parsed"
+      "norm_label": "parsed",
+      "id": "agent_src_research_test_parsed"
     },
     {
       "label": "run.mjs",
@@ -656,142 +625,142 @@
       "source_file": "agent/src/run.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_run",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "run.mjs"
+      "norm_label": "run.mjs",
+      "id": "agent_src_run"
     },
     {
       "label": "__dirname",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L11",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "agent_src_run_dirname",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "agent_src_run_dirname"
     },
     {
       "label": "ROOT",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L12",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "agent_src_run_root",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "root"
+      "norm_label": "root",
+      "id": "agent_src_run_root"
     },
     {
       "label": "STATE_PATH",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L13",
+      "source_location": "L23",
       "_origin": "ast",
-      "id": "agent_src_run_state_path",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "state_path"
+      "norm_label": "state_path",
+      "id": "agent_src_run_state_path"
     },
     {
       "label": "loadState()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L15",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "agent_src_run_loadstate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "loadstate()"
+      "norm_label": "loadstate()",
+      "id": "agent_src_run_loadstate"
     },
     {
       "label": "saveState()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L22",
+      "source_location": "L32",
       "_origin": "ast",
-      "id": "agent_src_run_savestate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "savestate()"
+      "norm_label": "savestate()",
+      "id": "agent_src_run_savestate"
     },
     {
       "label": "requireEnv()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L26",
+      "source_location": "L36",
       "_origin": "ast",
-      "id": "agent_src_run_requireenv",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "requireenv()"
+      "norm_label": "requireenv()",
+      "id": "agent_src_run_requireenv"
     },
     {
       "label": "parseRecipients()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L32",
+      "source_location": "L42",
       "_origin": "ast",
-      "id": "agent_src_run_parserecipients",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "parserecipients()"
+      "norm_label": "parserecipients()",
+      "id": "agent_src_run_parserecipients"
     },
     {
       "label": "MONTHS",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L39",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "agent_src_run_months",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "months"
+      "norm_label": "months",
+      "id": "agent_src_run_months"
     },
     {
       "label": "formatDate()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L42",
+      "source_location": "L52",
       "_origin": "ast",
-      "id": "agent_src_run_formatdate",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "formatdate()"
+      "norm_label": "formatdate()",
+      "id": "agent_src_run_formatdate"
     },
     {
       "label": "dateStamp()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L47",
+      "source_location": "L57",
       "_origin": "ast",
-      "id": "agent_src_run_datestamp",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "datestamp()"
+      "norm_label": "datestamp()",
+      "id": "agent_src_run_datestamp"
     },
     {
       "label": "hourStamp()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L51",
+      "source_location": "L61",
       "_origin": "ast",
-      "id": "agent_src_run_hourstamp",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "hourstamp()"
+      "norm_label": "hourstamp()",
+      "id": "agent_src_run_hourstamp"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L55",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "agent_src_run_main",
       "community": 4,
       "community_name": "Run Orchestration",
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "agent_src_run_main"
     },
     {
       "label": "sanitize.mjs",
@@ -799,76 +768,76 @@
       "source_file": "agent/src/sanitize.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_sanitize",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitize.mjs"
+      "norm_label": "sanitize.mjs",
+      "id": "agent_src_sanitize"
     },
     {
       "label": "REPLACEMENTS",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L7",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "agent_src_sanitize_replacements",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "replacements"
+      "norm_label": "replacements",
+      "id": "agent_src_sanitize_replacements"
     },
     {
       "label": "decodeHtmlEntities()",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
-      "id": "agent_src_sanitize_decodehtmlentities",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "decodehtmlentities()"
+      "norm_label": "decodehtmlentities()",
+      "id": "agent_src_sanitize_decodehtmlentities"
     },
     {
-      "label": "sanitizeNewsletterText()",
+      "label": "sanitizeDigestText()",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L64",
+      "source_location": "L68",
       "_origin": "ast",
-      "id": "agent_src_sanitize_sanitizenewslettertext",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizenewslettertext()"
+      "norm_label": "sanitizedigesttext()",
+      "id": "agent_src_sanitize_sanitizedigesttext"
     },
     {
       "label": "sanitizeDigestEntries()",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L105",
+      "source_location": "L109",
       "_origin": "ast",
-      "id": "agent_src_sanitize_sanitizedigestentries",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizedigestentries()"
+      "norm_label": "sanitizedigestentries()",
+      "id": "agent_src_sanitize_sanitizedigestentries"
     },
     {
       "label": "sanitizeIssue()",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L122",
+      "source_location": "L126",
       "_origin": "ast",
-      "id": "agent_src_sanitize_sanitizeissue",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizeissue()"
+      "norm_label": "sanitizeissue()",
+      "id": "agent_src_sanitize_sanitizeissue"
     },
     {
       "label": "sanitizeHtmlDocument()",
       "file_type": "code",
       "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L133",
+      "source_location": "L137",
       "_origin": "ast",
-      "id": "agent_src_sanitize_sanitizehtmldocument",
       "community": 3,
       "community_name": "Render & Sanitize",
-      "norm_label": "sanitizehtmldocument()"
+      "norm_label": "sanitizehtmldocument()",
+      "id": "agent_src_sanitize_sanitizehtmldocument"
     },
     {
       "label": "smtp.mjs",
@@ -876,76 +845,76 @@
       "source_file": "agent/src/smtp.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_smtp",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "smtp.mjs"
+      "norm_label": "smtp.mjs",
+      "id": "agent_src_smtp"
     },
     {
       "label": "requireEnv()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L3",
+      "source_location": "L7",
       "_origin": "ast",
-      "id": "agent_src_smtp_requireenv",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "requireenv()"
+      "norm_label": "requireenv()",
+      "id": "agent_src_smtp_requireenv"
     },
     {
       "label": "optionalEnv()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L9",
+      "source_location": "L13",
       "_origin": "ast",
-      "id": "agent_src_smtp_optionalenv",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "optionalenv()"
+      "norm_label": "optionalenv()",
+      "id": "agent_src_smtp_optionalenv"
     },
     {
       "label": "parseBool()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L15",
+      "source_location": "L19",
       "_origin": "ast",
-      "id": "agent_src_smtp_parsebool",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "parsebool()"
+      "norm_label": "parsebool()",
+      "id": "agent_src_smtp_parsebool"
     },
     {
       "label": "getSmtpConfig()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L30",
+      "source_location": "L34",
       "_origin": "ast",
-      "id": "agent_src_smtp_getsmtpconfig",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "getsmtpconfig()"
+      "norm_label": "getsmtpconfig()",
+      "id": "agent_src_smtp_getsmtpconfig"
     },
     {
       "label": "createTransport()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L45",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "agent_src_smtp_createtransport",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "createtransport()"
+      "norm_label": "createtransport()",
+      "id": "agent_src_smtp_createtransport"
     },
     {
       "label": "sendSmtpEmail()",
       "file_type": "code",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L61",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "agent_src_smtp_sendsmtpemail",
       "community": 7,
       "community_name": "SMTP Transport",
-      "norm_label": "sendsmtpemail()"
+      "norm_label": "sendsmtpemail()",
+      "id": "agent_src_smtp_sendsmtpemail"
     },
     {
       "label": "validate.mjs",
@@ -953,277 +922,208 @@
       "source_file": "agent/src/validate.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agent_src_validate",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validate.mjs"
+      "norm_label": "validate.mjs",
+      "id": "agent_src_validate"
     },
     {
       "label": "REQUIRED",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L6",
+      "source_location": "L8",
       "_origin": "ast",
-      "id": "agent_src_validate_required",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "required"
+      "norm_label": "required",
+      "id": "agent_src_validate_required"
     },
     {
       "label": "PRIMARY_HOST_HINTS",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "agent_src_validate_primary_host_hints",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "primary_host_hints"
+      "norm_label": "primary_host_hints",
+      "id": "agent_src_validate_primary_host_hints"
     },
     {
       "label": "INSIGHT_TERMS",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "agent_src_validate_insight_terms",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "insight_terms"
+      "norm_label": "insight_terms",
+      "id": "agent_src_validate_insight_terms"
     },
     {
       "label": "BOILERPLATE",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L57",
+      "source_location": "L59",
       "_origin": "ast",
-      "id": "agent_src_validate_boilerplate",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "boilerplate"
+      "norm_label": "boilerplate",
+      "id": "agent_src_validate_boilerplate"
     },
     {
       "label": "isHttpUrl()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L63",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "agent_src_validate_ishttpurl",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "ishttpurl()"
+      "norm_label": "ishttpurl()",
+      "id": "agent_src_validate_ishttpurl"
     },
     {
       "label": "clamp()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L72",
+      "source_location": "L74",
       "_origin": "ast",
-      "id": "agent_src_validate_clamp",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "clamp()"
+      "norm_label": "clamp()",
+      "id": "agent_src_validate_clamp"
     },
     {
       "label": "wordCount()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L76",
+      "source_location": "L78",
       "_origin": "ast",
-      "id": "agent_src_validate_wordcount",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "wordcount()"
+      "norm_label": "wordcount()",
+      "id": "agent_src_validate_wordcount"
     },
     {
       "label": "validateItem()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L87",
+      "source_location": "L89",
       "_origin": "ast",
-      "id": "agent_src_validate_validateitem",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validateitem()"
+      "norm_label": "validateitem()",
+      "id": "agent_src_validate_validateitem"
     },
     {
       "label": "scoreInsight()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L116",
+      "source_location": "L118",
       "_origin": "ast",
-      "id": "agent_src_validate_scoreinsight",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "scoreinsight()"
+      "norm_label": "scoreinsight()",
+      "id": "agent_src_validate_scoreinsight"
     },
     {
       "label": "stripRankingFields()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L171",
+      "source_location": "L173",
       "_origin": "ast",
-      "id": "agent_src_validate_striprankingfields",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "striprankingfields()"
+      "norm_label": "striprankingfields()",
+      "id": "agent_src_validate_striprankingfields"
     },
     {
       "label": "validateAndRankDigest()",
       "file_type": "code",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L186",
+      "source_location": "L188",
       "_origin": "ast",
-      "id": "agent_src_validate_validateandrankdigest",
       "community": 6,
       "community_name": "Validate & Rank",
-      "norm_label": "validateandrankdigest()"
+      "norm_label": "validateandrankdigest()",
+      "id": "agent_src_validate_validateandrankdigest"
     },
     {
-      "label": "Hive Digest (monthly) Cursor Automation",
+      "label": "hive-digest.md",
       "file_type": "document",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Preferred scheduled path; cloud agents could not create the automation via web UI due to Cloudflare bot check, so settings are pasted in the dashboard. Repo keeps GitHub Actions as fallback.",
-      "community": 1,
-      "norm_label": "hive digest (monthly) cursor automation",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_hive_digest_automation"
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "hive-digest.md",
+      "id": "cursor_automations_hive_digest"
     },
     {
-      "label": "Node Agent (npm start --prefix agent)",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Always use the existing Node agent rather than reimplementing research, ranking, or email by hand.",
-      "community": 1,
-      "norm_label": "node agent (npm start --prefix agent)",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_node_agent"
+      "label": "Cursor Automation — Hive Digest (monthly)",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "cursor automation — hive digest (monthly)",
+      "id": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly"
     },
     {
-      "label": "SMTP Newsletter Delivery",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Sending uses nodemailer SMTP with env secrets; Resend and Resend MCP are explicitly disallowed.",
-      "community": 1,
-      "norm_label": "smtp newsletter delivery",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_smtp_delivery"
+      "label": "Naming",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "naming",
+      "id": "cursor_automations_hive_digest_naming"
     },
     {
-      "label": "HN Algolia Research Source",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "hn algolia research source",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_hn_algolia"
+      "label": "Settings",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "settings",
+      "id": "cursor_automations_hive_digest_settings"
     },
     {
-      "label": "arXiv Research Source",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "arxiv research source",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_arxiv"
+      "label": "Required environment secrets",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "required environment secrets",
+      "id": "cursor_automations_hive_digest_required_environment_secrets"
     },
     {
-      "label": "OpenAlex Paper Backup",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "openalex paper backup",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_openalex"
+      "label": "Prompt",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "prompt",
+      "id": "cursor_automations_hive_digest_prompt"
     },
     {
-      "label": "Cross-Source Fallback Chain",
-      "file_type": "rationale",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Falls back arXiv \u2192 OpenAlex \u2192 HN-only; soft-fails individual queries and opens per-host circuits after exhausted rate-limit cycles so backups do not keep hammering a host.",
-      "community": 1,
-      "norm_label": "cross-source fallback chain",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_source_fallback"
-    },
-    {
-      "label": "Insight Value Ranking",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Scores are ranking-only and never included in email body or subject.",
-      "community": 1,
-      "norm_label": "insight value ranking",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_insight_ranking"
-    },
-    {
-      "label": "Dark Hive Theme",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Emailed HTML must always use the dark Hive theme; do not switch to light.",
-      "community": 1,
-      "norm_label": "dark hive theme",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_dark_hive_theme"
-    },
-    {
-      "label": "Monthly Cron 09:00 IST",
-      "file_type": "concept",
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "monthly cron 09:00 ist",
-      "community_name": "Automation & Delivery",
-      "id": "cursor_automations_newsletter_monthly_cron_ist"
+      "label": "`/automate` one-liner (local Cursor)",
+      "file_type": "document",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Cursor Automation — Hive Digest (monthly)",
+      "norm_label": "`/automate` one-liner (local cursor)",
+      "id": "cursor_automations_hive_digest_automate_one_liner_local_cursor"
     },
     {
       "label": "Delete Merged PR Branch Workflow",
@@ -1239,49 +1139,6 @@
       "norm_label": "delete merged pr branch workflow",
       "community_name": "Branch Cleanup CI",
       "id": "github_workflows_delete_merged_branch_workflow"
-    },
-    {
-      "label": "Hive Digest Monthly GitHub Actions Workflow",
-      "file_type": "code",
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "GitHub Actions cron is UTC-only, so schedule is 30 3 1 * * (03:30 UTC = 09:00 IST on the 1st).",
-      "community": 1,
-      "norm_label": "hive digest monthly github actions workflow",
-      "community_name": "Automation & Delivery",
-      "id": "github_workflows_newsletter_hive_digest_monthly"
-    },
-    {
-      "label": "Agent Start Step (npm start --prefix agent)",
-      "file_type": "code",
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "agent start step (npm start --prefix agent)",
-      "community_name": "Automation & Delivery",
-      "id": "github_workflows_newsletter_agent_start"
-    },
-    {
-      "label": "SMTP GitHub Actions Secrets",
-      "file_type": "concept",
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 1,
-      "norm_label": "smtp github actions secrets",
-      "community_name": "Automation & Delivery",
-      "id": "github_workflows_newsletter_smtp_secrets"
     },
     {
       "label": "Hive Digest",
@@ -1350,9 +1207,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Cursor Automation is the preferred scheduled newsletter path; GitHub Actions is the fallback.",
-      "community": 1,
+      "community": 13,
       "norm_label": "cursor automation (preferred)",
-      "community_name": "Automation & Delivery",
+      "community_name": "Cursor Automation (Preferred)",
       "id": "readme_cursor_automation"
     },
     {
@@ -1364,9 +1221,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 13,
       "norm_label": "github actions newsletter fallback",
-      "community_name": "Automation & Delivery",
+      "community_name": "Cursor Automation (Preferred)",
       "id": "readme_github_actions_fallback"
     },
     {
@@ -1384,7 +1241,7 @@
       "id": "readme_agent_cli"
     },
     {
-      "label": "tech-digest-agent.html Browser Artifact",
+      "label": "hive-digest.html Browser Artifact",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": null,
@@ -1393,7 +1250,7 @@
       "author": null,
       "contributor": null,
       "community": 5,
-      "norm_label": "tech-digest-agent.html browser artifact",
+      "norm_label": "hive-digest.html browser artifact",
       "community_name": "Hive Branding & UI",
       "id": "readme_tech_digest_agent_html"
     },
@@ -1420,9 +1277,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_dependencies",
-      "confidence_score": 1.0
+      "target": "agent_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1431,9 +1288,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_description",
-      "confidence_score": 1.0
+      "target": "agent_package_description"
     },
     {
       "relation": "contains",
@@ -1442,9 +1299,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_engines",
-      "confidence_score": 1.0
+      "target": "agent_package_engines"
     },
     {
       "relation": "contains",
@@ -1453,9 +1310,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_name",
-      "confidence_score": 1.0
+      "target": "agent_package_name"
     },
     {
       "relation": "contains",
@@ -1464,9 +1321,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_private",
-      "confidence_score": 1.0
+      "target": "agent_package_private"
     },
     {
       "relation": "contains",
@@ -1475,9 +1332,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_scripts",
-      "confidence_score": 1.0
+      "target": "agent_package_scripts"
     },
     {
       "relation": "contains",
@@ -1486,9 +1343,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_type",
-      "confidence_score": 1.0
+      "target": "agent_package_type"
     },
     {
       "relation": "contains",
@@ -1497,9 +1354,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package",
-      "target": "agent_package_version",
-      "confidence_score": 1.0
+      "target": "agent_package_version"
     },
     {
       "relation": "contains",
@@ -1508,9 +1365,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_generate",
-      "confidence_score": 1.0
+      "target": "agent_package_scripts_generate"
     },
     {
       "relation": "contains",
@@ -1519,9 +1376,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "agent_package_scripts_start"
     },
     {
       "relation": "contains",
@@ -1530,9 +1387,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_scripts",
-      "target": "agent_package_scripts_test",
-      "confidence_score": 1.0
+      "target": "agent_package_scripts_test"
     },
     {
       "relation": "contains",
@@ -1541,9 +1398,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_engines",
-      "target": "agent_package_engines_node",
-      "confidence_score": 1.0
+      "target": "agent_package_engines_node"
     },
     {
       "relation": "contains",
@@ -1552,9 +1409,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_dependencies",
-      "target": "agent_package_dependencies_nodemailer",
-      "confidence_score": 1.0
+      "target": "agent_package_dependencies_nodemailer"
     },
     {
       "relation": "imports",
@@ -1564,20 +1421,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_package_dependencies_nodemailer",
-      "target": "nodemailer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/render.mjs",
-      "source_location": "L35",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_render",
-      "target": "agent_src_render_accentbar",
-      "confidence_score": 1.0
+      "target": "nodemailer"
     },
     {
       "relation": "contains",
@@ -1586,137 +1432,148 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_buildissue",
-      "confidence_score": 1.0
+      "target": "agent_src_render_accentbar"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L25",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_default_order",
-      "confidence_score": 1.0
+      "target": "agent_src_render_buildissue"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_escapehtml",
-      "confidence_score": 1.0
+      "target": "agent_src_render_default_order"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L8",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_hive",
-      "confidence_score": 1.0
+      "target": "agent_src_render_escapehtml"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L19",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_render_section_meta",
-      "confidence_score": 1.0
+      "target": "agent_src_render_hive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/render.mjs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_render",
+      "target": "agent_src_render_section_meta"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize",
-      "confidence_score": 1.0
+      "target": "agent_src_sanitize"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizedigestentries",
-      "confidence_score": 1.0
+      "target": "agent_src_sanitize_sanitizedigestentries"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizeissue",
-      "confidence_score": 1.0
+      "target": "agent_src_sanitize_sanitizedigesttext"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render",
-      "target": "agent_src_sanitize_sanitizenewslettertext",
-      "confidence_score": 1.0
+      "target": "agent_src_sanitize_sanitizeissue"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L7",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_render",
-      "confidence_score": 1.0
+      "target": "agent_src_render"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L62",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_render_escapehtml",
-      "confidence_score": 1.0
+      "target": "agent_src_render_escapehtml"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/render.mjs",
-      "source_location": "L65",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_render_accentbar",
-      "confidence_score": 1.0
+      "target": "agent_src_render_accentbar"
     },
     {
       "relation": "calls",
@@ -1724,7 +1581,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "agent/src/render.mjs",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agent_src_render_buildissue",
@@ -1736,11 +1593,11 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "agent/src/render.mjs",
-      "source_location": "L96",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_sanitize_sanitizeissue"
+      "target": "agent_src_sanitize_sanitizedigesttext"
     },
     {
       "relation": "calls",
@@ -1748,215 +1605,123 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "agent/src/render.mjs",
-      "source_location": "L41",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agent_src_render_buildissue",
-      "target": "agent_src_sanitize_sanitizenewslettertext"
+      "target": "agent_src_sanitize_sanitizeissue"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L7",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_render_buildissue",
-      "confidence_score": 1.0
+      "target": "agent_src_render_buildissue"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L88",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_render_buildissue",
-      "confidence_score": 1.0
+      "target": "agent_src_render_buildissue"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L74",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_assertcircuitclosed",
-      "confidence_score": 1.0
+      "target": "agent_src_research_assertcircuitclosed"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L229",
+      "source_location": "L232",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_decodehtmlentities",
-      "confidence_score": 1.0
+      "target": "agent_src_research_decodehtmlentities"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L439",
+      "source_location": "L442",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_dedupe",
-      "confidence_score": 1.0
+      "target": "agent_src_research_dedupe"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L142",
+      "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_fetchwithretry",
-      "confidence_score": 1.0
+      "target": "agent_src_research_fetchwithretry"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L48",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_gethoststate",
-      "confidence_score": 1.0
+      "target": "agent_src_research_gethoststate"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_host_min_interval_ms",
-      "confidence_score": 1.0
+      "target": "agent_src_research_host_min_interval_ms"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L36",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_hoststate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "indirect_call",
-      "confidence": "INFERRED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L497",
-      "weight": 1.0,
-      "_origin": "ast",
-      "context": "collection",
-      "source": "agent_src_research",
-      "target": "agent_src_research_israteexceededbody",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "indirect_call",
-      "confidence": "INFERRED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L498",
-      "weight": 1.0,
-      "_origin": "ast",
-      "context": "collection",
-      "source": "agent_src_research",
-      "target": "agent_src_research_isretryablestatus",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "indirect_call",
-      "confidence": "INFERRED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L503",
-      "weight": 1.0,
-      "_origin": "ast",
-      "context": "collection",
-      "source": "agent_src_research",
-      "target": "agent_src_research_minintervalfor",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L496",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_mjs_agent_src_research_test",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L57",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_noteratelimit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_notesuccess",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "indirect_call",
-      "confidence": "INFERRED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L501",
-      "weight": 1.0,
-      "_origin": "ast",
-      "context": "collection",
-      "source": "agent_src_research",
-      "target": "agent_src_research_parsearxiv",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L451",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_picktop",
-      "confidence_score": 1.0
+      "target": "agent_src_research_hoststate"
     },
     {
       "relation": "indirect_call",
@@ -1966,120 +1731,112 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
+      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_reconstructabstract",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L462",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_researchdigest",
-      "confidence_score": 1.0
+      "target": "agent_src_research_israteexceededbody"
     },
     {
       "relation": "indirect_call",
       "confidence": "INFERRED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L499",
+      "source_location": "L501",
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
+      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_retryafterms",
-      "confidence_score": 0.5
+      "target": "agent_src_research_isretryablestatus"
+    },
+    {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L506",
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "collection",
+      "confidence_score": 0.5,
+      "source": "agent_src_research",
+      "target": "agent_src_research_minintervalfor"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L340",
+      "source_location": "L499",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searcharxiv",
-      "confidence_score": 1.0
+      "target": "agent_src_research_mjs_agent_src_research_test"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L275",
+      "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchhn",
-      "confidence_score": 1.0
+      "target": "agent_src_research_noteratelimit"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L306",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchhnwithfallback",
-      "confidence_score": 1.0
+      "target": "agent_src_research_notesuccess"
+    },
+    {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L504",
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "collection",
+      "confidence_score": 0.5,
+      "source": "agent_src_research",
+      "target": "agent_src_research_parsearxiv"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L359",
+      "source_location": "L454",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchopenalex",
-      "confidence_score": 1.0
+      "target": "agent_src_research_picktop"
+    },
+    {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L503",
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "collection",
+      "confidence_score": 0.5,
+      "source": "agent_src_research",
+      "target": "agent_src_research_reconstructabstract"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L413",
+      "source_location": "L465",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_searchpapers",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L266",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_settled",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L32",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_sleep",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L253",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research",
-      "target": "agent_src_research_striphtml",
-      "confidence_score": 1.0
+      "target": "agent_src_research_researchdigest"
     },
     {
       "relation": "indirect_call",
@@ -2089,20 +1846,120 @@
       "weight": 1.0,
       "_origin": "ast",
       "context": "collection",
+      "confidence_score": 0.5,
       "source": "agent_src_research",
-      "target": "agent_src_research_truncate",
-      "confidence_score": 0.5
+      "target": "agent_src_research_retryafterms"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L85",
+      "source_location": "L343",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research",
-      "target": "agent_src_research_withhostpace",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searcharxiv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L278",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_searchhn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L309",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_searchhnwithfallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L362",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_searchopenalex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L416",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_searchpapers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L269",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_settled"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_sleep"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L256",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_striphtml"
+    },
+    {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L505",
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "collection",
+      "confidence_score": 0.5,
+      "source": "agent_src_research",
+      "target": "agent_src_research_truncate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research",
+      "target": "agent_src_research_withhostpace"
     },
     {
       "relation": "imports_from",
@@ -2112,165 +1969,21 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research",
-      "confidence_score": 1.0
+      "target": "agent_src_research"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L5",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_research",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L164",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_sleep",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L103",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_sleep",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L75",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_assertcircuitclosed",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L45",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_minintervalfor",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L58",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_noteratelimit",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L69",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_notesuccess",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L86",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_hostof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L102",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_minintervalfor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L76",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_assertcircuitclosed",
-      "target": "agent_src_research_gethoststate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L58",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_noteratelimit",
-      "target": "agent_src_research_gethoststate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L69",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_notesuccess",
-      "target": "agent_src_research_gethoststate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/research.mjs",
-      "source_location": "L87",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_research_withhostpace",
-      "target": "agent_src_research_gethoststate",
-      "confidence_score": 1.0
+      "target": "agent_src_research"
     },
     {
       "relation": "calls",
@@ -2280,345 +1993,489 @@
       "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_noteratelimit",
-      "confidence_score": 1.0
+      "target": "agent_src_research_sleep"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L187",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_notesuccess",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_withhostpace",
+      "target": "agent_src_research_sleep"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L147",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_assertcircuitclosed",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_assertcircuitclosed",
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L149",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_withhostpace",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_minintervalfor",
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L164",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_retryafterms",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_noteratelimit",
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L158",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_israteexceededbody",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_notesuccess",
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L173",
+      "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_research_fetchwithretry",
-      "target": "agent_src_research_isretryablestatus",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_research_withhostpace",
+      "target": "agent_src_research_hostof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L348",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_withhostpace",
+      "target": "agent_src_research_minintervalfor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_assertcircuitclosed",
+      "target": "agent_src_research_gethoststate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_noteratelimit",
+      "target": "agent_src_research_gethoststate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_notesuccess",
+      "target": "agent_src_research_gethoststate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_withhostpace",
+      "target": "agent_src_research_gethoststate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_noteratelimit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_notesuccess"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_assertcircuitclosed"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_withhostpace"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_retryafterms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_israteexceededbody"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L176",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_research_fetchwithretry",
+      "target": "agent_src_research_isretryablestatus"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/research.mjs",
+      "source_location": "L351",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searcharxiv",
-      "target": "agent_src_research_fetchwithretry",
-      "confidence_score": 1.0
+      "target": "agent_src_research_fetchwithretry"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L282",
+      "source_location": "L285",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchhn",
-      "target": "agent_src_research_fetchwithretry",
-      "confidence_score": 1.0
+      "target": "agent_src_research_fetchwithretry"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L373",
+      "source_location": "L376",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_fetchwithretry",
-      "confidence_score": 1.0
+      "target": "agent_src_research_fetchwithretry"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L254",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_striphtml",
-      "target": "agent_src_research_decodehtmlentities",
-      "confidence_score": 1.0
+      "target": "agent_src_research_decodehtmlentities"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L325",
+      "source_location": "L328",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_parsearxiv",
-      "target": "agent_src_research_striphtml",
-      "confidence_score": 1.0
+      "target": "agent_src_research_striphtml"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L381",
+      "source_location": "L384",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_striphtml",
-      "confidence_score": 1.0
+      "target": "agent_src_research_striphtml"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L261",
+      "source_location": "L264",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_truncate",
-      "target": "agent_src_research_striphtml",
-      "confidence_score": 1.0
+      "target": "agent_src_research_striphtml"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L331",
+      "source_location": "L334",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_parsearxiv",
-      "target": "agent_src_research_truncate",
-      "confidence_score": 1.0
+      "target": "agent_src_research_truncate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L289",
+      "source_location": "L292",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchhn",
-      "target": "agent_src_research_truncate",
-      "confidence_score": 1.0
+      "target": "agent_src_research_truncate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L388",
+      "source_location": "L391",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_truncate",
-      "confidence_score": 1.0
+      "target": "agent_src_research_truncate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L309",
+      "source_location": "L312",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchhnwithfallback",
-      "target": "agent_src_research_settled",
-      "confidence_score": 1.0
+      "target": "agent_src_research_settled"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L309",
+      "source_location": "L312",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchhnwithfallback",
-      "target": "agent_src_research_searchhn",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searchhn"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L465",
+      "source_location": "L468",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_searchhnwithfallback",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searchhnwithfallback"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L352",
+      "source_location": "L355",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searcharxiv",
-      "target": "agent_src_research_parsearxiv",
-      "confidence_score": 1.0
+      "target": "agent_src_research_parsearxiv"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L415",
+      "source_location": "L418",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchpapers",
-      "target": "agent_src_research_searcharxiv",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searcharxiv"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L388",
+      "source_location": "L391",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchopenalex",
-      "target": "agent_src_research_reconstructabstract",
-      "confidence_score": 1.0
+      "target": "agent_src_research_reconstructabstract"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L425",
+      "source_location": "L428",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_searchpapers",
-      "target": "agent_src_research_searchopenalex",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searchopenalex"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L470",
+      "source_location": "L473",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_searchpapers",
-      "confidence_score": 1.0
+      "target": "agent_src_research_searchpapers"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L453",
+      "source_location": "L456",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_picktop",
-      "target": "agent_src_research_dedupe",
-      "confidence_score": 1.0
+      "target": "agent_src_research_dedupe"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/research.mjs",
-      "source_location": "L482",
+      "source_location": "L485",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_researchdigest",
-      "target": "agent_src_research_picktop",
-      "confidence_score": 1.0
+      "target": "agent_src_research_picktop"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L5",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_research_researchdigest",
-      "confidence_score": 1.0
+      "target": "agent_src_research_researchdigest"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L63",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run_main",
-      "target": "agent_src_research_researchdigest",
-      "confidence_score": 1.0
+      "target": "agent_src_research_researchdigest"
     },
     {
       "relation": "imports",
@@ -2628,9 +2485,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_mjs_agent_src_research_test",
-      "confidence_score": 1.0
+      "target": "agent_src_research_mjs_agent_src_research_test"
     },
     {
       "relation": "contains",
@@ -2639,9 +2496,9 @@
       "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_abs",
-      "confidence_score": 1.0
+      "target": "agent_src_research_test_abs"
     },
     {
       "relation": "contains",
@@ -2650,9 +2507,9 @@
       "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_headers",
-      "confidence_score": 1.0
+      "target": "agent_src_research_test_headers"
     },
     {
       "relation": "contains",
@@ -2661,31 +2518,86 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_research_test_mjs_agent_src_research_test",
-      "target": "agent_src_research_test_parsed",
-      "confidence_score": 1.0
+      "target": "agent_src_research_test_parsed"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L47",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_datestamp",
-      "confidence_score": 1.0
+      "target": "agent_src_run_datestamp"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L11",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_dirname",
-      "confidence_score": 1.0
+      "target": "agent_src_run_dirname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_formatdate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_hourstamp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_loadstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_months"
     },
     {
       "relation": "contains",
@@ -2694,86 +2606,20 @@
       "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_formatdate",
-      "confidence_score": 1.0
+      "target": "agent_src_run_parserecipients"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L51",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_hourstamp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_loadstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L55",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L39",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_months",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L32",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_parserecipients",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L26",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_requireenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_root",
-      "confidence_score": 1.0
+      "target": "agent_src_run_requireenv"
     },
     {
       "relation": "contains",
@@ -2782,416 +2628,415 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_run",
-      "target": "agent_src_run_savestate",
-      "confidence_score": 1.0
+      "target": "agent_src_run_root"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/run.mjs",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_run_state_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_sanitize",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_sanitize_sanitizeissue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_smtp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_smtp_sendsmtpemail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_validate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run",
-      "target": "agent_src_validate_validateandrankdigest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L57",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_loadstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L152",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_savestate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_requireenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_parserecipients",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L59",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_formatdate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L60",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_datestamp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L116",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_run_hourstamp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_sanitize_sanitizeissue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L119",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_smtp_sendsmtpemail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/run.mjs",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_run_main",
-      "target": "agent_src_validate_validateandrankdigest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L25",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_decodehtmlentities",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_replacements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L105",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizedigestentries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L133",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizehtmldocument",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L122",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizeissue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize",
-      "target": "agent_src_sanitize_sanitizenewslettertext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L65",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize_sanitizenewslettertext",
-      "target": "agent_src_sanitize_decodehtmlentities",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L110",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize_sanitizedigestentries",
-      "target": "agent_src_sanitize_sanitizenewslettertext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L125",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize_sanitizeissue",
-      "target": "agent_src_sanitize_sanitizenewslettertext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/sanitize.mjs",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_sanitize_sanitizeissue",
-      "target": "agent_src_sanitize_sanitizehtmldocument",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L45",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_createtransport",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_getsmtpconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_optionalenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_parsebool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_requireenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp",
-      "target": "agent_src_smtp_sendsmtpemail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
-      "source_location": "L31",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_requireenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/smtp.mjs",
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_savestate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_run_state_path"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_sanitize"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_sanitize_sanitizeissue"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_smtp"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_smtp_sendsmtpemail"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_validate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run",
+      "target": "agent_src_validate_validateandrankdigest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_loadstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_savestate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_requireenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_parserecipients"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_formatdate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_datestamp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_run_hourstamp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_sanitize_sanitizeissue"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_smtp_sendsmtpemail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/run.mjs",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_run_main",
+      "target": "agent_src_validate_validateandrankdigest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_decodehtmlentities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_replacements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_sanitizedigestentries"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_sanitizedigesttext"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_sanitizehtmldocument"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize",
+      "target": "agent_src_sanitize_sanitizeissue"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize_sanitizedigesttext",
+      "target": "agent_src_sanitize_decodehtmlentities"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize_sanitizedigestentries",
+      "target": "agent_src_sanitize_sanitizedigesttext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize_sanitizeissue",
+      "target": "agent_src_sanitize_sanitizedigesttext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/sanitize.mjs",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_sanitize_sanitizeissue",
+      "target": "agent_src_sanitize_sanitizehtmldocument"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_createtransport"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_getsmtpconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_optionalenv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_parsebool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_requireenv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp",
+      "target": "agent_src_smtp_sendsmtpemail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_optionalenv",
-      "confidence_score": 1.0
+      "target": "agent_src_smtp_requireenv"
     },
     {
       "relation": "calls",
@@ -3201,77 +3046,100 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_smtp_getsmtpconfig",
-      "target": "agent_src_smtp_parsebool",
-      "confidence_score": 1.0
+      "target": "agent_src_smtp_optionalenv"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L62",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "agent_src_smtp_sendsmtpemail",
-      "target": "agent_src_smtp_getsmtpconfig",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp_getsmtpconfig",
+      "target": "agent_src_smtp_parsebool"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/smtp.mjs",
-      "source_location": "L63",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_smtp_sendsmtpemail",
-      "target": "agent_src_smtp_createtransport",
-      "confidence_score": 1.0
+      "target": "agent_src_smtp_getsmtpconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/smtp.mjs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_smtp_sendsmtpemail",
+      "target": "agent_src_smtp_createtransport"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_boilerplate",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_boilerplate"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_clamp",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_clamp"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_insight_terms",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_insight_terms"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L63",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_ishttpurl",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_ishttpurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/src/validate.mjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "agent_src_validate",
+      "target": "agent_src_validate_primary_host_hints"
     },
     {
       "relation": "contains",
@@ -3280,361 +3148,226 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_primary_host_hints",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_required"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L6",
+      "source_location": "L118",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_required",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_scoreinsight"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L116",
+      "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_scoreinsight",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_striprankingfields"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L171",
+      "source_location": "L188",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_striprankingfields",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_validateandrankdigest"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L186",
+      "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_validateandrankdigest",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_validateitem"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L87",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate",
-      "target": "agent_src_validate_validateitem",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "agent/src/validate.mjs",
-      "source_location": "L76",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agent_src_validate",
-      "target": "agent_src_validate_wordcount",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_wordcount"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L105",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_validateitem",
-      "target": "agent_src_validate_ishttpurl",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_ishttpurl"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L135",
+      "source_location": "L137",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_clamp",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_clamp"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L134",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_wordcount",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_wordcount"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L102",
+      "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_validateitem",
-      "target": "agent_src_validate_wordcount",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_wordcount"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_scoreinsight",
-      "target": "agent_src_validate_validateitem",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_validateitem"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L195",
+      "source_location": "L197",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_validateitem",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_validateitem"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L200",
+      "source_location": "L202",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_scoreinsight",
-      "confidence_score": 1.0
+      "target": "agent_src_validate_scoreinsight"
     },
     {
       "relation": "indirect_call",
       "context": "argument",
       "confidence": "INFERRED",
       "source_file": "agent/src/validate.mjs",
-      "source_location": "L210",
+      "source_location": "L212",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 0.5,
       "source": "agent_src_validate_validateandrankdigest",
-      "target": "agent_src_validate_striprankingfields",
-      "confidence_score": 0.5
+      "target": "agent_src_validate_striprankingfields"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L1",
       "weight": 1.0,
-      "source": "cursor_automations_newsletter_hive_digest_automation",
-      "target": "cursor_automations_newsletter_dark_hive_theme"
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "cursor_automations_hive_digest",
+      "target": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L105",
       "weight": 1.0,
-      "source": "cursor_automations_newsletter_hive_digest_automation",
-      "target": "cursor_automations_newsletter_monthly_cron_ist"
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly",
+      "target": "cursor_automations_hive_digest_automate_one_liner_local_cursor"
     },
     {
-      "relation": "calls",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L10",
       "weight": 1.0,
-      "source": "cursor_automations_newsletter_hive_digest_automation",
-      "target": "cursor_automations_newsletter_node_agent"
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly",
+      "target": "cursor_automations_hive_digest_naming"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L41",
       "weight": 1.0,
-      "source": "cursor_automations_newsletter_hive_digest_automation",
-      "target": "github_workflows_newsletter_hive_digest_monthly"
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly",
+      "target": "cursor_automations_hive_digest_prompt"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L19",
       "weight": 1.0,
-      "source": "readme_cursor_automation",
-      "target": "cursor_automations_newsletter_hive_digest_automation"
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly",
+      "target": "cursor_automations_hive_digest_settings"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": ".cursor/automations/hive-digest.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
       "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "cursor_automations_newsletter_arxiv"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "cursor_automations_newsletter_hn_algolia"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "cursor_automations_newsletter_insight_ranking"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "cursor_automations_newsletter_openalex"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "cursor_automations_newsletter_smtp_delivery"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "github_workflows_newsletter_agent_start"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_node_agent",
-      "target": "readme_agent_cli"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_smtp_delivery",
-      "target": "github_workflows_newsletter_smtp_secrets"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_source_fallback",
-      "target": "cursor_automations_newsletter_hn_algolia"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_openalex",
-      "target": "cursor_automations_newsletter_arxiv"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_source_fallback",
-      "target": "cursor_automations_newsletter_arxiv"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_source_fallback",
-      "target": "cursor_automations_newsletter_openalex"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_insight_ranking",
-      "target": "readme_insight_ranking"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "cursor_automations_newsletter_monthly_cron_ist",
-      "target": "github_workflows_newsletter_hive_digest_monthly"
+      "source": "cursor_automations_hive_digest_settings",
+      "target": "cursor_automations_hive_digest_required_environment_secrets"
     },
     {
       "relation": "references",
@@ -3645,36 +3378,6 @@
       "weight": 1.0,
       "source": "readme_delete_merged_branch",
       "target": "github_workflows_delete_merged_branch_workflow"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "github_workflows_newsletter_hive_digest_monthly",
-      "target": "github_workflows_newsletter_agent_start"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_github_actions_fallback",
-      "target": "github_workflows_newsletter_hive_digest_monthly"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/newsletter.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "github_workflows_newsletter_agent_start",
-      "target": "github_workflows_newsletter_smtp_secrets"
     },
     {
       "relation": "references",
@@ -3727,35 +3430,6 @@
       "target": "readme_github_actions_fallback"
     }
   ],
-  "hyperedges": [
-    {
-      "id": "monthly_hive_digest_automation_pipeline",
-      "label": "Monthly Hive Digest Automation Pipeline",
-      "nodes": [
-        "cursor_automations_newsletter_hive_digest_automation",
-        "github_workflows_newsletter_hive_digest_monthly",
-        "cursor_automations_newsletter_node_agent",
-        "cursor_automations_newsletter_smtp_delivery"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "id": "research_source_fallback_chain",
-      "label": "Research Source Fallback Chain",
-      "nodes": [
-        "cursor_automations_newsletter_hn_algolia",
-        "cursor_automations_newsletter_arxiv",
-        "cursor_automations_newsletter_openalex",
-        "cursor_automations_newsletter_source_fallback"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".cursor/automations/newsletter.md"
-    }
-  ],
-  "built_at_commit": "64b72fe97a13e1a4eb26c72d0ad4b98a25e77330"
+  "hyperedges": [],
+  "built_at_commit": "51249594ee7a63dae194393112919d8b2fa6752f"
 }

@@ -1,16 +1,15 @@
-# Graph Report - workspace  (2026-07-22)
+# Graph Report - .  (2026-07-22)
 
 ## Corpus Check
-- 11 files · ~9,637 words
-- Verdict: corpus is large enough that graph structure adds value.
+- cluster-only mode — file stats not available
 
 ## Summary
-- 118 nodes · 204 edges · 10 communities (8 shown, 2 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.7)
+- 112 nodes · 188 edges · 14 communities (11 shown, 3 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `64b72fe9`
+- Built from commit: `51249594`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,47 +24,47 @@
 - SMTP Transport
 - Research Tests
 - Branch Cleanup CI
+- research.mjs
+- searchOpenAlex
+- Cursor Automation — Hive Digest (monthly)
+- Cursor Automation (Preferred)
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 13 edges
 2. `fetchWithRetry()` - 12 edges
 3. `buildIssue()` - 8 edges
-4. `Node Agent (npm start --prefix agent)` - 8 edges
-5. `sanitizeIssue()` - 7 edges
-6. `hostOf()` - 6 edges
-7. `withHostPace()` - 6 edges
-8. `searchOpenAlex()` - 6 edges
-9. `researchDigest()` - 6 edges
-10. `sanitizeNewsletterText()` - 6 edges
+4. `sanitizeIssue()` - 7 edges
+5. `hostOf()` - 6 edges
+6. `withHostPace()` - 6 edges
+7. `searchOpenAlex()` - 6 edges
+8. `researchDigest()` - 6 edges
+9. `sanitizeDigestText()` - 6 edges
+10. `validateAndRankDigest()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Node Agent (npm start --prefix agent)` --semantically_similar_to--> `Agent CLI (agent/)`  [INFERRED] [semantically similar]
-  .cursor/automations/newsletter.md → README.md
-- `Node Agent (npm start --prefix agent)` --semantically_similar_to--> `Agent Start Step (npm start --prefix agent)`  [INFERRED] [semantically similar]
-  .cursor/automations/newsletter.md → .github/workflows/newsletter.yml
-- `Insight Value Ranking` --semantically_similar_to--> `Validation and Insight Ranking`  [INFERRED] [semantically similar]
-  .cursor/automations/newsletter.md → README.md
-- `Cursor Automation (Preferred)` --references--> `Hive Digest (monthly) Cursor Automation`  [EXTRACTED]
-  README.md → .cursor/automations/newsletter.md
-- `SMTP Newsletter Delivery` --shares_data_with--> `SMTP GitHub Actions Secrets`  [INFERRED]
-  .cursor/automations/newsletter.md → .github/workflows/newsletter.yml
+- `Automatic Merged Branch Deletion` --references--> `Delete Merged PR Branch Workflow`  [EXTRACTED]
+  README.md → .github/workflows/delete-merged-branch.yml
+- `main()` --calls--> `buildIssue()`  [EXTRACTED]
+  agent/src/run.mjs → agent/src/render.mjs
+- `main()` --calls--> `researchDigest()`  [EXTRACTED]
+  agent/src/run.mjs → agent/src/research.mjs
+- `main()` --calls--> `sanitizeIssue()`  [EXTRACTED]
+  agent/src/run.mjs → agent/src/sanitize.mjs
+- `main()` --calls--> `sendSmtpEmail()`  [EXTRACTED]
+  agent/src/run.mjs → agent/src/smtp.mjs
 
 ## Import Cycles
 - None detected.
 
-## Hyperedges (group relationships)
-- **Monthly Hive Digest Automation Pipeline** — cursor_automations_newsletter_hive_digest_automation, github_workflows_newsletter_hive_digest_monthly, cursor_automations_newsletter_node_agent, cursor_automations_newsletter_smtp_delivery [EXTRACTED 1.00]
-- **Research Source Fallback Chain** — cursor_automations_newsletter_hn_algolia, cursor_automations_newsletter_arxiv, cursor_automations_newsletter_openalex, cursor_automations_newsletter_source_fallback [EXTRACTED 1.00]
-
-## Communities (10 total, 2 thin omitted)
+## Communities (14 total, 3 thin omitted)
 
 ### Community 0 - "Research Resilience"
-Cohesion: 0.17
-Nodes (28): assertCircuitClosed(), decodeHtmlEntities(), dedupe(), fetchWithRetry(), getHostState(), HOST_MIN_INTERVAL_MS, hostOf(), hostState (+20 more)
+Cohesion: 0.29
+Nodes (12): assertCircuitClosed(), fetchWithRetry(), getHostState(), hostOf(), isRateExceededBody(), isRetryableStatus(), minIntervalFor(), noteRateLimit() (+4 more)
 
 ### Community 1 - "Automation & Delivery"
-Cohesion: 0.14
-Nodes (20): arXiv Research Source, Dark Hive Theme, Hive Digest (monthly) Cursor Automation, HN Algolia Research Source, Insight Value Ranking, Monthly Cron 09:00 IST, Node Agent (npm start --prefix agent), OpenAlex Paper Backup (+12 more)
+Cohesion: 0.40
+Nodes (5): Agent CLI (agent/), Hive Digest, Validation and Insight Ranking, Hive by Synbrains, Three Content Lanes
 
 ### Community 2 - "Agent Package Config"
 Cohesion: 0.13
@@ -91,23 +90,33 @@ Nodes (6): createTransport(), getSmtpConfig(), optionalEnv(), parseBool(), requi
 Cohesion: 0.40
 Nodes (4): __test, abs, headers, parsed
 
+### Community 10 - "research.mjs"
+Cohesion: 0.36
+Nodes (8): dedupe(), HOST_MIN_INTERVAL_MS, hostState, pickTop(), researchDigest(), searchHnWithFallback(), searchPapers(), settled()
+
+### Community 11 - "searchOpenAlex"
+Cohesion: 0.32
+Nodes (8): decodeHtmlEntities(), parseArxiv(), reconstructAbstract(), searchArxiv(), searchHn(), searchOpenAlex(), stripHtml(), truncate()
+
+### Community 12 - "Cursor Automation — Hive Digest (monthly)"
+Cohesion: 0.29
+Nodes (6): `/automate` one-liner (local Cursor), Cursor Automation — Hive Digest (monthly), Naming, Prompt, Required environment secrets, Settings
+
 ## Knowledge Gaps
-- **33 isolated node(s):** `name`, `version`, `private`, `type`, `description` (+28 more)
+- **40 isolated node(s):** `name`, `version`, `private`, `type`, `description` (+35 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `buildIssue()` connect `Render & Sanitize` to `Run Orchestration`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `validateAndRankDigest()` connect `Validate & Rank` to `Run Orchestration`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `Node Agent (npm start --prefix agent)` (e.g. with `Agent Start Step (npm start --prefix agent)` and `Agent CLI (agent/)`) actually correct?**
-  _`Node Agent (npm start --prefix agent)` has 2 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `researchDigest()` connect `research.mjs` to `Run Orchestration`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _33 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Automation & Delivery` be split into smaller, more focused modules?**
-  _Cohesion score 0.14210526315789473 - nodes in this community are weakly interconnected._
+  _40 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent Package Config` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

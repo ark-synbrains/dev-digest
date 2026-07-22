@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+<!--
+  hive-digest.html — Hive Digest browser artifact UI (Claude.ai).
+  Product: Hive Digest | Brand: Hive by Synbrains | Site: https://hive.synbrains.ai/
+  Formerly: tech-digest-agent.html
+  Companion Node sender: agent/ (npm package hive-digest-agent)
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Hive Digest — AI & technology insights from Synbrains (hive.synbrains.ai).">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23EE462F'/%3E%3Cstop offset='1' stop-color='%237610C7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='6' fill='url(%23g)'/%3E%3C/svg%3E">
-<title>Hive Digest — Synbrains newsletter agent</title>
+<title>Hive Digest — Synbrains</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
 
@@ -16,12 +22,10 @@
     --hairline: #2A2438;
     --ink: #F3F0F7;
     --ink-dim: #A39BB3;
-    --amber: #EE462F;
-    --amber-dim: #5A2430;
-    --amber-dim-text: #C79AA0;
-    --amber-text: #FFFFFF;
-    --add: #7610C7;
-    --del: #F07167;
+    --hive-red-dim: #5A2430;
+    --hive-red-dim-text: #C79AA0;
+    --hive-red-text: #FFFFFF;
+    --hive-err: #F07167; /* errors + changelog “deleted” */
     --hive-red: #EE462F;
     --hive-purple: #7610C7;
   }
@@ -129,7 +133,7 @@
   select{cursor:pointer;}
   #genBtn{
     background: linear-gradient(90deg, var(--hive-red), var(--hive-purple));
-    color: var(--amber-text);
+    color: var(--hive-red-text);
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -138,9 +142,9 @@
     transition: filter 0.15s ease, transform 0.15s ease;
   }
   #genBtn:hover{ filter: brightness(1.08); }
-  #genBtn:disabled{ background: var(--amber-dim); color: var(--amber-dim-text); cursor: progress; }
+  #genBtn:disabled{ background: var(--hive-red-dim); color: var(--hive-red-dim-text); cursor: progress; }
   #genBtn:focus-visible, select:focus-visible{
-    outline: 2px solid var(--amber); outline-offset: 2px;
+    outline: 2px solid var(--hive-red); outline-offset: 2px;
   }
   .format-wrap{
     display: inline-flex;
@@ -160,8 +164,8 @@
   }
   #downloadBtn svg{ width:16px; height:16px; }
   #downloadBtn:hover:not(:disabled){
-    border-color: var(--amber);
-    color: var(--amber);
+    border-color: var(--hive-red);
+    color: var(--hive-red);
   }
   #downloadBtn:disabled{
     color: var(--ink-dim);
@@ -169,7 +173,7 @@
     opacity: 0.5;
   }
   #downloadBtn:focus-visible{
-    outline: 2px solid var(--amber); outline-offset: 2px;
+    outline: 2px solid var(--hive-red); outline-offset: 2px;
   }
 
   /* ---- Status ---- */
@@ -180,8 +184,8 @@
     margin-top: 14px;
     min-height: 18px;
   }
-  .status .ok{ color: var(--add); }
-  .status .err{ color: var(--del); }
+  .status .ok{ color: var(--hive-purple); }
+  .status .err{ color: var(--hive-err); }
 
   /* ---- Sections ---- */
   .section{ margin-top: 40px; }
@@ -250,7 +254,7 @@
     color: var(--ink);
     margin: 0 0 8px;
   }
-  .entry-body .del{ color: var(--del); }
+  .entry-body .del{ color: var(--hive-err); }
   .entry-source{
     font-family:'Manrope', system-ui, sans-serif;
     font-size: 12px;
@@ -684,15 +688,16 @@ function buildMarkdown(){
   return md;
 }
 
-// Generated newsletter HTML is always dark Hive theme; insight scores are never included.
-const NEWSLETTER_DARK = {
+// Standalone HTML export palette (always dark Hive theme; insight scores never included).
+// Keep keys aligned with HIVE in agent/src/render.mjs.
+const HIVE_DIGEST_DARK = {
   bg: '#0B0A12',
   card: '#161222',
   hairline: '#2A2438',
   ink: '#F3F0F7',
-  'ink-dim': '#A39BB3',
-  amber: '#EE462F',
-  add: '#7610C7',
+  inkDim: '#A39BB3',
+  red: '#EE462F',
+  purple: '#7610C7',
 };
 
 function buildHtmlExport(){
@@ -706,7 +711,7 @@ function buildHtmlExport(){
       };
       return avg(b) - avg(a);
     });
-  const v = NEWSLETTER_DARK;
+  const v = HIVE_DIGEST_DARK;
   let sections = '';
   order.forEach(cat => {
     const items = lastIssue.byCategory[cat];
@@ -745,8 +750,8 @@ function buildHtmlExport(){
     color-scheme: dark;
   }
   .wrap{ max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; background: ${v.bg}; color: ${v.ink}; }
-  .brand-bar{ height:4px; border-radius:999px; background:linear-gradient(90deg, ${v.amber}, ${v.add}); margin:0 0 22px; }
-  .eyebrow{ font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; margin:0 0 8px; color:${v.amber}; }
+  .brand-bar{ height:4px; border-radius:999px; background:linear-gradient(90deg, ${v.red}, ${v.purple}); margin:0 0 22px; }
+  .eyebrow{ font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; margin:0 0 8px; color:${v.red}; }
   .masthead-title{
     font-family: 'Fraunces', Georgia, serif;
     font-size: 34px;
@@ -758,13 +763,13 @@ function buildHtmlExport(){
   .meta-line{
     font-family: 'Manrope', system-ui, sans-serif;
     font-size: 13px;
-    color: ${v.add};
+    color: ${v.purple};
     margin-bottom: 4px;
   }
   .tagline{
     font-family: 'Manrope', system-ui, sans-serif;
     font-size: 13px;
-    color: ${v['ink-dim']};
+    color: ${v.inkDim};
     border-bottom: 1px solid ${v.hairline};
     padding-bottom: 22px;
     margin-bottom: 8px;
@@ -779,7 +784,7 @@ function buildHtmlExport(){
   .section-head .label{
     font-family: 'Manrope', system-ui, sans-serif;
     font-size: 12px;
-    color: ${v.amber};
+    color: ${v.red};
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 700;
@@ -787,7 +792,7 @@ function buildHtmlExport(){
   .section-head .count{
     font-family: 'Manrope', system-ui, sans-serif;
     font-size: 12px;
-    color: ${v['ink-dim']};
+    color: ${v.inkDim};
   }
   .entry{
     background: ${v.card};
@@ -800,8 +805,8 @@ function buildHtmlExport(){
     display:flex; justify-content: space-between; align-items: baseline;
     margin-bottom: 6px;
   }
-  .entry-tag{ font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; color: ${v.add}; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
-  .entry-hash{ font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; color: ${v['ink-dim']}; }
+  .entry-tag{ font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; color: ${v.purple}; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
+  .entry-hash{ font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; color: ${v.inkDim}; }
   .entry-title{
     font-family: 'Fraunces', Georgia, serif;
     font-size: 19px;
@@ -812,14 +817,14 @@ function buildHtmlExport(){
   }
   .entry-body{ font-size: 14.5px; line-height: 1.55; margin: 0 0 8px; color: ${v.ink}; }
   .entry-source{ font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; }
-  .entry-source a{ color: ${v.amber}; text-decoration: none; font-weight: 600; }
+  .entry-source a{ color: ${v.red}; text-decoration: none; font-weight: 600; }
   .footer-note{
     margin-top: 44px;
     padding-top: 16px;
     border-top: 1px solid ${v.hairline};
     font-family: 'Manrope', system-ui, sans-serif;
     font-size: 12px;
-    color: ${v['ink-dim']};
+    color: ${v.inkDim};
     line-height: 1.6;
   }
 </style>
@@ -830,7 +835,7 @@ function buildHtmlExport(){
   <p class="eyebrow">Hive by Synbrains</p>
   <h1 class="masthead-title">Hive Digest</h1>
   <div class="meta-line">${escapeHtml(lastIssue.date)}</div>
-  <div class="tagline">AI &amp; technology insights — <a href="https://hive.synbrains.ai/" style="color:${v.add};text-decoration:none;">hive.synbrains.ai</a></div>
+  <div class="tagline">AI &amp; technology insights — <a href="https://hive.synbrains.ai/" style="color:${v.purple};text-decoration:none;">hive.synbrains.ai</a></div>
 ${sections}
   <div class="footer-note">Generated for Hive Digest · Synbrains — verify against primary sources before citing.</div>
 </div>

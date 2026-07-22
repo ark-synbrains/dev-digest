@@ -1,17 +1,17 @@
 {
   "agent/package.json": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "5cf669f21a526e0a672075e6f2ab0239",
+    "mtime": 1784700811.6155868,
+    "ast_hash": "a463fdcf8b813a2db7bc013005794209",
     "semantic_hash": ""
   },
   "agent/src/render.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "a824f232795e364a10eb5d38550231a0",
+    "mtime": 1784700859.7588663,
+    "ast_hash": "7b5e10c10259bb64851a353a2e446cf0",
     "semantic_hash": ""
   },
   "agent/src/research.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "26b06ce2f5d5ee7c8f76928a1243eb53",
+    "mtime": 1784700811.587587,
+    "ast_hash": "ed27a33881a2c26046bac70bed422d23",
     "semantic_hash": ""
   },
   "agent/src/research.test.mjs": {
@@ -20,23 +20,23 @@
     "semantic_hash": ""
   },
   "agent/src/run.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "22a9bd486ae369f5d9c1cb386b582e62",
+    "mtime": 1784700811.599587,
+    "ast_hash": "90ea4a23b5a5f209f38409f5f5804047",
     "semantic_hash": ""
   },
   "agent/src/sanitize.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "e2ed66c16bc50a756339ed654bcd8005",
+    "mtime": 1784700812.4315727,
+    "ast_hash": "344a228f40ccfccbc449287ec0c05017",
     "semantic_hash": ""
   },
   "agent/src/smtp.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "6122fa8852664688d0ebaea3cdcf17fc",
+    "mtime": 1784700811.595587,
+    "ast_hash": "af58a93863e422ec34f36c5c3f2dddbe",
     "semantic_hash": ""
   },
   "agent/src/validate.mjs": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "671696ea41260f505d445ecd9eabd3bd",
+    "mtime": 1784700859.7708662,
+    "ast_hash": "0cfa28bacf1061592bc817997c78d177",
     "semantic_hash": ""
   },
   "agent/state.json": {
@@ -44,34 +44,34 @@
     "ast_hash": "fb27a94462bea05f76d2768a0a5f8831",
     "semantic_hash": ""
   },
-  ".cursor/automations/newsletter.md": {
-    "mtime": 1784700609.6400416,
-    "ast_hash": "30061864f75897c8481ff57c3792c486",
-    "semantic_hash": ""
-  },
   ".github/workflows/delete-merged-branch.yml": {
     "mtime": 1784700179.9654217,
     "ast_hash": "9f7f870897f8394e0da098c61893efa2",
     "semantic_hash": ""
   },
-  ".github/workflows/newsletter.yml": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "a51f8ee78b15a689051a5ebb58ccb30d",
-    "semantic_hash": ""
-  },
   "README.md": {
-    "mtime": 1784700609.6120415,
-    "ast_hash": "4dfaa3025430de4da8e2567ba6992b90",
+    "mtime": 1784700843.319089,
+    "ast_hash": "78238c5a944cc1e1d6ec29c721e00f0d",
     "semantic_hash": ""
   },
   ".github/workflows/graphify.yml": {
-    "mtime": 1784700609.6160414,
-    "ast_hash": "f69219da55731cf95ee0dc9d0616fc8a",
+    "mtime": 1784700859.7708662,
+    "ast_hash": "12552605c38056383863cfd8fba74fd7",
     "semantic_hash": ""
   },
   "hive-digest.html": {
-    "mtime": 1784700179.9694219,
-    "ast_hash": "843523a4fbc47e41c46a5357574ece75",
+    "mtime": 1784700801.303771,
+    "ast_hash": "5a25f0f0e8639d2f4413e591b7114fc4",
+    "semantic_hash": ""
+  },
+  ".cursor/automations/hive-digest.md": {
+    "mtime": 1784700843.319089,
+    "ast_hash": "54464f18d67063686aacefa4d9ad3001",
+    "semantic_hash": ""
+  },
+  ".github/workflows/hive-digest.yml": {
+    "mtime": 1784700843.2350903,
+    "ast_hash": "5c09dfeb218bfd69648f3b8b4c67a5fb",
     "semantic_hash": ""
   }
 }

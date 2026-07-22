@@ -1,3 +1,7 @@
+/**
+ * SMTP transport for Hive Digest delivery (nodemailer).
+ * Reads SMTP_* env vars; called from run.mjs after the issue is built.
+ */
 import nodemailer from 'nodemailer';
 
 function requireEnv(name) {
