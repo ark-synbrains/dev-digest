@@ -86,19 +86,13 @@ graphify path "researchDigest" "sendSmtpEmail"
 graphify explain "fetchWithRetry"
 ```
 
-### Rebuild on PR merge (automation)
+### Rebuild on code changes (CI)
 
-Two ways to keep `graphify-out/` current after merges into `main`:
-
-1. **Cursor Automation (preferred)** — paste
-   [`.cursor/automations/graphify.md`](.cursor/automations/graphify.md)
-   at [cursor.com/automations](https://cursor.com/automations) with trigger
-   **Pull request merged**. Opens a follow-up PR when the graph changes.
-2. **GitHub Actions fallback** —
-   [`.github/workflows/graphify.yml`](.github/workflows/graphify.yml)
-   runs `graphify update . --force` on merged PRs (skips
-   `chore(graphify)` / graphify-out-only merges) and commits AST updates
-   back to the base branch.
+[`.github/workflows/graphify.yml`](.github/workflows/graphify.yml) runs
+`graphify update . --force` on pushes to `main` that touch code
+(`agent/**`, `tech-digest-agent.html`, and common source extensions), then
+commits refreshed `graphify-out/` artifacts when the graph changes.
+Manual runs: Actions → **graphify** → **Run workflow**.
 ## Important: where this runs
 
 This tool calls `https://api.anthropic.com/v1/messages` directly from the
