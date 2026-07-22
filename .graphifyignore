@@ -1,6 +1,6 @@
-# Graphify install artifacts — never index the skill/tooling into the project graph
+# Graphify install / Cursor rules — never index tooling into the project graph
 .agents/skills/graphify/
-.cursor/rules/graphify.mdc
+.cursor/rules/
 # Tracked in git, but excluded from the *codebase* knowledge graph:
 agent/out/
 agent/digest-corpus/
