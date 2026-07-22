@@ -461,8 +461,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agent_src_graphrag_test",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "graphrag.test.mjs"
     },
     {
@@ -472,8 +472,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_sample",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "sample"
     },
     {
@@ -483,8 +483,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_extraction_idmap",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "{ extraction, idmap }"
     },
     {
@@ -494,8 +494,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_fallback",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "fallback"
     },
     {
@@ -505,8 +505,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_basescore",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "basescore"
     },
     {
@@ -516,8 +516,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_boostedscore",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "boostedscore"
     },
     {
@@ -527,8 +527,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_tmp",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "tmp"
     },
     {
@@ -538,8 +538,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_bycategory_ranked_report",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "{ bycategory: ranked, report }"
     },
     {
@@ -549,8 +549,8 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "agent_src_graphrag_test_serialized",
-      "community": 10,
-      "community_name": "graphrag.mjs",
+      "community": 6,
+      "community_name": "Validate & Rank",
       "norm_label": "serialized"
     },
     {
@@ -1264,8 +1264,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agent_src_smtp",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "smtp.mjs"
     },
     {
@@ -1275,8 +1275,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "agent_src_smtp_requireenv",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "requireenv()"
     },
     {
@@ -1286,8 +1286,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "agent_src_smtp_optionalenv",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "optionalenv()"
     },
     {
@@ -1297,8 +1297,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "agent_src_smtp_parsebool",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "parsebool()"
     },
     {
@@ -1308,8 +1308,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "agent_src_smtp_sleep",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "sleep()"
     },
     {
@@ -1319,8 +1319,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "agent_src_smtp_istransientsmtperror",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "istransientsmtperror()"
     },
     {
@@ -1330,8 +1330,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "agent_src_smtp_getsmtpconfig",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "getsmtpconfig()"
     },
     {
@@ -1341,8 +1341,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "agent_src_smtp_createtransport",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "createtransport()"
     },
     {
@@ -1352,8 +1352,8 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "agent_src_smtp_sendsmtpemail",
-      "community": 7,
-      "community_name": "SMTP Transport",
+      "community": 4,
+      "community_name": "Run Orchestration",
       "norm_label": "sendsmtpemail()"
     },
     {
@@ -1396,8 +1396,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "agent_src_validate_insight_terms",
-      "community": 6,
-      "community_name": "Validate & Rank",
+      "community": 10,
+      "community_name": "graphrag.mjs",
       "norm_label": "insight_terms"
     },
     {
@@ -1591,12 +1591,155 @@
       "label": "Commands",
       "file_type": "document",
       "source_file": "agent/README.md",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "agent_readme_commands",
       "community": 12,
       "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
       "norm_label": "commands"
+    },
+    {
+      "label": "ARCHITECTURE.md",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "architecture.md"
+    },
+    {
+      "label": "Hive Digest \u2014 Architecture & Graphify Integration",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "hive digest \u2014 architecture & graphify integration"
+    },
+    {
+      "label": "1. What the system does (plain English)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_architecture_1_what_the_system_does_plain_english",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "1. what the system does (plain english)"
+    },
+    {
+      "label": "2. Overall architecture flowchart",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_architecture_2_overall_architecture_flowchart",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "2. overall architecture flowchart"
+    },
+    {
+      "label": "Pipeline in one line",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "docs_architecture_pipeline_in_one_line",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "pipeline in one line"
+    },
+    {
+      "label": "3. Module map (Node sender)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "docs_architecture_3_module_map_node_sender",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "3. module map (node sender)"
+    },
+    {
+      "label": "4. How Graphify is integrated",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "docs_architecture_4_how_graphify_is_integrated",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "4. how graphify is integrated"
+    },
+    {
+      "label": "Role A \u2014 Codebase knowledge graph (developer / agent tooling)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "docs_architecture_role_a_codebase_knowledge_graph_developer_agent_tooling",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "role a \u2014 codebase knowledge graph (developer / agent tooling)"
+    },
+    {
+      "label": "Role B \u2014 Content GraphRAG (inside the monthly digest)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L175",
+      "_origin": "ast",
+      "id": "docs_architecture_role_b_content_graphrag_inside_the_monthly_digest",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "role b \u2014 content graphrag (inside the monthly digest)"
+    },
+    {
+      "label": "5. Issue archive",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "docs_architecture_5_issue_archive",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "5. issue archive"
+    },
+    {
+      "label": "6. Trust boundaries & secrets",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L232",
+      "_origin": "ast",
+      "id": "docs_architecture_6_trust_boundaries_secrets",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "6. trust boundaries & secrets"
+    },
+    {
+      "label": "7. Related docs",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L244",
+      "_origin": "ast",
+      "id": "docs_architecture_7_related_docs",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "7. related docs"
+    },
+    {
+      "label": "8. Mental model (one paragraph)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L256",
+      "_origin": "ast",
+      "id": "docs_architecture_8_mental_model_one_paragraph",
+      "community": 12,
+      "community_name": "Cursor Automation \u2014 Hive Digest (monthly)",
+      "norm_label": "8. mental model (one paragraph)"
     },
     {
       "label": "Delete Merged PR Branch Workflow",
@@ -4644,7 +4787,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "agent/README.md",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agent_readme",
@@ -4660,6 +4803,17 @@
       "_origin": "ast",
       "source": "cursor_automations_hive_digest",
       "target": "cursor_automations_hive_digest_cursor_automation_hive_digest_monthly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture",
+      "target": "cursor_automations_hive_digest",
       "confidence_score": 1.0
     },
     {
@@ -4729,14 +4883,157 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "agent/README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agent_readme",
+      "target": "docs_architecture",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "agent/README.md",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agent_readme_agent_hive_digest_node_sender",
       "target": "agent_readme_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture",
+      "target": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_1_what_the_system_does_plain_english",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_2_overall_architecture_flowchart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_3_module_map_node_sender",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_4_how_graphify_is_integrated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_5_issue_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L232",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_6_trust_boundaries_secrets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L244",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_7_related_docs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L256",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_hive_digest_architecture_graphify_integration",
+      "target": "docs_architecture_8_mental_model_one_paragraph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_2_overall_architecture_flowchart",
+      "target": "docs_architecture_pipeline_in_one_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_4_how_graphify_is_integrated",
+      "target": "docs_architecture_role_a_codebase_knowledge_graph_developer_agent_tooling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_architecture_4_how_graphify_is_integrated",
+      "target": "docs_architecture_role_b_content_graphrag_inside_the_monthly_digest",
       "confidence_score": 1.0
     },
     {
@@ -4801,5 +5098,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d96aeb8df6295ca309e3f0909af807e0744206b2"
+  "built_at_commit": "449e8c20c8422d8a217d554e4abbe262488a858e"
 }
