@@ -1,5 +1,9 @@
 /**
- * Normalize newsletter copy to plain ASCII-safe text for email clients.
+ * Sanitize Hive Digest copy for email clients (ASCII-safe).
+ *
+ * Product: Hive Digest (hive.synbrains.ai). This module is used by the Node
+ * sender in agent/ (`hive-digest-agent`) before SMTP delivery.
+ *
  * Decodes HTML entities, then removes curly quotes, arrows, ellipses, and
  * other odd glyphs that show up poorly in mail clients.
  */
@@ -59,9 +63,9 @@ export function decodeHtmlEntities(input) {
 }
 
 /**
- * Sanitize a string for newsletter subject/body content.
+ * Sanitize a string for Hive Digest subject/body content.
  */
-export function sanitizeNewsletterText(input) {
+export function sanitizeDigestText(input) {
   let s = decodeHtmlEntities(input);
 
   // If feed text still contains tags after decode, keep the tag name as words
@@ -107,9 +111,9 @@ export function sanitizeDigestEntries(byCategory) {
   for (const [cat, items] of Object.entries(byCategory || {})) {
     out[cat] = (items || []).map((it) => ({
       ...it,
-      headline: sanitizeNewsletterText(it.headline),
-      summary: sanitizeNewsletterText(it.summary),
-      source_name: sanitizeNewsletterText(it.source_name),
+      headline: sanitizeDigestText(it.headline),
+      summary: sanitizeDigestText(it.summary),
+      source_name: sanitizeDigestText(it.source_name),
       source_url: String(it.source_url || '').trim(),
     }));
   }
@@ -122,11 +126,11 @@ export function sanitizeDigestEntries(byCategory) {
 export function sanitizeIssue(issue) {
   return {
     ...issue,
-    subject: sanitizeNewsletterText(issue.subject),
-    text: sanitizeNewsletterText(issue.text),
+    subject: sanitizeDigestText(issue.subject),
+    text: sanitizeDigestText(issue.text),
     // Do not decode HTML entities in the finished document (would break &amp; etc.)
     html: sanitizeHtmlDocument(issue.html),
-    date: sanitizeNewsletterText(issue.date),
+    date: sanitizeDigestText(issue.date),
   };
 }
 

@@ -1,7 +1,10 @@
 /**
- * Gather recent tech developments for the three Hive Digest lanes.
- * Uses public APIs (HN Algolia + arXiv, with OpenAlex paper backup) so
- * scheduled runs don't need an LLM key.
+ * Research sources for the three Hive Digest lanes (models, algorithms, product).
+ *
+ * Used by the Node sender (`researchDigest`) and covered by research.test.mjs.
+ * Public APIs only (HN Algolia + arXiv, with OpenAlex paper backup) so scheduled
+ * runs do not need an LLM key. The Claude.ai UI in hive-digest.html researches
+ * separately via Anthropic web search.
  *
  * Resilience (applies to EVERY upstream — HN, arXiv, OpenAlex):
  * - Per-host pacing to avoid burst 429s

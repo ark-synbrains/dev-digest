@@ -1,6 +1,6 @@
 {
-  "runsCompleted": 2,
-  "lastSentAt": "2026-07-21T05:06:05.588Z",
+  "runsCompleted": 3,
+  "lastSentAt": "2026-07-22T06:31:21.612Z",
   "history": [
     {
       "date": "Mon Jul 20 2026",
@@ -24,6 +24,21 @@
       ],
       "rankingKept": 9,
       "rankingDropped": 1
+    },
+    {
+      "date": "22 Jul 2026",
+      "dateStamp": "2026-07-22",
+      "subject": "Hive Digest - 22 Jul 2026",
+      "messageId": "<ad32c8a8-3983-1060-5407-7d1ea157972a@synbrains.ai>",
+      "sentAt": "2026-07-22T06:31:21.612Z",
+      "recipients": 1,
+      "sectionOrder": [
+        "algorithm",
+        "product",
+        "model"
+      ],
+      "rankingKept": 9,
+      "rankingDropped": 0
     }
   ]
 }

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Generate and email Hive Digest (Synbrains) newsletters via SMTP",
+  "description": "Hive Digest Node sender — research, validate/rank, and email issues via SMTP (hive.synbrains.ai)",
   "scripts": {
     "start": "node src/run.mjs",
     "generate": "node src/run.mjs --dry-run",
-    "test": "node src/research.test.mjs"
+    "test": "node src/research.test.mjs && node src/digest.test.mjs"
   },
   "engines": {
     "node": ">=20"

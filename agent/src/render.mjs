@@ -1,10 +1,14 @@
 /**
- * Hive Digest email renderer - Synbrains / hive.synbrains.ai branding.
- * Newsletter HTML is always dark; insight scores are never shown.
+ * Hive Digest email renderer — Synbrains / hive.synbrains.ai branding.
+ *
+ * Builds the SMTP subject, plain-text, and dark HTML for one issue.
+ * Keep the HIVE palette in sync with HIVE_DIGEST_DARK in hive-digest.html.
+ * Insight scores are ranking-only and must never appear in the email.
  */
 
-import { sanitizeDigestEntries, sanitizeIssue, sanitizeNewsletterText } from './sanitize.mjs';
+import { sanitizeDigestEntries, sanitizeIssue, sanitizeDigestText } from './sanitize.mjs';
 
+/** Brand tokens for emailed Hive Digest HTML (always dark). */
 const HIVE = {
   bg: '#0B0A12',
   card: '#161222',
@@ -38,7 +42,7 @@ function accentBar() {
 
 export function buildIssue({ date, byCategory, sectionOrder }) {
   const clean = sanitizeDigestEntries(byCategory);
-  const cleanDate = sanitizeNewsletterText(date);
+  const cleanDate = sanitizeDigestText(date);
   const order = (sectionOrder?.length ? sectionOrder : DEFAULT_ORDER).filter(
     (k) => (clean[k] || []).length
   );
@@ -58,7 +62,7 @@ export function buildIssue({ date, byCategory, sectionOrder }) {
   }
   text += `- Hive Digest - Synbrains\n${HIVE.site}\n`;
 
-  // Always dark theme for the emailed newsletter.
+  // Always dark theme for the emailed Hive Digest.
   let html = `<!DOCTYPE html><html lang="en" data-theme="dark" style="color-scheme:dark;"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="color-scheme" content="dark only"/><meta name="supported-color-schemes" content="dark"/><title>Hive Digest - ${escapeHtml(cleanDate)}</title><style>:root{color-scheme:dark only;}@media (prefers-color-scheme:light){body{background:${HIVE.bg}!important;color:${HIVE.ink}!important;}}</style></head>`;
   html += `<body style="margin:0;padding:0;background:${HIVE.bg};color:${HIVE.ink};color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">`;
   html += `<div style="max-width:640px;margin:0 auto;padding:40px 20px 72px;background:${HIVE.bg};color:${HIVE.ink};">`;

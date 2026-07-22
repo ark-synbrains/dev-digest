@@ -1,4 +1,7 @@
-# Hive Digest — monthly newsletter automation (hive.synbrains.ai)
+# Hive Digest — monthly SMTP send (hive.synbrains.ai)
+#
+# Product: Hive Digest | Repo: ark-synbrains/hive-digest
+# Runs the Node sender in agent/ (npm package: hive-digest-agent).
 #
 # Schedule: 1st of each month at 09:00 IST (Asia/Kolkata).
 # GitHub Actions cron is UTC-only, so this is 03:30 UTC on day 1 (= 09:00 IST).
@@ -9,11 +12,13 @@
 #   SMTP_USER
 #   SMTP_PASS
 #   SMTP_FROM          (e.g. "Hive Digest <news@example.com>")
-#   NEWSLETTER_TO_EMAILS
+#   NEWSLETTER_TO_EMAILS   # historical env name for the recipient list
 #
 # Optional secrets / vars:
 #   SMTP_SECURE        (true/false; defaults to true when port is 465)
 #   SMTP_REPLY_TO
+#
+# Companion Cursor Automation recipe: .cursor/automations/hive-digest.md
 
 name: Hive Digest monthly
 
@@ -26,7 +31,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: newsletter
+  group: hive-digest
   cancel-in-progress: false
 
 jobs:
@@ -44,10 +49,10 @@ jobs:
           cache: npm
           cache-dependency-path: agent/package.json
 
-      - name: Install agent deps
+      - name: Install Hive Digest sender deps
         run: npm install --prefix agent
 
-      - name: Generate and send newsletter
+      - name: Generate and send Hive Digest
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}

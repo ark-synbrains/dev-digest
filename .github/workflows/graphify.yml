@@ -1,5 +1,5 @@
-# Rebuild the checked-in graphify knowledge graph when code lands on main.
-# AST-only (`graphify update`) — no LLM / API key required.
+# Rebuild the checked-in graphify knowledge graph when Hive Digest code lands on main.
+# Repo: ark-synbrains/hive-digest | AST-only (`graphify update`) — no LLM / API key.
 
 name: graphify
 
@@ -8,7 +8,7 @@ on:
     branches: [main]
     paths:
       - 'agent/**'
-      - 'tech-digest-agent.html'
+      - 'hive-digest.html'
       - '**/*.js'
       - '**/*.mjs'
       - '**/*.cjs'

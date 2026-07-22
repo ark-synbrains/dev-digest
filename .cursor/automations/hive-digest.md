@@ -1,8 +1,20 @@
-# Cursor Automation — Hive Digest newsletter
+# Cursor Automation — Hive Digest (monthly)
+
+Automation recipe for [ark-synbrains/hive-digest](https://github.com/ark-synbrains/hive-digest).
+Product is **Hive Digest** (brand: **Hive by Synbrains**, site: https://hive.synbrains.ai/).
 
 Use this when creating the automation at [cursor.com/automations/new](https://cursor.com/automations/new) or via `/automate` in a local Cursor session.
 
-> Cloud agents in this environment could not create the automation via the web UI (Cloudflare bot check). Paste the settings below once in the dashboard to activate the Cursor-native schedule. The repo also includes a GitHub Actions fallback (`.github/workflows/newsletter.yml`).
+> Cloud agents in this environment could not create the automation via the web UI (Cloudflare bot check). Paste the settings below once in the dashboard to activate the Cursor-native schedule. The repo also includes a GitHub Actions fallback (`.github/workflows/hive-digest.yml`).
+
+## Naming
+
+| Name | Meaning |
+| --- | --- |
+| Hive Digest | Product / emailed issue |
+| `agent/` (`hive-digest-agent`) | Node sender CLI — not a Cursor Cloud Agent |
+| `NEWSLETTER_TO_EMAILS` | Recipient-list secret (historical env name; product is still Hive Digest) |
+| Former repo name | `ark-synbrains/dev-digest` — do not use |
 
 ## Settings
 
@@ -10,8 +22,8 @@ Use this when creating the automation at [cursor.com/automations/new](https://cu
 | --- | --- |
 | **Name** | Hive Digest (monthly) |
 | **Trigger** | Scheduled → Custom cron (monthly, 1st at 09:00 IST): `CRON_TZ=Asia/Kolkata 0 9 1 * *` |
-| **Repository** | `ark-synbrains/dev-digest` @ `main` |
-| **Environment** | `ark-synbrains/dev-digest` (needs SMTP + recipient secrets — see below) |
+| **Repository** | `ark-synbrains/hive-digest` @ `main` |
+| **Environment** | `ark-synbrains/hive-digest` (needs SMTP + recipient secrets — see below) |
 | **Tools** | Memories on · PR creation off |
 | **Model** | Any current cloud-agent model |
 
@@ -22,14 +34,14 @@ Use this when creating the automation at [cursor.com/automations/new](https://cu
 - `SMTP_USER`
 - `SMTP_PASS`
 - `SMTP_FROM` (e.g. `Hive Digest <news@example.com>`)
-- `NEWSLETTER_TO_EMAILS`
+- `NEWSLETTER_TO_EMAILS` (recipient list; historical name)
 
 Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 
 ## Prompt
 
 ```
-You are the Hive Digest newsletter automation for repo ark-synbrains/dev-digest (brand: Synbrains Hive — https://hive.synbrains.ai/).
+You are the Hive Digest automation for repo ark-synbrains/hive-digest (brand: Hive by Synbrains — https://hive.synbrains.ai/).
 
 ## Task
 Every scheduled run (monthly): generate a fresh Hive Digest and email it via SMTP.
@@ -43,17 +55,17 @@ Do not open a PR or create a feature branch for a normal successful send.
   2. algorithms & systems
   3. product & company releases
 - Each entry: headline, 2–4 sentence engineer-focused summary, source_name, source_url (real links only).
-- Tone: Synbrains Hive insights for hands-on engineers. Match tech-digest-agent.html / Hive branding (red #EE462F → purple #7610C7 on dark).
-- The emailed HTML newsletter must always use the dark Hive theme (do not switch to light).
+- Tone: Hive by Synbrains insights for hands-on engineers. Match hive-digest.html / Hive branding (red #EE462F → purple #7610C7 on dark).
+- The emailed HTML must always use the dark Hive theme (do not switch to light).
 - Subject: `Hive Digest - DD Mon YYYY`
   - Example: `Hive Digest - 21 Jul 2026`
   - Date is the issue identity (DD Mon YYYY). No #NNN issue numbers; no teaser in subject.
 - NEVER include insight scores in the email body/subject. Scores are ranking-only.
 
 ### Preferred implementation
-- Always use the Node agent (do not reimplement research/ranking/email by hand):
+- Always use the Node sender in agent/ (npm package hive-digest-agent; do not reimplement research/ranking/email by hand):
   `npm install --prefix agent && npm start --prefix agent`
-- What the agent already does (trust logs; do not abort early on warnings):
+- What the sender already does (trust logs; do not abort early on warnings):
   - Researches via HN Algolia + arXiv, with OpenAlex as a paper backup.
   - Retries transient 429 / 408 / 425 / 5xx (and soft bodies like "Rate exceeded." / invalid JSON under load) with backoff and Retry-After.
   - Paces requests per host (arXiv ≥3s; mild gaps for HN / OpenAlex) and times out hung requests.
@@ -61,13 +73,13 @@ Do not open a PR or create a feature branch for a normal successful send.
   - Soft-fails individual queries so one upstream cannot abort the whole run.
   - Falls back across sources: arXiv → OpenAlex → HN-only; each HN lane has alternate queries if the primary is empty/failing.
   - Validates entries, scores insight value, ranks high→low, orders sections by average score (scores logged only, never emailed).
-  - Sanitizes newsletter text/HTML before SMTP send.
+  - Sanitizes digest text/HTML before SMTP send.
 - Sending uses nodemailer SMTP with env secrets:
   - SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM
-  - NEWSLETTER_TO_EMAILS (comma/semicolon-separated)
+  - NEWSLETTER_TO_EMAILS (comma/semicolon-separated; historical env name)
   - optional SMTP_SECURE, SMTP_REPLY_TO
 - Do not use Resend or the Resend MCP.
-- Ignore any prior memory about /dev/digest naming, issue numbers, hourly schedules, a "1-run trial", or "fail immediately on arXiv 429".
+- Ignore any prior memory about /dev/digest naming, the old repo ark-synbrains/dev-digest, issue numbers, hourly schedules, a "1-run trial", or "fail immediately on arXiv 429".
 
 ### Success criteria
 - Treat the run as success when `npm start` prints ok:true with a messageId (or SMTP accepted recipients), even if logs warn about:
@@ -93,5 +105,5 @@ Do not keep retrying beyond that single outer retry.
 ## `/automate` one-liner (local Cursor)
 
 ```
-/automate On the 1st of every month at 09:00 IST (cron: CRON_TZ=Asia/Kolkata 0 9 1 * *), generate the Hive Digest for ark-synbrains/dev-digest (hive.synbrains.ai branding) and email it via SMTP using SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/SMTP_FROM and NEWSLETTER_TO_EMAILS. Prefer `npm start --prefix agent` (it already retries/falls back across HN, arXiv, and OpenAlex — warnings are OK if entries exist). Validate and rank by insight score without showing scores. Newsletter HTML must always be dark Hive theme. No PRs for normal sends; on transient npm start failure wait ~30s and retry once.
+/automate On the 1st of every month at 09:00 IST (cron: CRON_TZ=Asia/Kolkata 0 9 1 * *), generate the Hive Digest for ark-synbrains/hive-digest (hive.synbrains.ai branding) and email it via SMTP using SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/SMTP_FROM and NEWSLETTER_TO_EMAILS. Prefer `npm start --prefix agent` (it already retries/falls back across HN, arXiv, and OpenAlex — warnings are OK if entries exist). Validate and rank by insight score without showing scores. Email HTML must always be dark Hive theme. No PRs for normal sends; on transient npm start failure wait ~30s and retry once.
 ```

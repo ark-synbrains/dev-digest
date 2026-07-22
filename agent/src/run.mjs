@@ -1,4 +1,14 @@
 #!/usr/bin/env node
+/**
+ * Hive Digest monthly sender (Node CLI for ark-synbrains/hive-digest).
+ *
+ * Flow: researchDigest → validateAndRankDigest → buildIssue → sanitizeIssue → SMTP.
+ * Browser UI counterpart: ../hive-digest.html (Claude.ai artifact).
+ * npm package name: hive-digest-agent (this directory is agent/).
+ *
+ * Required env: SMTP_* and NEWSLETTER_TO_EMAILS
+ * (historical recipient-list name — product is still Hive Digest).
+ */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -84,7 +94,7 @@ async function main() {
     throw new Error('No digest entries passed validation / insight ranking');
   }
 
-  // Sanitize fancy/unicode glyphs out of the final newsletter before send.
+  // Sanitize fancy/unicode glyphs out of the final Hive Digest before send.
   const issue = sanitizeIssue(buildIssue({ date, byCategory, sectionOrder }));
 
   if (dryRun) {

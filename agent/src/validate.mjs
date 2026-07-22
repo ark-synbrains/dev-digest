@@ -1,6 +1,8 @@
 /**
- * Validate digest entries and rank them by insight value.
- * Scores are ranking-only — never rendered in the newsletter.
+ * Validate Hive Digest entries and rank them by insight value.
+ *
+ * Scores are ranking-only — never rendered in emailed or exported issues.
+ * Mirrored client-side in hive-digest.html (scoreInsight / validateItem).
  */
 
 const REQUIRED = ['headline', 'summary', 'source_name', 'source_url'];
@@ -111,7 +113,7 @@ export function validateItem(item) {
 
 /**
  * Score how much an entry improves engineer understanding (0–100).
- * Higher = show earlier. Never display this in the newsletter.
+ * Higher = show earlier. Never display this in the emailed or exported issue.
  */
 export function scoreInsight(item) {
   const { ok } = validateItem(item);
