@@ -1,6 +1,9 @@
 /**
  * SMTP transport for Hive Digest delivery (nodemailer).
  * Reads SMTP_* env vars; called from run.mjs after the issue is built.
+ *
+ * Zoho Mail on 587 needs STARTTLS (`requireTLS`) and can close sockets before
+ * the greeting when rate-limited — sendSmtpEmail retries those transient errors.
  */
 import nodemailer from 'nodemailer';
 
@@ -22,6 +25,17 @@ function parseBool(v, fallback) {
   if (['1', 'true', 'yes', 'on'].includes(s)) return true;
   if (['0', 'false', 'no', 'off'].includes(s)) return false;
   return fallback;
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isTransientSmtpError(err) {
+  const msg = String(err?.message || err || '');
+  return /socket close|ECONNRESET|ETIMEDOUT|ECONNREFUSED|Greeting never received|Connection closed/i.test(
+    msg
+  );
 }
 
 /**
@@ -47,39 +61,67 @@ export function getSmtpConfig() {
 }
 
 export function createTransport(config = getSmtpConfig()) {
+  // Zoho (and similar) on 587 speak plain SMTP then STARTTLS; without
+  // requireTLS, nodemailer can race the slow greeting and see "socket close".
+  const starttls = !config.secure && config.port === 587;
   return nodemailer.createTransport({
     host: config.host,
     port: config.port,
     secure: config.secure,
+    requireTLS: starttls,
     auth: {
       user: config.user,
       pass: config.pass,
     },
+    connectionTimeout: 20_000,
+    greetingTimeout: 20_000,
+    socketTimeout: 30_000,
   });
 }
 
 /**
  * Send an HTML+text email via SMTP.
- * @returns {{ messageId: string, accepted: string[], rejected: string[] }}
+ * Retries transient Zoho/socket failures a few times with backoff.
+ * @returns {{ messageId: string, accepted: string[], rejected: string[], response: string|null }}
  */
 export async function sendSmtpEmail({ to, subject, text, html, headers = {} }) {
   const config = getSmtpConfig();
-  const transport = createTransport(config);
+  const maxAttempts = 5;
+  let lastError;
 
-  const info = await transport.sendMail({
-    from: config.from,
-    to: Array.isArray(to) ? to.join(', ') : to,
-    subject,
-    text,
-    html,
-    replyTo: config.replyTo,
-    headers,
-  });
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const transport = createTransport(config);
+    try {
+      const info = await transport.sendMail({
+        from: config.from,
+        to: Array.isArray(to) ? to.join(', ') : to,
+        subject,
+        text,
+        html,
+        replyTo: config.replyTo,
+        headers,
+      });
 
-  return {
-    messageId: info.messageId || null,
-    accepted: info.accepted || [],
-    rejected: info.rejected || [],
-    response: info.response || null,
-  };
+      return {
+        messageId: info.messageId || null,
+        accepted: info.accepted || [],
+        rejected: info.rejected || [],
+        response: info.response || null,
+      };
+    } catch (err) {
+      lastError = err;
+      if (!isTransientSmtpError(err) || attempt === maxAttempts) {
+        throw err;
+      }
+      const waitMs = 2000 * attempt;
+      console.warn(
+        `SMTP transient error attempt ${attempt}/${maxAttempts}: ${err.message}; retrying in ${waitMs}ms…`
+      );
+      await sleep(waitMs);
+    } finally {
+      transport.close();
+    }
+  }
+
+  throw lastError;
 }
