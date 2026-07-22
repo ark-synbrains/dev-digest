@@ -17,7 +17,7 @@
 ## Community Hubs (Navigation)
 - Research Resilience
 - Automation & Delivery
-- Agent Package Config
+- SMTP Transport
 - Render & Sanitize
 - Run Orchestration
 - Hive Branding & UI
@@ -66,7 +66,7 @@ Nodes (28): assertCircuitClosed(), decodeHtmlEntities(), dedupe(), fetchWithRetr
 Cohesion: 0.40
 Nodes (5): Agent CLI (agent/), Hive Digest, Validation and Insight Ranking, Hive by Synbrains, Three Content Lanes
 
-### Community 2 - "Agent Package Config"
+### Community 2 - "SMTP Transport"
 Cohesion: 0.42
 Nodes (8): createTransport(), getSmtpConfig(), isTransientSmtpError(), optionalEnv(), parseBool(), requireEnv(), sendSmtpEmail(), sleep()
 
@@ -110,7 +110,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **Why does `validateAndRankDigest()` connect `Validate & Rank` to `graphrag.mjs`, `Render & Sanitize`, `Run Orchestration`?**
   _High betweenness centrality (0.035) - this node is a cross-community bridge._
-- **Why does `sendSmtpEmail()` connect `Agent Package Config` to `Run Orchestration`?**
+- **Why does `sendSmtpEmail()` connect `SMTP Transport` to `Run Orchestration`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **What connects `raw`, `{ byCategory, sectionOrder, report }`, `issue` to the rest of the system?**
   _56 weakly-connected nodes found - possible documentation gaps or missing edges._
