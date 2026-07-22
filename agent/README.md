@@ -43,8 +43,9 @@ npm start          # research + archive + send (needs SMTP_* + NEWSLETTER_TO_EMA
 
 Every generated issue (dry-run or send) is written to **`digests/YYYY-MM-DD/`** in the
 repo (`hive-digest.html`, `.txt`, ranking/GraphRAG/meta JSON). Scratch copies also
-go to `agent/out/` (gitignored). Monthly GitHub Actions commits new `digests/`
-folders after a successful send.
+go to `agent/out/` (**tracked** in git — issue scratch + GraphRAG run files).
+Monthly GitHub Actions commits new `digests/` and `agent/out/` folders after a
+successful send.
 
 
 `NEWSLETTER_TO_EMAILS` is the recipient-list secret name (historical); the

@@ -18,4 +18,5 @@ digests/
 
 Same-day re-runs overwrite that date’s folder (monthly schedule is once per month).
 
-Local scratch copies also land under `agent/out/` (gitignored).
+Local copies also land under `agent/out/` (tracked in git; includes GraphRAG
+run artifacts under `agent/out/digest-graph/`).

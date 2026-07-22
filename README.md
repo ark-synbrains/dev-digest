@@ -135,7 +135,7 @@ flowchart TB
     G[enrichDigestWithGraphRag<br/>content knowledge graph]
     V[validateAndRankDigest<br/>insight score + GraphRAG boost]
     B[buildIssue → sanitizeIssue]
-    A[Archive digests/YYYY-MM-DD/<br/>+ agent/out scratch]
+    A[Archive digests/YYYY-MM-DD/<br/>+ tracked agent/out/]
     S[sendSmtpEmail or stop on dry-run]
   end
 
@@ -190,7 +190,7 @@ How it works:
 5. `scoreInsight()` applies the boost (capped at +12). Boosts are ranking-only
    and never appear in the emailed issue.
 
-Artifacts (gitignored) land under `agent/out/digest-graph/<date>/`:
+Artifacts (tracked in git) land under `agent/out/digest-graph/<date>/`:
 `extraction.json`, `graph.json`, `boosts.json`, `corpus/`, `summary.json`.
 
 | Env | Effect |
@@ -277,14 +277,14 @@ agent/                              Node sender (npm: hive-digest-agent)
   src/sanitize.mjs                  sanitizeDigestText / sanitizeIssue
   src/smtp.mjs                      nodemailer transport
   scripts/build_content_graph.py    Graphify build/cluster for content boosts
-  out/                              local scratch copies (gitignored)
+  out/                              tracked run artifacts (HTML scratch + GraphRAG)
 graphify-out/                       codebase knowledge graph (graphify)
   graph.html                        interactive visualization
   graph.json                        queryable graph data
   GRAPH_REPORT.md                   communities / god nodes / questions
 .agents/skills/graphify/            /graphify Agent Skill + references
-.graphifyignore                     exclude skill/rule/digest files from the graph
-.github/workflows/hive-digest.yml   monthly SMTP send + commit digests/
+.graphifyignore                     exclude skill/rule/digest/out from code graph
+.github/workflows/hive-digest.yml   monthly SMTP send + commit digests/ + agent/out/
 .github/workflows/graphify.yml      rebuild graphify-out on code pushes
 .cursor/automations/hive-digest.md  Cursor Automation recipe (monthly send)
 .cursor/rules/graphify.mdc          always-on Cursor graphify rule

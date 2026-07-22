@@ -1,0 +1,216 @@
+{
+  "gods": [
+    {
+      "id": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "label": "Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers",
+      "degree": 24
+    },
+    {
+      "id": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "label": "Open-source memory for coding agents, synced over SSH",
+      "degree": 24
+    },
+    {
+      "id": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "label": "Inkling – Open-Weights 975B Parameter LLM",
+      "degree": 23
+    },
+    {
+      "id": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "label": "Controlling Reasoning Effort in LLMs",
+      "degree": 23
+    },
+    {
+      "id": "entry_algorithm_0_grok_build_is_open_source",
+      "label": "Grok Build is open source",
+      "degree": 23
+    },
+    {
+      "id": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "label": "Soofi – Sovereign Open Source Foundation Models",
+      "degree": 23
+    },
+    {
+      "id": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "label": "Show HN: Immersive Gaussian Splat tour of grace cathedral, San Francisco",
+      "degree": 23
+    },
+    {
+      "id": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "label": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "degree": 22
+    },
+    {
+      "id": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "label": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+      "degree": 22
+    },
+    {
+      "id": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "label": "DSLs Enable Reliable Use of LLMs",
+      "degree": 22
+    }
+  ],
+  "surprises": [
+    {
+      "source": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "target": "Grok Build is open source",
+      "source_files": [
+        "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+        "corpus/algorithm/grok_build_is_open_source.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "target": "Microsoft Comic Chat is now open source",
+      "source_files": [
+        "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+        "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "target": "The state of open source AI",
+      "source_files": [
+        "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+        "corpus/algorithm/the_state_of_open_source_ai.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "target": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
+      "source_files": [
+        "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+        "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "target": "Open Book Touch: open-source e-reader",
+      "source_files": [
+        "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+        "corpus/algorithm/open_book_touch_open_source_e_reader.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "cohesion": {
+    "0": 0.3787878787878788,
+    "1": 0.2857142857142857,
+    "2": 0.4,
+    "3": 0.5,
+    "4": 0.5,
+    "5": 0.6666666666666666,
+    "6": 0.5,
+    "7": 0.6666666666666666,
+    "8": 0.6666666666666666,
+    "9": 0.6666666666666666,
+    "10": 0.6666666666666666,
+    "11": 0.6666666666666666,
+    "12": 0.6666666666666666
+  },
+  "communities": {
+    "0": [
+      "concept_host_blog_greg_technology",
+      "concept_host_blog_lyc8503_net",
+      "concept_host_huggingface_co",
+      "concept_host_martinfowler_com",
+      "concept_host_www_theocharis_dev",
+      "concept_lane_model",
+      "concept_llm",
+      "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "entry_model_3_1_bit_llm_in_the_browser",
+      "entry_model_4_llm_networking_with_mikrotik"
+    ],
+    "1": [
+      "concept_host_app_everything_diena_co",
+      "concept_host_developer_puter_com",
+      "concept_host_justif_lyall_co",
+      "concept_lane_product",
+      "entry_product_0_show_hn_firefox_in_webassembly",
+      "entry_product_5_show_hn_justif_knuth_plass_justification_and_microtypography_for",
+      "entry_product_6_show_hn_a_zoomable_timeline_of_4m_wikipedia_events"
+    ],
+    "2": [
+      "concept_ga",
+      "concept_host_vincentwoo_com",
+      "concept_sota",
+      "concept_throughput",
+      "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better"
+    ],
+    "3": [
+      "concept_host_www_crowdsupply_com",
+      "concept_host_www_siegelendowment_org",
+      "concept_lane_algorithm",
+      "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "entry_algorithm_4_open_book_touch_open_source_e_reader"
+    ],
+    "4": [
+      "concept_architecture",
+      "concept_host_arxiv_org",
+      "concept_paper",
+      "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit"
+    ],
+    "5": [
+      "concept_grok",
+      "concept_host_github_com",
+      "entry_algorithm_0_grok_build_is_open_source",
+      "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge"
+    ],
+    "6": [
+      "concept_host_honeypotlive_cc",
+      "concept_host_ikea_greg_technology",
+      "entry_product_2_show_hn_ikea_complexity_index",
+      "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time"
+    ],
+    "7": [
+      "concept_agent",
+      "concept_memory",
+      "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh"
+    ],
+    "8": [
+      "concept_foundation_model",
+      "concept_host_www_soofi_info",
+      "entry_algorithm_7_soofi_sovereign_open_source_foundation_models"
+    ],
+    "9": [
+      "concept_host_magazine_sebastianraschka_com",
+      "concept_reasoning",
+      "entry_model_7_controlling_reasoning_effort_in_llms"
+    ],
+    "10": [
+      "concept_host_opensource_microsoft_com",
+      "concept_release",
+      "entry_algorithm_1_microsoft_comic_chat_is_now_open_source"
+    ],
+    "11": [
+      "concept_host_stateofopensource_ai",
+      "concept_open_source",
+      "entry_algorithm_2_the_state_of_open_source_ai"
+    ],
+    "12": [
+      "concept_host_thinkingmachines_ai",
+      "concept_weights",
+      "entry_model_5_inkling_open_weights_975b_parameter_llm"
+    ]
+  },
+  "nodes": 60,
+  "edges": 265
+}

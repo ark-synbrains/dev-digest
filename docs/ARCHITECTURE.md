@@ -53,7 +53,7 @@ flowchart TB
     G[enrichDigestWithGraphRag<br/>content knowledge graph]
     V[validateAndRankDigest<br/>insight score + GraphRAG boost]
     B[buildIssue → sanitizeIssue]
-    A[Archive digests/YYYY-MM-DD/<br/>+ agent/out scratch]
+    A[Archive digests/YYYY-MM-DD/<br/>+ tracked agent/out/]
     S[sendSmtpEmail<br/>or stop on dry-run]
   end
 
@@ -223,9 +223,11 @@ digests/YYYY-MM-DD/
   meta.json
 ```
 
-Scratch copies also go to `agent/out/` (gitignored).  
-The monthly GitHub Actions workflow commits new `digests/` folders after a
-successful send. See [`digests/README.md`](../digests/README.md).
+Scratch copies also go to `agent/out/` (tracked in git, including per-run
+content GraphRAG under `agent/out/digest-graph/`).
+The monthly GitHub Actions workflow commits new `digests/` and `agent/out/`
+folders after a successful send. See [`digests/README.md`](../digests/README.md)
+and [`agent/out/README.md`](../agent/out/README.md).
 
 ---
 
