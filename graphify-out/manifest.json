@@ -1,7 +1,7 @@
 {
   "agent/package.json": {
-    "mtime": 1784700811.6155868,
-    "ast_hash": "a463fdcf8b813a2db7bc013005794209",
+    "mtime": 1784701629.8640525,
+    "ast_hash": "e446744f8d462421cc435a4d6ed9b069",
     "semantic_hash": ""
   },
   "agent/src/render.mjs": {
@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "agent/src/run.mjs": {
-    "mtime": 1784700811.599587,
-    "ast_hash": "90ea4a23b5a5f209f38409f5f5804047",
+    "mtime": 1784701629.8440528,
+    "ast_hash": "c36c8c2ef2ac6bac9b971c16a72f30b4",
     "semantic_hash": ""
   },
   "agent/src/sanitize.mjs": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "agent/src/smtp.mjs": {
-    "mtime": 1784700811.595587,
-    "ast_hash": "af58a93863e422ec34f36c5c3f2dddbe",
+    "mtime": 1784701845.3667443,
+    "ast_hash": "cd2cbfc645c89cda5b38107d1b40b0ac",
     "semantic_hash": ""
   },
   "agent/src/validate.mjs": {
@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "agent/state.json": {
-    "mtime": 1784700179.9654217,
-    "ast_hash": "fb27a94462bea05f76d2768a0a5f8831",
+    "mtime": 1784701881.6065433,
+    "ast_hash": "aca38a9ab5c550c60e537789da04232c",
     "semantic_hash": ""
   },
   ".github/workflows/delete-merged-branch.yml": {
@@ -75,8 +75,13 @@
     "semantic_hash": ""
   },
   "agent/README.md": {
-    "mtime": 1784700876.4146612,
-    "ast_hash": "66ced24628bff27756ea33d1bbe092e9",
+    "mtime": 1784701629.8480527,
+    "ast_hash": "1738a21900f610414c6400e179c2c316",
+    "semantic_hash": ""
+  },
+  "agent/src/digest.test.mjs": {
+    "mtime": 1784701629.8440528,
+    "ast_hash": "4fec4b07812f1a75befb18d9884ee582",
     "semantic_hash": ""
   }
 }
