@@ -5,11 +5,10 @@ node_modules/
 .env
 .env.*
 
-# Alternate/local GraphRAG paths (not used by the sender archive layout)
+# Local sender run artifacts (HTML scratch + content GraphRAG) — not tracked
+agent/out/
 agent/digest-corpus/
 agent/digest-graph/
-
-# Tracked: agent/out/ (issue scratch copies + per-run content GraphRAG artifacts)
 
 # OS
 .DS_Store

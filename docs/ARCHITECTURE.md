@@ -53,7 +53,7 @@ flowchart TB
     G[enrichDigestWithGraphRag<br/>content knowledge graph]
     V[validateAndRankDigest<br/>insight score + GraphRAG boost]
     B[buildIssue → sanitizeIssue]
-    A[Archive digests/YYYY-MM-DD/<br/>+ tracked agent/out/]
+    A[Archive digests/YYYY-MM-DD/<br/>canonical tracked archive]
     S[sendSmtpEmail<br/>or stop on dry-run]
   end
 
@@ -158,8 +158,12 @@ reading every file.
 | Plain-language report | [`graphify-out/GRAPH_REPORT.md`](../graphify-out/GRAPH_REPORT.md) |
 | Always-on Cursor rule | [`.cursor/rules/graphify.mdc`](../.cursor/rules/graphify.mdc) |
 | Agent Skill | [`.agents/skills/graphify/`](../.agents/skills/graphify/) |
-| Ignore skill/digest noise | [`.graphifyignore`](../.graphifyignore) |
+| Ignore rules / skills / digests / local out | [`.graphifyignore`](../.graphifyignore) — **rules are never graph corpus** |
 | CI rebuild | [`.github/workflows/graphify.yml`](../.github/workflows/graphify.yml) |
+
+**Rules are never considered by Graphify.** `.graphifyignore` excludes
+`.cursor/rules/`, `.agents/`, `AGENTS.md`, `CLAUDE.md`, and similar paths so
+agent instructions cannot become nodes/edges in `graphify-out/`.
 
 **Typical use:**
 
@@ -223,11 +227,10 @@ digests/YYYY-MM-DD/
   meta.json
 ```
 
-Scratch copies also go to `agent/out/` (tracked in git, including per-run
-content GraphRAG under `agent/out/digest-graph/`).
-The monthly GitHub Actions workflow commits new `digests/` and `agent/out/`
-folders after a successful send. See [`digests/README.md`](../digests/README.md)
-and [`agent/out/README.md`](../agent/out/README.md).
+Scratch copies also go to `agent/out/` (**gitignored** local scratch, including
+per-run content GraphRAG under `agent/out/digest-graph/`).
+The monthly GitHub Actions workflow commits new **`digests/`** folders after a
+successful send. See [`digests/README.md`](../digests/README.md).
 
 ---
 
@@ -238,7 +241,7 @@ and [`agent/out/README.md`](../agent/out/README.md).
 | Email delivery | SMTP via `SMTP_*` + `NEWSLETTER_TO_EMAILS` (historical env name) |
 | Upstream APIs | Retries, per-host pacing, circuit breaker, soft-fail per query |
 | Ranking privacy | Insight / GraphRAG scores logged only — never in subject/body |
-| Codebase vs content | Separate graphs; `.graphifyignore` keeps digests/skills out of code graph |
+| Codebase vs content | Separate graphs; `.graphifyignore` excludes rules/skills/`digests/`/`agent/out` from the codebase graph |
 | Browser UI | `hive-digest.html` needs Claude.ai artifact proxy for Anthropic calls |
 
 ---
@@ -261,5 +264,5 @@ Think of Hive Digest as a **research → rank → publish** factory. Graphify si
 beside that factory as a **map of the factory’s code** (for builders), and also
 steps into the line briefly after research to **map how this month’s stories
 relate**, nudging ranking without changing how stories are fetched or how the
-email looks. Finished issues are stored in `digests/` so every run leaves a
-durable record in the repository.
+email looks. Finished issues are stored in tracked `digests/`; local GraphRAG
+scratch under `agent/out/` stays gitignored.
