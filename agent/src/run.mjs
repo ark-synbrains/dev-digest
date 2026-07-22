@@ -2,17 +2,20 @@
 /**
  * Hive Digest monthly sender (Node CLI for ark-synbrains/hive-digest).
  *
- * Flow: researchDigest → validateAndRankDigest → buildIssue → sanitizeIssue → SMTP.
+ * Flow: researchDigest → enrichDigestWithGraphRag → validateAndRankDigest
+ *       → buildIssue → sanitizeIssue → archive digests/ → SMTP (unless --dry-run).
  * Browser UI counterpart: ../hive-digest.html (Claude.ai artifact).
  * npm package name: hive-digest-agent (this directory is agent/).
  *
  * Required env: SMTP_* and NEWSLETTER_TO_EMAILS
  * (historical recipient-list name — product is still Hive Digest).
+ * Optional: HIVE_GRAPHRAG=0 to disable content GraphRAG ranking boosts.
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { researchDigest } from './research.mjs';
+import { enrichDigestWithGraphRag } from './graphrag.mjs';
 import { validateAndRankDigest } from './validate.mjs';
 import { buildIssue } from './render.mjs';
 import { sanitizeIssue } from './sanitize.mjs';
@@ -20,7 +23,10 @@ import { sendSmtpEmail } from './smtp.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+/** Repo root (parent of agent/) — tracked issue archive lives here. */
+const REPO_ROOT = join(ROOT, '..');
 const STATE_PATH = join(ROOT, 'state.json');
+const DIGESTS_DIR = join(REPO_ROOT, 'digests');
 
 function loadState() {
   if (!existsSync(STATE_PATH)) {
@@ -62,6 +68,72 @@ function hourStamp(d = new Date()) {
   return d.toISOString().slice(0, 13).replace('T', '-');
 }
 
+/**
+ * Persist every generated issue into the repo archive (digests/) and a local
+ * scratch copy under agent/out/. Both dry-run and live sends call this.
+ *
+ * Layout:
+ *   digests/YYYY-MM-DD/
+ *     hive-digest.html
+ *     hive-digest.txt
+ *     ranking.json
+ *     graphrag.json
+ *     meta.json
+ */
+function archiveIssue({
+  stamp,
+  date,
+  issue,
+  report,
+  graphRag,
+  sectionOrder,
+  entries,
+  dryRun,
+  messageId = null,
+  recipients = null,
+}) {
+  const meta = {
+    subject: issue.subject,
+    date,
+    dateStamp: stamp,
+    dryRun: Boolean(dryRun),
+    entries,
+    sectionOrder,
+    messageId,
+    recipients,
+    archivedAt: new Date().toISOString(),
+    rankingKept: report?.kept ?? null,
+    rankingDropped: report?.dropped ?? null,
+    graphRag: graphRag
+      ? {
+          enabled: graphRag.enabled,
+          engine: graphRag.engine,
+          boosted: graphRag.boosted,
+          nodes: graphRag.nodes,
+          edges: graphRag.edges,
+        }
+      : null,
+  };
+
+  const repoDir = join(DIGESTS_DIR, stamp);
+  mkdirSync(repoDir, { recursive: true });
+  writeFileSync(join(repoDir, 'hive-digest.html'), issue.html);
+  writeFileSync(join(repoDir, 'hive-digest.txt'), issue.text);
+  writeFileSync(join(repoDir, 'ranking.json'), JSON.stringify(report, null, 2) + '\n');
+  writeFileSync(join(repoDir, 'graphrag.json'), JSON.stringify(graphRag, null, 2) + '\n');
+  writeFileSync(join(repoDir, 'meta.json'), JSON.stringify(meta, null, 2) + '\n');
+
+  // Local scratch (gitignored) — same payloads for quick inspection
+  const outDir = join(ROOT, 'out');
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, `digest-${stamp}.html`), issue.html);
+  writeFileSync(join(outDir, `digest-${stamp}.txt`), issue.text);
+  writeFileSync(join(outDir, `digest-${stamp}.ranking.json`), JSON.stringify(report, null, 2) + '\n');
+  writeFileSync(join(outDir, `digest-${stamp}.graphrag.json`), JSON.stringify(graphRag, null, 2) + '\n');
+
+  return { repoDir, outDir, meta };
+}
+
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
   const state = loadState();
@@ -70,7 +142,13 @@ async function main() {
   const stamp = dateStamp(now);
 
   console.log('Researching Hive Digest lanes...');
-  const raw = await researchDigest();
+  const researched = await researchDigest();
+
+  console.log('Building content GraphRAG (Graphify) for ranking boosts...');
+  const { byCategory: raw, graphRag } = await enrichDigestWithGraphRag(researched, {
+    stamp,
+  });
+  console.log(JSON.stringify({ graphRag }, null, 2));
 
   console.log('Validating & ranking by insight score...');
   const { byCategory, sectionOrder, report } = validateAndRankDigest(raw);
@@ -83,6 +161,7 @@ async function main() {
           sectionOrder: report.sectionOrder,
           categories: report.categories,
         },
+        graphRag,
       },
       null,
       2
@@ -98,11 +177,16 @@ async function main() {
   const issue = sanitizeIssue(buildIssue({ date, byCategory, sectionOrder }));
 
   if (dryRun) {
-    const outDir = join(ROOT, 'out');
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, `digest-${stamp}.html`), issue.html);
-    writeFileSync(join(outDir, `digest-${stamp}.txt`), issue.text);
-    writeFileSync(join(outDir, `digest-${stamp}.ranking.json`), JSON.stringify(report, null, 2) + '\n');
+    const archived = archiveIssue({
+      stamp,
+      date,
+      issue,
+      report,
+      graphRag,
+      sectionOrder,
+      entries: total,
+      dryRun: true,
+    });
     console.log(
       JSON.stringify(
         {
@@ -112,6 +196,9 @@ async function main() {
           date,
           entries: total,
           sectionOrder,
+          graphRag,
+          archive: archived.repoDir,
+          scratch: archived.outDir,
         },
         null,
         2
@@ -122,6 +209,20 @@ async function main() {
 
   const to = parseRecipients(requireEnv('NEWSLETTER_TO_EMAILS'));
   if (!to.length) throw new Error('NEWSLETTER_TO_EMAILS parsed to empty list');
+
+  // Archive before SMTP so a send failure still leaves the issue in digests/.
+  let archived = archiveIssue({
+    stamp,
+    date,
+    issue,
+    report,
+    graphRag,
+    sectionOrder,
+    entries: total,
+    dryRun: false,
+    messageId: null,
+    recipients: to.length,
+  });
 
   const issueKey = `hive-digest/${hourStamp()}`;
 
@@ -141,6 +242,20 @@ async function main() {
     throw new Error(`SMTP rejected recipients: ${result.rejected.join(', ')}`);
   }
 
+  // Refresh archive meta with SMTP message id after a successful send.
+  archived = archiveIssue({
+    stamp,
+    date,
+    issue,
+    report,
+    graphRag,
+    sectionOrder,
+    entries: total,
+    dryRun: false,
+    messageId: result.messageId || null,
+    recipients: to.length,
+  });
+
   delete state.lastIssueNumber;
 
   state.runsCompleted = (state.runsCompleted || 0) + 1;
@@ -157,6 +272,7 @@ async function main() {
       sectionOrder,
       rankingKept: report.kept,
       rankingDropped: report.dropped,
+      archive: `digests/${stamp}/`,
     },
   ].slice(-20);
   saveState(state);
@@ -172,6 +288,8 @@ async function main() {
         recipients: to.length,
         runsCompleted: state.runsCompleted,
         sectionOrder,
+        archive: archived.repoDir,
+        scratch: archived.outDir,
       },
       null,
       2

@@ -45,7 +45,9 @@ Brand: **Hive by Synbrains** (accents `#EE462F` → `#7610C7`).
   (`Hive Digest` branding).
 - **Responsive layout** — usable from phone to desktop.
 - **Knowledge graph** — [graphify](https://github.com/Graphify-Labs/graphify) maps the
-  codebase (AST + docs) into a queryable graph under `graphify-out/`.
+  codebase (AST + docs) into a queryable graph under `graphify-out/`, and the
+  Node sender also builds a **content GraphRAG** graph from each run’s research
+  candidates to boost insight ranking (see below).
 
 ## How to use it
 
@@ -110,6 +112,90 @@ graphify explain "fetchWithRetry"
 commits refreshed `graphify-out/` artifacts when the graph changes.
 Manual runs: Actions → **graphify** → **Run workflow**.
 
+### Architecture flowchart
+
+Two Graphify roles sit around the product: a **codebase map** for agents/humans,
+and a **content GraphRAG** step inside each monthly send.
+
+```mermaid
+flowchart TB
+  subgraph triggers [Triggers]
+    CA[Cursor Automation monthly]
+    GA[GitHub Actions hive-digest.yml]
+  end
+
+  subgraph sender [Node sender agent/]
+    R[researchDigest<br/>HN · arXiv · OpenAlex]
+    G[enrichDigestWithGraphRag<br/>content knowledge graph]
+    V[validateAndRankDigest<br/>insight score + GraphRAG boost]
+    B[buildIssue → sanitizeIssue]
+    A[Archive digests/YYYY-MM-DD/<br/>+ agent/out scratch]
+    S[sendSmtpEmail or stop on dry-run]
+  end
+
+  subgraph contentGraph [Content GraphRAG per run]
+    E[Entries + shared concepts]
+    P[Graphify Python cluster<br/>preferred]
+    N[Node fallback graph]
+    X[_graphBoost ranking-only<br/>capped · never emailed]
+  end
+
+  subgraph codebaseGraph [Codebase graph — separate]
+    CG[graphify-out/<br/>graph.html · graph.json · GRAPH_REPORT.md]
+    CQ[Cursor agents: query / path / explain]
+  end
+
+  CA --> R
+  GA --> R
+  R --> G
+  G --> E
+  E --> P
+  E --> N
+  P --> X
+  N --> X
+  X --> V
+  G --> V
+  V --> B
+  B --> A
+  A --> S
+
+  Codebase[Repo code + docs] --> CG
+  CG --> CQ
+```
+
+### Content GraphRAG (inside the monthly digest pipeline)
+
+Separate from the **codebase** map above, the Node sender (`agent/`) builds a
+**content** knowledge graph from research candidates each run:
+
+```
+researchDigest → enrichDigestWithGraphRag → validateAndRankDigest → render → SMTP
+```
+
+How it works:
+
+1. Research pulls HN / arXiv / OpenAlex candidates into three lanes.
+2. `agent/src/graphrag.mjs` turns entries into Graphify extraction nodes
+   (documents) plus shared technical **concepts**, lane tags, and source hosts.
+3. Prefer `agent/scripts/build_content_graph.py` (Graphify + NetworkX) to
+   cluster and compute god-node / bridge **ranking boosts** (`_graphBoost`).
+4. If Python/graphifyy is missing, a pure-Node fallback computes the same style
+   of boosts so the digest never fails on GraphRAG.
+5. `scoreInsight()` applies the boost (capped at +12). Boosts are ranking-only
+   and never appear in the emailed issue.
+
+Artifacts (gitignored) land under `agent/out/digest-graph/<date>/`:
+`extraction.json`, `graph.json`, `boosts.json`, `corpus/`, `summary.json`.
+
+| Env | Effect |
+| --- | --- |
+| `HIVE_GRAPHRAG=0` | Disable content GraphRAG (research → validate only) |
+| `HIVE_GRAPHRAG_FORCE_NODE=1` | Skip Python; use Node fallback boosts |
+| `GRAPHIFY_PYTHON` | Optional path to the Python that has `graphify` installed |
+
+This does **not** replace live research, and it does **not** write into
+`graphify-out/` (that remains the codebase map for Cursor agents).
+
 ## Important: where this runs
 
 This tool calls `https://api.anthropic.com/v1/messages` directly from the
@@ -152,9 +238,9 @@ Merged PR feature branches are deleted automatically by
 
 ```bash
 npm install --prefix agent
-# preview only (writes agent/out/ + ranking.json)
+# preview only (writes digests/YYYY-MM-DD/ + agent/out/)
 npm run generate --prefix agent
-# send for real (needs SMTP secrets below)
+# send for real (needs SMTP secrets below; also archives under digests/)
 npm start --prefix agent
 ```
 
@@ -173,21 +259,26 @@ Optional: `SMTP_SECURE`, `SMTP_REPLY_TO`
 
 ```
 hive-digest.html                    Claude.ai browser artifact UI
+digests/                            tracked archive of generated issues
+  YYYY-MM-DD/                       hive-digest.html/.txt + ranking/meta JSON
 agent/                              Node sender (npm: hive-digest-agent)
   package.json                      package name hive-digest-agent
-  src/run.mjs                       orchestration + SMTP send
+  src/run.mjs                       orchestration + GraphRAG + archive + SMTP
   src/research.mjs                  HN + arXiv research (OpenAlex / HN fallback)
+  src/graphrag.mjs                  content GraphRAG → ranking boosts
   src/validate.mjs                  schema validation + insight scoring
   src/render.mjs                    Hive Digest email HTML (dark; HIVE palette)
   src/sanitize.mjs                  sanitizeDigestText / sanitizeIssue
   src/smtp.mjs                      nodemailer transport
-graphify-out/                       knowledge graph (graphify)
+  scripts/build_content_graph.py    Graphify build/cluster for content boosts
+  out/                              local scratch copies (gitignored)
+graphify-out/                       codebase knowledge graph (graphify)
   graph.html                        interactive visualization
   graph.json                        queryable graph data
   GRAPH_REPORT.md                   communities / god nodes / questions
 .agents/skills/graphify/            /graphify Agent Skill + references
-.graphifyignore                     exclude skill/rule files from the graph
-.github/workflows/hive-digest.yml   monthly SMTP send (Actions)
+.graphifyignore                     exclude skill/rule/digest files from the graph
+.github/workflows/hive-digest.yml   monthly SMTP send + commit digests/
 .github/workflows/graphify.yml      rebuild graphify-out on code pushes
 .cursor/automations/hive-digest.md  Cursor Automation recipe (monthly send)
 .cursor/rules/graphify.mdc          always-on Cursor graphify rule
