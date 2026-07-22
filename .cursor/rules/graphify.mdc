@@ -20,7 +20,8 @@ Only use Read/Grep/Glob directly when:
 - Read `graphify-out/GRAPH_REPORT.md` only for broad architecture review when query/path/explain do not surface enough context
 - After modifying code files, run `graphify update .` to keep the graph current (AST-only, no API cost)
 
-**Never index or treat agent/Cursor rules as graph corpus.** `.graphifyignore` excludes
-`.cursor/rules/`, `.agents/`, `AGENTS.md`, `CLAUDE.md`, and similar rule/skill paths.
+**Never index or treat agent/Cursor rules or documentation Markdown as graph corpus.**
+`.graphifyignore` excludes `.cursor/rules/`, `.agents/`, `AGENTS.md`, `CLAUDE.md`,
+all `*.md` documentation (including `README.md` and `docs/`), and similar paths.
 Do not `graphify add` those files, do not force them into extraction, and do not answer
-codebase questions as if rule text were part of the product graph.
+codebase questions as if rule or doc text were part of the product graph.

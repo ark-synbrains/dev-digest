@@ -25,3 +25,8 @@ package.json
 **/package.json
 package-lock.json
 **/package-lock.json
+
+# Documentation Markdown — excluded from graph.html / codebase graph generation
+*.md
+**/*.md
+docs/

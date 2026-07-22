@@ -1,15 +1,1 @@
-{
-  "0": "Research Resilience",
-  "1": "Automation & Delivery",
-  "2": "SMTP Transport",
-  "3": "Render & Sanitize",
-  "4": "Run Orchestration",
-  "5": "Hive Branding & UI",
-  "6": "Validate & Rank",
-  "8": "Research Tests",
-  "9": "Branch Cleanup CI",
-  "10": "graphrag.mjs",
-  "11": "compute_boosts",
-  "12": "Cursor Automation — Hive Digest (monthly)",
-  "13": "Cursor Automation (Preferred)"
-}
+{"0": "research.mjs", "1": "graphrag.test.mjs", "2": "render.mjs", "3": "graphrag.mjs", "4": "run.mjs", "5": "smtp.mjs", "6": "compute_boosts", "7": "research.test.mjs"}
