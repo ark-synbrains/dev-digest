@@ -1,0 +1,3364 @@
+{
+  "nodes": [
+    {
+      "id": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "label": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "file_type": "document",
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_lane_model",
+      "label": "lane:model",
+      "file_type": "concept",
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_host_www_theocharis_dev",
+      "label": "www.theocharis.dev",
+      "file_type": "concept",
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_release",
+      "label": "release",
+      "file_type": "concept",
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_llm",
+      "label": "llm",
+      "file_type": "concept",
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "label": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+      "file_type": "document",
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_blog_lyc8503_net",
+      "label": "blog.lyc8503.net",
+      "file_type": "concept",
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "label": "DSLs Enable Reliable Use of LLMs",
+      "file_type": "document",
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_martinfowler_com",
+      "label": "martinfowler.com",
+      "file_type": "concept",
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_3_1_bit_llm_in_the_browser",
+      "label": "1-Bit LLM in the Browser",
+      "file_type": "document",
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_huggingface_co",
+      "label": "huggingface.co",
+      "file_type": "concept",
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_4_llm_networking_with_mikrotik",
+      "label": "LLM Networking with MikroTik",
+      "file_type": "document",
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_blog_greg_technology",
+      "label": "blog.greg.technology",
+      "file_type": "concept",
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "label": "Inkling – Open-Weights 975B Parameter LLM",
+      "file_type": "document",
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_thinkingmachines_ai",
+      "label": "thinkingmachines.ai",
+      "file_type": "concept",
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_weights",
+      "label": "weights",
+      "file_type": "concept",
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "label": "Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers",
+      "file_type": "document",
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_arxiv_org",
+      "label": "arxiv.org",
+      "file_type": "concept",
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_architecture",
+      "label": "architecture",
+      "file_type": "concept",
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_paper",
+      "label": "paper",
+      "file_type": "concept",
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "label": "Controlling Reasoning Effort in LLMs",
+      "file_type": "document",
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "model"
+    },
+    {
+      "id": "concept_host_magazine_sebastianraschka_com",
+      "label": "magazine.sebastianraschka.com",
+      "file_type": "concept",
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_reasoning",
+      "label": "reasoning",
+      "file_type": "concept",
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_0_grok_build_is_open_source",
+      "label": "Grok Build is open source",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_lane_algorithm",
+      "label": "lane:algorithm",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_host_github_com",
+      "label": "github.com",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_open_source",
+      "label": "open source",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_grok",
+      "label": "grok",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "label": "Microsoft Comic Chat is now open source",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_host_opensource_microsoft_com",
+      "label": "opensource.microsoft.com",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_2_the_state_of_open_source_ai",
+      "label": "The state of open source AI",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_host_stateofopensource_ai",
+      "label": "stateofopensource.ai",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "label": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_host_www_siegelendowment_org",
+      "label": "www.siegelendowment.org",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "label": "Open Book Touch: open-source e-reader",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_host_www_crowdsupply_com",
+      "label": "www.crowdsupply.com",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "label": "Open-source memory for coding agents, synced over SSH",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_agent",
+      "label": "agent",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_memory",
+      "label": "memory",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "label": "Show HN: Imagin Raw – A 9MB Open-Source Alternative to Adobe Bridge for Mac",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "label": "Soofi – Sovereign Open Source Foundation Models",
+      "file_type": "document",
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "algorithm"
+    },
+    {
+      "id": "concept_host_www_soofi_info",
+      "label": "www.soofi.info",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_foundation_model",
+      "label": "foundation model",
+      "file_type": "concept",
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_0_show_hn_firefox_in_webassembly",
+      "label": "Show HN: Firefox in WebAssembly",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_firefox_in_webassembly.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_lane_product",
+      "label": "lane:product",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_firefox_in_webassembly.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_host_developer_puter_com",
+      "label": "developer.puter.com",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_firefox_in_webassembly.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "label": "Show HN: Immersive Gaussian Splat tour of grace cathedral, San Francisco",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_host_vincentwoo_com",
+      "label": "vincentwoo.com",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_ga",
+      "label": "ga",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_2_show_hn_ikea_complexity_index",
+      "label": "Show HN: IKEA Complexity Index",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_ikea_complexity_index.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_host_ikea_greg_technology",
+      "label": "ikea.greg.technology",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_ikea_complexity_index.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "label": "Show HN: Watch bots interact with an SSH honeypot in real time",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_host_honeypotlive_cc",
+      "label": "honeypotlive.cc",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "label": "Show HN: misa77 - a codec that decodes 2x faster than LZ4 (at better ratios)",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_throughput",
+      "label": "throughput",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "concept_sota",
+      "label": "sota",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_5_show_hn_justif_knuth_plass_justification_and_microtypography_for",
+      "label": "Show HN: Justif – Knuth-Plass justification and microtypography for the web",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_justif_knuth_plass_justification_and_microtypography_for.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_host_justif_lyall_co",
+      "label": "justif.lyall.co",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_justif_knuth_plass_justification_and_microtypography_for.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "id": "entry_product_6_show_hn_a_zoomable_timeline_of_4m_wikipedia_events",
+      "label": "Show HN: A zoomable timeline of 4M Wikipedia events",
+      "file_type": "document",
+      "source_file": "corpus/product/show_hn_a_zoomable_timeline_of_4m_wikipedia_events.md",
+      "source_location": null,
+      "_origin": "digest_graphrag",
+      "category": "product"
+    },
+    {
+      "id": "concept_host_app_everything_diena_co",
+      "label": "app.everything.diena.co",
+      "file_type": "concept",
+      "source_file": "corpus/product/show_hn_a_zoomable_timeline_of_4m_wikipedia_events.md",
+      "_origin": "digest_graphrag"
+    }
+  ],
+  "edges": [
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "concept_host_www_theocharis_dev",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/the_llm_critics_are_right_i_use_llms_anyway.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "concept_host_blog_lyc8503_net",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/detecting_llm_generated_texts_with_classical_machine_learning.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "concept_host_martinfowler_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/dsls_enable_reliable_use_of_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "concept_host_huggingface_co",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/1_bit_llm_in_the_browser.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "concept_host_blog_greg_technology",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/llm_networking_with_mikrotik.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "concept_host_thinkingmachines_ai",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "concept_weights",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/inkling_open_weights_975b_parameter_llm.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_host_arxiv_org",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_architecture",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_paper",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/can_llms_perform_deep_technical_comprehension_of_computer_archit.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "concept_lane_model",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "concept_host_magazine_sebastianraschka_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "concept_reasoning",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "concept_llm",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/model/controlling_reasoning_effort_in_llms.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "concept_host_github_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "concept_grok",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/grok_build_is_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "concept_host_opensource_microsoft_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/microsoft_comic_chat_is_now_open_source.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "concept_host_stateofopensource_ai",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/the_state_of_open_source_ai.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "concept_host_www_siegelendowment_org",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/governments_companies_nonprofits_should_invest_in_free_open_sour.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "concept_host_www_crowdsupply_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_book_touch_open_source_e_reader.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_host_github_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_agent",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "concept_memory",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/open_source_memory_for_coding_agents_synced_over_ssh.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "concept_host_github_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "concept_lane_algorithm",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "concept_host_www_soofi_info",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "concept_open_source",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "concept_foundation_model",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/algorithm/soofi_sovereign_open_source_foundation_models.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_0_show_hn_firefox_in_webassembly",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_firefox_in_webassembly.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_0_show_hn_firefox_in_webassembly",
+      "target": "concept_host_developer_puter_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_firefox_in_webassembly.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "concept_host_vincentwoo_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "concept_ga",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_2_show_hn_ikea_complexity_index",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_ikea_complexity_index.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_2_show_hn_ikea_complexity_index",
+      "target": "concept_host_ikea_greg_technology",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_ikea_complexity_index.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_2_show_hn_ikea_complexity_index",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_ikea_complexity_index.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "target": "concept_host_honeypotlive_cc",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "target": "concept_release",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "target": "concept_host_github_com",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "target": "concept_throughput",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "target": "concept_ga",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "target": "concept_sota",
+      "relation": "mentions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_5_show_hn_justif_knuth_plass_justification_and_microtypography_for",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_justif_knuth_plass_justification_and_microtypography_for.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_5_show_hn_justif_knuth_plass_justification_and_microtypography_for",
+      "target": "concept_host_justif_lyall_co",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_justif_knuth_plass_justification_and_microtypography_for.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_6_show_hn_a_zoomable_timeline_of_4m_wikipedia_events",
+      "target": "concept_lane_product",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_a_zoomable_timeline_of_4m_wikipedia_events.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_6_show_hn_a_zoomable_timeline_of_4m_wikipedia_events",
+      "target": "concept_host_app_everything_diena_co",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "corpus/product/show_hn_a_zoomable_timeline_of_4m_wikipedia_events.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_0_grok_build_is_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "entry_product_2_show_hn_ikea_complexity_index",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_2_show_hn_ikea_complexity_index",
+      "target": "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_3_1_bit_llm_in_the_browser",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_2_dsls_enable_reliable_use_of_llms",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_4_llm_networking_with_mikrotik",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_3_1_bit_llm_in_the_browser",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_4_llm_networking_with_mikrotik",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_5_inkling_open_weights_975b_parameter_llm",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit",
+      "target": "entry_model_7_controlling_reasoning_effort_in_llms",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_0_grok_build_is_open_source",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_2_the_state_of_open_source_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_1_microsoft_comic_chat_is_now_open_source",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_2_the_state_of_open_source_ai",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_4_open_book_touch_open_source_e_reader",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge",
+      "target": "entry_algorithm_7_soofi_sovereign_open_source_foundation_models",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    },
+    {
+      "source": "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra",
+      "target": "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "corpus/_bridges.md",
+      "_origin": "digest_graphrag"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,229 @@
+{
+  "entry_model_0_the_llm_critics_are_right_i_use_llms_anyway": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 12 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 0,
+    "label": "The LLM Critics Are Right. I Use LLMs Anyway"
+  },
+  "entry_model_1_detecting_llm_generated_texts_with_classical_machine_learning": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 12 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 0,
+    "label": "Detecting LLM-Generated Texts with “Classical” Machine Learning"
+  },
+  "entry_model_2_dsls_enable_reliable_use_of_llms": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 12 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 0,
+    "label": "DSLs Enable Reliable Use of LLMs"
+  },
+  "entry_model_3_1_bit_llm_in_the_browser": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 12 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 0,
+    "label": "1-Bit LLM in the Browser"
+  },
+  "entry_model_4_llm_networking_with_mikrotik": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 12 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 0,
+    "label": "LLM Networking with MikroTik"
+  },
+  "entry_model_5_inkling_open_weights_975b_parameter_llm": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 23,
+    "community": 12,
+    "label": "Inkling – Open-Weights 975B Parameter LLM"
+  },
+  "entry_model_6_can_llms_perform_deep_technical_comprehension_of_computer_archit": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 4 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 24,
+    "community": 4,
+    "label": "Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers"
+  },
+  "entry_model_7_controlling_reasoning_effort_in_llms": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 23,
+    "community": 9,
+    "label": "Controlling Reasoning Effort in LLMs"
+  },
+  "entry_algorithm_0_grok_build_is_open_source": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 4 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 23,
+    "community": 5,
+    "label": "Grok Build is open source"
+  },
+  "entry_algorithm_1_microsoft_comic_chat_is_now_open_source": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 10,
+    "label": "Microsoft Comic Chat is now open source"
+  },
+  "entry_algorithm_2_the_state_of_open_source_ai": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 11,
+    "label": "The state of open source AI"
+  },
+  "entry_algorithm_3_governments_companies_nonprofits_should_invest_in_free_open_sour": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 5 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 3,
+    "label": "Governments, companies, nonprofits should invest in free, open source AI [pdf]"
+  },
+  "entry_algorithm_4_open_book_touch_open_source_e_reader": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 5 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 3,
+    "label": "Open Book Touch: open-source e-reader"
+  },
+  "entry_algorithm_5_open_source_memory_for_coding_agents_synced_over_ssh": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 24,
+    "community": 7,
+    "label": "Open-source memory for coding agents, synced over SSH"
+  },
+  "entry_algorithm_6_show_hn_imagin_raw_a_9mb_open_source_alternative_to_adobe_bridge": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 4 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 22,
+    "community": 5,
+    "label": "Show HN: Imagin Raw – A 9MB Open-Source Alternative to Adobe Bridge for Mac"
+  },
+  "entry_algorithm_7_soofi_sovereign_open_source_foundation_models": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 3 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 23,
+    "community": 8,
+    "label": "Soofi – Sovereign Open Source Foundation Models"
+  },
+  "entry_product_0_show_hn_firefox_in_webassembly": {
+    "boost": 2,
+    "reasons": [
+      "belongs to theme community of 7 nodes"
+    ],
+    "degree": 2,
+    "community": 1,
+    "label": "Show HN: Firefox in WebAssembly"
+  },
+  "entry_product_1_show_hn_immersive_gaussian_splat_tour_of_grace_cathedral_san_fra": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 6 nodes",
+      "bridges 19 related digests item(s)"
+    ],
+    "degree": 23,
+    "community": 2,
+    "label": "Show HN: Immersive Gaussian Splat tour of grace cathedral, San Francisco"
+  },
+  "entry_product_2_show_hn_ikea_complexity_index": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 4 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 21,
+    "community": 6,
+    "label": "Show HN: IKEA Complexity Index"
+  },
+  "entry_product_3_show_hn_watch_bots_interact_with_an_ssh_honeypot_in_real_time": {
+    "boost": 6,
+    "reasons": [
+      "belongs to theme community of 4 nodes",
+      "bridges 18 related digests item(s)"
+    ],
+    "degree": 21,
+    "community": 6,
+    "label": "Show HN: Watch bots interact with an SSH honeypot in real time"
+  },
+  "entry_product_4_show_hn_misa77_a_codec_that_decodes_2x_faster_than_lz4_at_better": {
+    "boost": 4,
+    "reasons": [
+      "belongs to theme community of 6 nodes",
+      "bridges 1 related digests item(s)"
+    ],
+    "degree": 6,
+    "community": 2,
+    "label": "Show HN: misa77 - a codec that decodes 2x faster than LZ4 (at better ratios)"
+  },
+  "entry_product_5_show_hn_justif_knuth_plass_justification_and_microtypography_for": {
+    "boost": 2,
+    "reasons": [
+      "belongs to theme community of 7 nodes"
+    ],
+    "degree": 2,
+    "community": 1,
+    "label": "Show HN: Justif – Knuth-Plass justification and microtypography for the web"
+  },
+  "entry_product_6_show_hn_a_zoomable_timeline_of_4m_wikipedia_events": {
+    "boost": 2,
+    "reasons": [
+      "belongs to theme community of 7 nodes"
+    ],
+    "degree": 2,
+    "community": 1,
+    "label": "Show HN: A zoomable timeline of 4M Wikipedia events"
+  }
+}
